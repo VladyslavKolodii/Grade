@@ -6,6 +6,7 @@
 
 import UIKit
 import GoogleSignIn
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,14 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        IQKeyboardManager.shared.enable = true
         
         GIDSignIn.sharedInstance().clientID = kClientID
         
         UINavigationBar.appearance().barTintColor = Color.navBG // Navigation's BG Color
         UINavigationBar.appearance().tintColor = .white // Navigation's Button Color
         UINavigationBar.appearance().isTranslucent = false
-        UIBarButtonItem.appearance().tintColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.appFontBold(ofSize: 18)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .highlighted)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .selected)
         
         return true
     }

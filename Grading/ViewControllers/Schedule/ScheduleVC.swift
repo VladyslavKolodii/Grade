@@ -137,6 +137,12 @@ class ScheduleVC: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
           return .lightContent
     }
+    
+    @IBAction func addScheduleAction(_ sender: Any) {
+        let controller = UINavigationController(rootViewController: GradingProcessViewController.instantiate(from: .schedule))
+        controller.modalPresentationStyle = .overFullScreen
+        self.tabBarController?.present(controller, animated: true, completion: nil)
+    }
 }
 
 extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
@@ -152,6 +158,8 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         case .week:
             self.calendar.appearance.headerDateFormat = "MMMM yyyy"
             return velocity.y > 0
+        @unknown default:
+            fatalError()
         }
     }
     
