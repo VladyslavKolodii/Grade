@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SuppliersVC-->
         <scene sceneID="3Gn-EM-8lE">
@@ -18,19 +26,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zwf-FB-DxV">
-                                <rect key="frame" x="0.0" y="112" width="414" height="613"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SupplierHeaderCell" id="lMh-81-g5P" customClass="SupplierHeaderCell" customModule="Grading" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="22"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lMh-81-g5P" id="PkH-9U-yMX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="19.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM2-6k-Ye6">
-                                                    <rect key="frame" x="15" y="0.0" width="39.5" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -47,16 +55,16 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SupplierCell" rowHeight="61" id="lVE-2t-M00" customClass="SupplierCell" customModule="Grading" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="75" width="414" height="61"/>
+                                        <rect key="frame" x="0.0" y="77.5" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lVE-2t-M00" id="WkY-ac-bmi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWk-CN-cKc">
-                                                    <rect key="frame" x="15" y="0.0" width="39.5" height="61"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="61"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                                    <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-3O-ScX">
@@ -87,20 +95,20 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-Hu-KJE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Ps-3UI">
-                                        <rect key="frame" x="0.0" y="-50" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="-50" width="414" height="100"/>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.074509803920000006" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suppliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-Iu-WhH">
-                                        <rect key="frame" x="164" y="30" width="86.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="164.5" y="13" width="85" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAJ-9F-yj3">
-                                        <rect key="frame" x="364" y="27" width="30" height="30"/>
+                                        <rect key="frame" x="364" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YEc-b4-dun"/>
                                             <constraint firstAttribute="width" constant="30" id="gdK-hG-grs"/>
@@ -112,17 +120,17 @@
                                 <constraints>
                                     <constraint firstItem="WAb-Ps-3UI" firstAttribute="top" secondItem="tgA-Hu-KJE" secondAttribute="top" constant="-50" id="Sgu-h2-e4f"/>
                                     <constraint firstAttribute="bottom" secondItem="WAb-Ps-3UI" secondAttribute="bottom" id="WNE-bB-0Yb"/>
-                                    <constraint firstItem="SEP-Iu-WhH" firstAttribute="top" secondItem="tgA-Hu-KJE" secondAttribute="top" constant="30" id="bFl-GP-87L"/>
                                     <constraint firstAttribute="trailing" secondItem="WAb-Ps-3UI" secondAttribute="trailing" id="ebv-qR-2aa"/>
-                                    <constraint firstAttribute="height" constant="60" id="h0o-3M-Zfd"/>
+                                    <constraint firstAttribute="height" constant="50" id="h0o-3M-Zfd"/>
                                     <constraint firstItem="SEP-Iu-WhH" firstAttribute="centerX" secondItem="tgA-Hu-KJE" secondAttribute="centerX" id="iEk-Ru-eft"/>
                                     <constraint firstAttribute="trailing" secondItem="ZAJ-9F-yj3" secondAttribute="trailing" constant="20" id="kQw-su-lRp"/>
                                     <constraint firstItem="ZAJ-9F-yj3" firstAttribute="centerY" secondItem="SEP-Iu-WhH" secondAttribute="centerY" id="oao-1c-KMs"/>
                                     <constraint firstItem="WAb-Ps-3UI" firstAttribute="leading" secondItem="tgA-Hu-KJE" secondAttribute="leading" id="pHW-bv-2wb"/>
+                                    <constraint firstItem="SEP-Iu-WhH" firstAttribute="centerY" secondItem="tgA-Hu-KJE" secondAttribute="centerY" id="yB3-xe-rIc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3c7-P9-xk0">
-                                <rect key="frame" x="0.0" y="60" width="414" height="52"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="52"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcw-bV-CLj">
                                         <rect key="frame" x="16" y="11" width="382" height="30"/>
@@ -219,7 +227,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzP-jW-IrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-912" y="-22"/>
+            <point key="canvasLocation" x="-1439" y="-263"/>
         </scene>
     </scenes>
     <resources>

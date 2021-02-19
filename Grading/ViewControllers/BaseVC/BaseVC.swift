@@ -28,7 +28,7 @@ class BaseVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let navi = navigationController as? BaseNavigation {
+        if let navi = navigationController as? BaseNavigationController {
             navi.requiredStatusBarStyle = statusBarStyle
         }
     }

@@ -49,7 +49,6 @@
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
-		FCE2A8F625E02D91001CF1EA /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E525E02D91001CF1EA /* BaseNavigation.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -112,7 +111,6 @@
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
-		FCE2A8E525E02D91001CF1EA /* BaseNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -197,6 +195,7 @@
 		B79773D025DFA52D00DBE149 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				FCE2A8E925E02D91001CF1EA /* BaseVC.swift */,
 				B79773D125DFA54400DBE149 /* BaseNavigationController.swift */,
 			);
 			path = BaseVC;
@@ -259,8 +258,6 @@
 		BCE06F8425CE6CD60071CD3C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCE2A8E525E02D91001CF1EA /* BaseNavigation.swift */,
-				FCE2A8E925E02D91001CF1EA /* BaseVC.swift */,
 				FCE2A8F025E02D91001CF1EA /* Contact */,
 				FCE2A8EA25E02D91001CF1EA /* FAQ */,
 				FCE2A8F325E02D91001CF1EA /* ProfileInfo */,
@@ -589,7 +586,6 @@
 				B79773C925DFA10B00DBE149 /* GradingProcessLabSeletedViewController.swift in Sources */,
 				BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */,
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
-				FCE2A8F625E02D91001CF1EA /* BaseNavigation.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,

@@ -8,7 +8,15 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-
+    public var requiredStatusBarStyle: UIStatusBarStyle = .lightContent {
+        didSet {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        requiredStatusBarStyle
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.barTintColor = UIColor.init(hex: "101332")

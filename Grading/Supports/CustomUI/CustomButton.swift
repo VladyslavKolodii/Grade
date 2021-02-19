@@ -28,17 +28,4 @@ class CustomButton: UIButton {
         }
     }
     
-    @IBInspectable
-    var borderColor: UIColor = .clear {
-        didSet {
-            self.layer.borderColor = borderColor.cgColor
-        }
-    }
-    
-    @IBInspectable
-    var borderWidth: CGFloat = 0.0 {
-        didSet {
-            self.layer.borderWidth = borderWidth
-        }
-    }
 }
