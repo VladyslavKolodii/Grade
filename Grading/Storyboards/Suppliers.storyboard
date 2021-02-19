@@ -204,7 +204,7 @@
         <!--Suppliers-->
         <scene sceneID="uky-hq-Ul6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r4L-yY-fQv" customClass="BaseNavigation" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r4L-yY-fQv" customClass="BaseNavigationController" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Suppliers" image="tab_supplier_off" id="cb3-T5-eca"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>

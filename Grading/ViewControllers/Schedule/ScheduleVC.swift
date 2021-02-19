@@ -157,9 +157,15 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         case .week:
             self.calendar.appearance.headerDateFormat = "MMMM yyyy"
             return velocity.y > 0
+        default: return false
         }
     }
-    
+    @IBAction func addScheduleAction(_ sender: Any) {
+        let controller = UINavigationController(rootViewController: GradingProcessViewController.instantiate(from: .schedule))
+        controller.modalPresentationStyle = .overFullScreen
+        self.tabBarController?.present(controller, animated: true, completion: nil)
+    }
+
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         self.calendarHeightConstraint.constant = bounds.height
         self.view.layoutIfNeeded()

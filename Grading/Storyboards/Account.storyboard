@@ -358,10 +358,10 @@ Big Tree Grading!</string>
             </objects>
             <point key="canvasLocation" x="1515.9420289855075" y="24.776785714285712"/>
         </scene>
-        <!--Base Navigation-->
+        <!--Navigation Controller-->
         <scene sceneID="0kn-fl-KiI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="LuO-To-9ZL" customClass="BaseNavigation" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="LuO-To-9ZL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1t2-l0-Sw9">

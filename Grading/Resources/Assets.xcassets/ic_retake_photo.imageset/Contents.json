@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "FAQ.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FAQ@2x.png",
+      "filename" : "ic_retake_photo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FAQ@3x.png",
+      "filename" : "ic_retake_photo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

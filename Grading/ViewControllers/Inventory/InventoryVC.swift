@@ -19,4 +19,7 @@ class InventoryVC: UIViewController {
         self.navigationItem.title = "Inventory"
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
 }
