@@ -6,7 +6,6 @@
 
 import UIKit
 import GoogleSignIn
-import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         GIDSignIn.sharedInstance().clientID = kClientID
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        IQKeyboardManager.shared.enableAutoToolbar = false
-        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        
         UINavigationBar.appearance().barTintColor = Color.navBG // Navigation's BG Color
         UINavigationBar.appearance().tintColor = .white // Navigation's Button Color
         UINavigationBar.appearance().isTranslucent = false

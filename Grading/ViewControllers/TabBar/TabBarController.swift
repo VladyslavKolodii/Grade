@@ -11,6 +11,7 @@ class TabBarController: UITabBarController {
     static func storyboardInstance() -> TabBarController? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
         let controller = storyboard.instantiateInitialViewController() as? TabBarController
+        
         return controller
     }
     
@@ -21,10 +22,10 @@ class TabBarController: UITabBarController {
     }
     
     private func setupControllers() {
-        let schedule = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController()!
-        let supplier = UIStoryboard(name: "Suppliers", bundle: nil).instantiateInitialViewController()!
-        let inventory = UIStoryboard(name: "Inventory", bundle: nil).instantiateInitialViewController()!
-        viewControllers = [schedule, supplier, inventory]
+        let vc1 = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController()!
+        let vc2 = UIStoryboard(name: "Suppliers", bundle: nil).instantiateInitialViewController()!
+        let vc3 = UIStoryboard(name: "Inventory", bundle: nil).instantiateInitialViewController()!
+        viewControllers = [vc1, vc2, vc3]
         tabBar.barTintColor = Color.tabBG
         tabBar.backgroundColor = .clear
         tabBar.tintColor = Color.tabTintBG

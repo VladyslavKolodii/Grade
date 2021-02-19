@@ -7,7 +7,7 @@
 import UIKit
 import GoogleSignIn
 
-class LoginVC: BaseVC {
+class LoginVC: UIViewController {
 
     //@IBOutlet weak var loginGoogleButton: GIDSignInButton!
     @IBOutlet weak var loginGmailButton: UIButton!
@@ -19,17 +19,8 @@ class LoginVC: BaseVC {
         configureView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if #available(iOS 13.0, *) {
-            self.statusBarStyle = .darkContent
-        } else {
-            // Fallback on earlier versions
-            self.statusBarStyle = .default
-        }
-    }
-    
     func configureView() {
+        
         // Google sign in setup
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
@@ -65,6 +56,10 @@ class LoginVC: BaseVC {
         if let controller = OnboardVC.storyboardInstance() {
             navigationController?.pushViewController(controller, animated: true)
         }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .darkContent
     }
 
 }

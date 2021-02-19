@@ -7,7 +7,7 @@
 import UIKit
 import FSCalendar
 
-class ScheduleVC: BaseVC {
+class ScheduleVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarView: UIView!
@@ -40,12 +40,10 @@ class ScheduleVC: BaseVC {
         configureView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
     func configureView() {
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         self.dragView.addGestureRecognizer(self.scopeGesture)
         
         calendar.backgroundColor = .clear
@@ -136,12 +134,9 @@ class ScheduleVC: BaseVC {
         self.calendar.setCurrentPage(date ?? Date(), animated: true)
     }
     
-    @IBAction func settingTap(_ sender: Any) {
-        let settingVC = SettingVC()
-        settingVC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(settingVC, animated: true)
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
     }
-    
 }
 
 extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {

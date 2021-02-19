@@ -8,7 +8,5 @@ target 'Grading' do
   # Pods for Grading
   pod 'GoogleSignIn'
   pod 'FSCalendar'
-  pod 'SwifterSwift'
-  pod 'IQKeyboardManagerSwift'
 
 end
