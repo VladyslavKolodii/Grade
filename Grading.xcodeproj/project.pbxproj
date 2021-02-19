@@ -35,11 +35,13 @@
 		BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */; };
 		BCE06FED25CECF960071CD3C /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FEC25CECF960071CD3C /* ScheduleVC.swift */; };
 		BCE06FF225CED12F0071CD3C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FF125CED12F0071CD3C /* UIColor.swift */; };
-		BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */; };
 		BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FFA25CED2050071CD3C /* InventoryVC.swift */; };
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
+		FCE2A86625DFF3C5001CF1EA /* SuppliersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A86425DFF3C5001CF1EA /* SuppliersVC.swift */; };
+		FCE2A86C25E0171E001CF1EA /* SupplierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A86A25E0171E001CF1EA /* SupplierCell.swift */; };
+		FCE2A86D25E0171E001CF1EA /* SupplierHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A86B25E0171E001CF1EA /* SupplierHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,11 +77,13 @@
 		BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE06FEC25CECF960071CD3C /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		BCE06FF125CED12F0071CD3C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersVC.swift; sourceTree = "<group>"; };
 		BCE06FFA25CED2050071CD3C /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
+		FCE2A86425DFF3C5001CF1EA /* SuppliersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuppliersVC.swift; sourceTree = "<group>"; };
+		FCE2A86A25E0171E001CF1EA /* SupplierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierCell.swift; sourceTree = "<group>"; };
+		FCE2A86B25E0171E001CF1EA /* SupplierHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,7 +296,9 @@
 		BCE06FF425CED1DD0071CD3C /* Suppliers */ = {
 			isa = PBXGroup;
 			children = (
-				BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */,
+				FCE2A86A25E0171E001CF1EA /* SupplierCell.swift */,
+				FCE2A86B25E0171E001CF1EA /* SupplierHeaderCell.swift */,
+				FCE2A86425DFF3C5001CF1EA /* SuppliersVC.swift */,
 			);
 			path = Suppliers;
 			sourceTree = "<group>";
@@ -453,17 +459,19 @@
 				326C363B25DF9AEF0035DD65 /* FaqVC.swift in Sources */,
 				BCE06FF225CED12F0071CD3C /* UIColor.swift in Sources */,
 				326C363425DF92E80035DD65 /* ProfileInfoVC.swift in Sources */,
+				FCE2A86D25E0171E001CF1EA /* SupplierHeaderCell.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
 				BCE06FED25CECF960071CD3C /* ScheduleVC.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
+				FCE2A86625DFF3C5001CF1EA /* SuppliersVC.swift in Sources */,
 				BC774DF125CF689E0052B4EA /* ScheduleCell.swift in Sources */,
-				BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */,
 				326C364425DF9F150035DD65 /* FaqCell.swift in Sources */,
 				3202807F25DF5BF7007C63CE /* BaseVC.swift in Sources */,
 				BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */,
 				3202808225DF6136007C63CE /* BaseNavigation.swift in Sources */,
 				326C366425DFAE3F0035DD65 /* ContactVC.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
+				FCE2A86C25E0171E001CF1EA /* SupplierCell.swift in Sources */,
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
 			);
