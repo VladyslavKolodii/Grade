@@ -19,7 +19,4 @@ class SuppliersVC: UIViewController {
         self.navigationItem.title = "Suppliers"
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-          return .lightContent
-    }
 }

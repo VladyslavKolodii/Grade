@@ -6,7 +6,7 @@
 
 import UIKit
 
-class OnboardVC: UIViewController {
+class OnboardVC: BaseVC {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -24,6 +24,15 @@ class OnboardVC: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 13.0, *) {
+            self.statusBarStyle = .darkContent
+        } else {
+            // Fallback on earlier versions
+            self.statusBarStyle = .default
+        }
+    }
 
     func configureView() {
         
@@ -32,7 +41,7 @@ class OnboardVC: UIViewController {
     
     func showTabs() {
         
-        Util.showTabbar()
+        Util.changeTabbarToRoot()
     }
     
     //MARK: - USER INTERACTION

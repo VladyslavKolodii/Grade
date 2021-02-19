@@ -23,8 +23,7 @@ struct Color {
 }
 
 class Util: NSObject {
-    
-    class func showTabbar() {
+    class func changeTabbarToRoot() {
         if let ctrl = TabBarController.storyboardInstance() {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window!.rootViewController = ctrl
