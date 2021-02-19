@@ -8,7 +8,7 @@ import UIKit
 import FSCalendar
 
 class ScheduleVC: BaseVC {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var dragView: UIView!
@@ -36,7 +36,7 @@ class ScheduleVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureView()
     }
     
@@ -45,7 +45,9 @@ class ScheduleVC: BaseVC {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    
     func configureView() {
+        
         self.dragView.addGestureRecognizer(self.scopeGesture)
         
         calendar.backgroundColor = .clear
@@ -142,6 +144,12 @@ class ScheduleVC: BaseVC {
         self.navigationController?.pushViewController(settingVC, animated: true)
     }
     
+    
+    @IBAction func addScheduleAction(_ sender: Any) {
+        let controller = UINavigationController(rootViewController: GradingProcessViewController.instantiate(from: .schedule))
+        controller.modalPresentationStyle = .overFullScreen
+        self.tabBarController?.present(controller, animated: true, completion: nil)
+    }
 }
 
 extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
@@ -157,15 +165,11 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         case .week:
             self.calendar.appearance.headerDateFormat = "MMMM yyyy"
             return velocity.y > 0
-        default: return false
+        @unknown default:
+            fatalError()
         }
     }
-    @IBAction func addScheduleAction(_ sender: Any) {
-        let controller = UINavigationController(rootViewController: GradingProcessViewController.instantiate(from: .schedule))
-        controller.modalPresentationStyle = .overFullScreen
-        self.tabBarController?.present(controller, animated: true, completion: nil)
-    }
-
+    
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         self.calendarHeightConstraint.constant = bounds.height
         self.view.layoutIfNeeded()
@@ -181,7 +185,7 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         lblSelectedDate.text = selectedDates[0]
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
-
+    
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
@@ -244,7 +248,7 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
     }
     
 }

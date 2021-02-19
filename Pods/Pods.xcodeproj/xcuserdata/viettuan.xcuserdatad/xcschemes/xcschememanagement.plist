@@ -11,12 +11,22 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AppAuth.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>FSCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>FSCalendar.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>GTMAppAuth.xcscheme</key>
 		<dict>
@@ -25,12 +35,22 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>GTMAppAuth.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>GoogleSignIn.xcscheme</key>
 		<dict>
@@ -39,6 +59,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>GoogleSignIn.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -46,12 +71,22 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Pods-Grading.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+		<key>Pods-Grading.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>SwifterSwift.xcscheme</key>
 		<dict>
