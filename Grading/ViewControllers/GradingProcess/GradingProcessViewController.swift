@@ -73,8 +73,7 @@ extension GradingProcessViewController {
         let materialPhotosVC = UIViewController()
         materialPhotosVC.view.backgroundColor = .purple
         
-        let gradingVC = UIViewController()
-        gradingVC.view.backgroundColor = .systemPink
+        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
         
         let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
         

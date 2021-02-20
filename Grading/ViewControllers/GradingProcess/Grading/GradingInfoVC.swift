@@ -1,5 +1,5 @@
 //
-//  GradingDefectInfoVC.swift
+//  GradingInfoVC.swift
 //  Grading
 //
 //  Created by Aira on 20.02.2021.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class GradingDefectInfoVC: UIViewController {
-    
-    @IBOutlet weak var containUV: UIView!
+class GradingInfoVC: UIViewController {
+
     @IBOutlet weak var pageLB: UILabel!
+    @IBOutlet weak var containUV: UIView!
     
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
     private var currentIndex: Int = 0 {
         didSet {
-            pageLB.text = "\(currentIndex + 1)/6"
+            pageLB.text = "\(currentIndex + 1)/4"
         }
     }
     
@@ -25,32 +25,28 @@ class GradingDefectInfoVC: UIViewController {
         setupPageController()
     }
     
-    
+
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
     
     private func setupPageController() {
         
-        let itemVC1 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC1.strTitle = "Mold"
-        let itemVC2 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC2.strTitle = "Fungus"
-        let itemVC3 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC3.strTitle = "Seeds"
-        let itemVC4 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC4.strTitle = "Herm"
-        let itemVC5 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC5.strTitle = "Pests and/or by product"
-        let itemVC6 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectIemVC") as! GradingDefectIemVC
-        itemVC6.strTitle = "Foreign Objects"
-        pages = [itemVC1, itemVC2, itemVC3, itemVC4, itemVC5, itemVC6]
+        let itemVC1 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingItemVC") as! GradingItemVC
+        itemVC1.strTitle = "Color"
+        let itemVC2 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingItemVC") as! GradingItemVC
+        itemVC2.strTitle = "Aromatics"
+        let itemVC3 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingItemVC") as! GradingItemVC
+        itemVC3.strTitle = "Structure"
+        let itemVC4 = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingItemVC") as! GradingItemVC
+        itemVC4.strTitle = "Trichome"
+        pages = [itemVC1, itemVC2, itemVC3, itemVC4]
                 
         self.pageController.dataSource = self
         self.pageController.delegate = self
@@ -70,13 +66,7 @@ class GradingDefectInfoVC: UIViewController {
         }
     }
     
-    @IBAction func onTapPreUB(_ sender: Any) {
-        if currentIndex == 0 {
-            return
-        }
-        currentIndex -= 1
-        pageController.setViewControllers([pages[currentIndex]], direction: .reverse, animated: true, completion: nil)
-    }
+    
     @IBAction func onTapNextUB(_ sender: Any) {
         if currentIndex >= pages.count - 1 {
             return
@@ -84,12 +74,22 @@ class GradingDefectInfoVC: UIViewController {
         currentIndex += 1
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
+    
+    @IBAction func onTapPreUB(_ sender: Any) {
+        if currentIndex == 0 {
+            return
+        }
+        currentIndex -= 1
+        pageController.setViewControllers([pages[currentIndex]], direction: .reverse, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func onTapCloseUB(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 }
 
-extension GradingDefectInfoVC: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+extension GradingInfoVC: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     private func viewController(comingFrom viewController: UIViewController, indexModifier: Int) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController) else { return nil }
@@ -105,5 +105,5 @@ extension GradingDefectInfoVC: UIPageViewControllerDelegate, UIPageViewControlle
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return self.viewController(comingFrom: viewController, indexModifier: 1)
-    }
+    }    
 }

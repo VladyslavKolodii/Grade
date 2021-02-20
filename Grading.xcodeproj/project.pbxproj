@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */; };
 		453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */; };
+		453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8125E1596D00F9F220 /* GradingVC.swift */; };
+		453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8425E1684700F9F220 /* GradingInfoVC.swift */; };
+		453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */; };
 		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
 		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
 		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
@@ -81,6 +84,9 @@
 		0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectInfoVC.swift; sourceTree = "<group>"; };
 		453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectIemVC.swift; sourceTree = "<group>"; };
+		453D0F8125E1596D00F9F220 /* GradingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingVC.swift; sourceTree = "<group>"; };
+		453D0F8425E1684700F9F220 /* GradingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInfoVC.swift; sourceTree = "<group>"; };
+		453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingItemVC.swift; sourceTree = "<group>"; };
 		45760C4825E10A89000E7C3D /* GradingProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProductVC.swift; sourceTree = "<group>"; };
 		45760C5525E1242D000E7C3D /* GradingDefectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectVC.swift; sourceTree = "<group>"; };
 		457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryVC.swift; sourceTree = "<group>"; };
@@ -180,6 +186,16 @@
 				453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */,
 			);
 			path = Defect;
+			sourceTree = "<group>";
+		};
+		453D0F8725E1684E00F9F220 /* Grading */ = {
+			isa = PBXGroup;
+			children = (
+				453D0F8125E1596D00F9F220 /* GradingVC.swift */,
+				453D0F8425E1684700F9F220 /* GradingInfoVC.swift */,
+				453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */,
+			);
+			path = Grading;
 			sourceTree = "<group>";
 		};
 		457EF5F225E09D290051AF10 /* Schedule */ = {
@@ -284,6 +300,7 @@
 				457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */,
 				45760C4825E10A89000E7C3D /* GradingProductVC.swift */,
 				453D0F7125E13D3800F9F220 /* Defect */,
+				453D0F8725E1684E00F9F220 /* Grading */,
 			);
 			path = GradingProcess;
 			sourceTree = "<group>";
@@ -655,6 +672,7 @@
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
+				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
 				457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */,
@@ -664,6 +682,7 @@
 				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
+				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
@@ -674,6 +693,7 @@
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
 				B79773D625DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift in Sources */,
+				453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */,
 				B79773D925DFB08D00DBE149 /* GradingProcessLabPhotoPreviewViewController.swift in Sources */,
 				FCE2A8FF25E02D91001CF1EA /* ContactVC.swift in Sources */,
 				B79773D225DFA54400DBE149 /* BaseNavigationController.swift in Sources */,
