@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457EF60225E09D290051AF10 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F525E09D290051AF10 /* LocationCell.swift */; };
+		457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F625E09D290051AF10 /* LocationNotesCell.swift */; };
+		457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F725E09D290051AF10 /* LocationDetailVC.swift */; };
+		457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F925E09D290051AF10 /* AddLocationPhotoVC.swift */; };
+		457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5FA25E09D290051AF10 /* PhotoControlVC.swift */; };
+		457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5FB25E09D290051AF10 /* PhotoReviewVC.swift */; };
+		457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5FD25E09D290051AF10 /* AddAppointVC.swift */; };
+		457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5FF25E09D290051AF10 /* ScheduleCell.swift */; };
+		457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */; };
+		457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60125E09D290051AF10 /* ScheduleVC.swift */; };
 		B79773B025DF7F3300DBE149 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79773AF25DF7F3300DBE149 /* Colors.xcassets */; };
 		B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */; };
 		B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */; };
@@ -30,7 +40,6 @@
 		B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773F425DFBD5300DBE149 /* CustomLabel.swift */; };
 		B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773F525DFBD5300DBE149 /* CustomButton.swift */; };
 		B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773F925DFBD6600DBE149 /* CustomTextField.swift */; };
-		BC774DF125CF689E0052B4EA /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774DF025CF689E0052B4EA /* ScheduleCell.swift */; };
 		BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774DF425CF6AC40052B4EA /* Schedule.swift */; };
 		BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06F6D25CE6C8B0071CD3C /* AppDelegate.swift */; };
 		BCE06F7525CE6C8B0071CD3C /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06F7325CE6C8B0071CD3C /* Schedule.storyboard */; };
@@ -43,7 +52,6 @@
 		BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */; };
 		BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */; };
 		BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */; };
-		BCE06FED25CECF960071CD3C /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FEC25CECF960071CD3C /* ScheduleVC.swift */; };
 		BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */; };
 		BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FFA25CED2050071CD3C /* InventoryVC.swift */; };
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
@@ -66,6 +74,16 @@
 
 /* Begin PBXFileReference section */
 		0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		457EF5F525E09D290051AF10 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		457EF5F625E09D290051AF10 /* LocationNotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotesCell.swift; sourceTree = "<group>"; };
+		457EF5F725E09D290051AF10 /* LocationDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailVC.swift; sourceTree = "<group>"; };
+		457EF5F925E09D290051AF10 /* AddLocationPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationPhotoVC.swift; sourceTree = "<group>"; };
+		457EF5FA25E09D290051AF10 /* PhotoControlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoControlVC.swift; sourceTree = "<group>"; };
+		457EF5FB25E09D290051AF10 /* PhotoReviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoReviewVC.swift; sourceTree = "<group>"; };
+		457EF5FD25E09D290051AF10 /* AddAppointVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAppointVC.swift; sourceTree = "<group>"; };
+		457EF5FF25E09D290051AF10 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailVC.swift; sourceTree = "<group>"; };
+		457EF60125E09D290051AF10 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
 		B79773AF25DF7F3300DBE149 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -90,7 +108,6 @@
 		B79773F425DFBD5300DBE149 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		B79773F525DFBD5300DBE149 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B79773F925DFBD6600DBE149 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		BC774DF025CF689E0052B4EA /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		BC774DF425CF6AC40052B4EA /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		BCE06F6A25CE6C8B0071CD3C /* Grading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE06F6D25CE6C8B0071CD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +122,6 @@
 		BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BCE06FEC25CECF960071CD3C /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersVC.swift; sourceTree = "<group>"; };
 		BCE06FFA25CED2050071CD3C /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
@@ -144,6 +160,63 @@
 				0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		457EF5F225E09D290051AF10 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5F325E09D290051AF10 /* LocationDetail */,
+				457EF5F825E09D290051AF10 /* LocationPhoto */,
+				457EF5FC25E09D290051AF10 /* ScheduleInfo */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		457EF5F325E09D290051AF10 /* LocationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5F425E09D290051AF10 /* Cell */,
+				457EF5F725E09D290051AF10 /* LocationDetailVC.swift */,
+			);
+			path = LocationDetail;
+			sourceTree = "<group>";
+		};
+		457EF5F425E09D290051AF10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5F525E09D290051AF10 /* LocationCell.swift */,
+				457EF5F625E09D290051AF10 /* LocationNotesCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		457EF5F825E09D290051AF10 /* LocationPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5F925E09D290051AF10 /* AddLocationPhotoVC.swift */,
+				457EF5FA25E09D290051AF10 /* PhotoControlVC.swift */,
+				457EF5FB25E09D290051AF10 /* PhotoReviewVC.swift */,
+			);
+			path = LocationPhoto;
+			sourceTree = "<group>";
+		};
+		457EF5FC25E09D290051AF10 /* ScheduleInfo */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5FD25E09D290051AF10 /* AddAppointVC.swift */,
+				457EF5FE25E09D290051AF10 /* Cell */,
+				457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */,
+				457EF60125E09D290051AF10 /* ScheduleVC.swift */,
+			);
+			path = ScheduleInfo;
+			sourceTree = "<group>";
+		};
+		457EF5FE25E09D290051AF10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5FF25E09D290051AF10 /* ScheduleCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8E1E59385BEA9C88561BBE7D /* Pods */ = {
@@ -258,6 +331,7 @@
 		BCE06F8425CE6CD60071CD3C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				457EF5F225E09D290051AF10 /* Schedule */,
 				FCE2A8F025E02D91001CF1EA /* Contact */,
 				FCE2A8EA25E02D91001CF1EA /* FAQ */,
 				FCE2A8F325E02D91001CF1EA /* ProfileInfo */,
@@ -266,7 +340,6 @@
 				B79773C725DFA0D800DBE149 /* GradingProcess */,
 				BCE06F8725CE6DE70071CD3C /* Account */,
 				BCE06FD925CEC5E20071CD3C /* TabBar */,
-				BCE06FD725CEC4180071CD3C /* Schedule */,
 				BCE06FF425CED1DD0071CD3C /* Suppliers */,
 				BCE06FF925CED1F20071CD3C /* Inventory */,
 			);
@@ -309,15 +382,6 @@
 				BCE06FD325CEC3C40071CD3C /* Utility.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		BCE06FD725CEC4180071CD3C /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				BCE06FEC25CECF960071CD3C /* ScheduleVC.swift */,
-				BC774DF025CF689E0052B4EA /* ScheduleCell.swift */,
-			);
-			path = Schedule;
 			sourceTree = "<group>";
 		};
 		BCE06FD925CEC5E20071CD3C /* TabBar */ = {
@@ -561,28 +625,34 @@
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
+				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
+				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
-				BCE06FED25CECF960071CD3C /* ScheduleVC.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
+				457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */,
 				FCE2A90625E02D9F001CF1EA /* SupplierHeaderCell.swift in Sources */,
 				FCE2A90525E02D9F001CF1EA /* SupplierCell.swift in Sources */,
+				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
+				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
+				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
+				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
-				BC774DF125CF689E0052B4EA /* ScheduleCell.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
 				B79773D625DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift in Sources */,
 				B79773D925DFB08D00DBE149 /* GradingProcessLabPhotoPreviewViewController.swift in Sources */,
 				FCE2A8FF25E02D91001CF1EA /* ContactVC.swift in Sources */,
 				B79773D225DFA54400DBE149 /* BaseNavigationController.swift in Sources */,
 				BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */,
+				457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */,
 				B79773C925DFA10B00DBE149 /* GradingProcessLabSeletedViewController.swift in Sources */,
 				BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */,
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
@@ -594,6 +664,8 @@
 				B79773E225DFB7B800DBE149 /* ImagePicker.swift in Sources */,
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
+				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
+				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

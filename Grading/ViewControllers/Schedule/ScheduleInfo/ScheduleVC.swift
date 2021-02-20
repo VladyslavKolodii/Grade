@@ -7,8 +7,8 @@
 import UIKit
 import FSCalendar
 
-class ScheduleVC: BaseVC {
-    
+class ScheduleVC: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var dragView: UIView!
@@ -36,17 +36,13 @@ class ScheduleVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    
     func configureView() {
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         self.dragView.addGestureRecognizer(self.scopeGesture)
         
@@ -100,6 +96,13 @@ class ScheduleVC: BaseVC {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scheduleDetail" {
+            let destVC = segue.destination as! ScheduleDetailVC
+            destVC.hidesBottomBarWhenPushed = true
+        }
+    }
+    
     //MARK: - USER INTERACTION
     
     @IBAction func toggleTap(_ sender: Any) {
@@ -138,17 +141,8 @@ class ScheduleVC: BaseVC {
         self.calendar.setCurrentPage(date ?? Date(), animated: true)
     }
     
-    @IBAction func settingTap(_ sender: Any) {
-        let settingVC = SettingVC()
-        settingVC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(settingVC, animated: true)
-    }
-    
-    
-    @IBAction func addScheduleAction(_ sender: Any) {
-        let controller = UINavigationController(rootViewController: GradingProcessViewController.instantiate(from: .schedule))
-        controller.modalPresentationStyle = .overFullScreen
-        self.tabBarController?.present(controller, animated: true, completion: nil)
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
     }
 }
 
@@ -165,8 +159,6 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         case .week:
             self.calendar.appearance.headerDateFormat = "MMMM yyyy"
             return velocity.y > 0
-        @unknown default:
-            fatalError()
         }
     }
     
@@ -185,7 +177,7 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         lblSelectedDate.text = selectedDates[0]
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
-    
+
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
@@ -240,6 +232,7 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.selectionStyle = .none
+        cell.delegate = self
         return cell
     }
     
@@ -248,7 +241,12 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
     }
-    
+}
+
+extension ScheduleVC: ScheduleCellDelegate {
+    func didTapActionUB() {
+        self.performSegue(withIdentifier: "scheduleDetail", sender: nil)
+    }
 }
