@@ -57,6 +57,9 @@
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
+		FC826B1725E1263E009BFB91 /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */; };
+		FC859E3125E0EFB500FC76B5 /* SupplierProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */; };
+		FCCB95EF25E1505200123FE1 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB95EE25E1505200123FE1 /* InventoryCell.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -127,6 +130,9 @@
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
+		FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
+		FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierProfileVC.swift; sourceTree = "<group>"; };
+		FCCB95EE25E1505200123FE1 /* InventoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -414,9 +420,11 @@
 		BCE06FF425CED1DD0071CD3C /* Suppliers */ = {
 			isa = PBXGroup;
 			children = (
+				FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */,
 				FCE2A90325E02D9F001CF1EA /* SupplierCell.swift */,
 				FCE2A90425E02D9F001CF1EA /* SupplierHeaderCell.swift */,
 				BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */,
+				FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */,
 			);
 			path = Suppliers;
 			sourceTree = "<group>";
@@ -425,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
+				FCCB95EE25E1505200123FE1 /* InventoryCell.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -441,8 +450,8 @@
 		FCE2A8EA25E02D91001CF1EA /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
-				FCE2A8EB25E02D91001CF1EA /* FaqVC.xib */,
 				FCE2A8EC25E02D91001CF1EA /* Cells */,
+				FCE2A8EB25E02D91001CF1EA /* FaqVC.xib */,
 				FCE2A8EF25E02D91001CF1EA /* FaqVC.swift */,
 			);
 			path = FAQ;
@@ -622,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCB95EF25E1505200123FE1 /* InventoryCell.swift in Sources */,
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
@@ -644,6 +654,7 @@
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
+				FC859E3125E0EFB500FC76B5 /* SupplierProfileVC.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
@@ -660,6 +671,7 @@
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
 				FCE2A8FD25E02D91001CF1EA /* FaqVC.swift in Sources */,
+				FC826B1725E1263E009BFB91 /* SupplierDetailVC.swift in Sources */,
 				B79773DD25DFB26B00DBE149 /* CameraController.swift in Sources */,
 				B79773E225DFB7B800DBE149 /* ImagePicker.swift in Sources */,
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
