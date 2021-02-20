@@ -40,6 +40,11 @@ class ScheduleVC: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     func configureView() {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -143,6 +148,12 @@ class ScheduleVC: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
           return .lightContent
+    }
+    
+    @IBAction func settingTap(_ sender: Any) {
+        let settingVC = SettingVC()
+        settingVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(settingVC, animated: true)
     }
 }
 
