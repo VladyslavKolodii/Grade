@@ -12,6 +12,7 @@ class GradingInventoryVC: UIViewController {
     @IBOutlet weak var plantMatterUB: UIButton!
     @IBOutlet weak var extractUB: UIButton!
     @IBOutlet weak var entryNameTF: UITextField!
+    @IBOutlet weak var lotIDLB: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,4 +46,15 @@ class GradingInventoryVC: UIViewController {
         }
     }
     
+    @IBAction func onTtapQRUB(_ sender: Any) {
+        let vc = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryScanVC") as! GradingInventoryScanVC
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+}
+
+extension GradingInventoryVC: GradingQRScanDelegate {
+    func returnScanValue(val: String) {
+        lotIDLB.text = val
+    }
 }

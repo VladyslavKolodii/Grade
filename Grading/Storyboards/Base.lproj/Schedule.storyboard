@@ -21,6 +21,62 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Grading Inventory ScanVC-->
+        <scene sceneID="PTi-8T-bjC">
+            <objects>
+                <viewController storyboardIdentifier="GradingInventoryScanVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="VpZ-98-ncU" customClass="GradingInventoryScanVC" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJT-2m-6fv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rav-iP-TIC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUo-HY-qjR">
+                                        <rect key="frame" x="8" y="70" width="60" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="i3W-1Y-ouP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="arrow_left_white">
+                                            <color key="titleColor" name="appwhiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTapBackUB:" destination="VpZ-98-ncU" eventType="touchUpInside" id="OlA-pc-jfD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR or Bar Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-Xl-kxT">
+                                        <rect key="frame" x="100" y="68.666666666666671" width="175" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="appwhiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Z4e-Xl-kxT" firstAttribute="centerY" secondItem="hUo-HY-qjR" secondAttribute="centerY" id="7tl-c8-XRV"/>
+                                    <constraint firstAttribute="bottom" secondItem="hUo-HY-qjR" secondAttribute="bottom" constant="12" id="AsE-Rh-VI9"/>
+                                    <constraint firstItem="Z4e-Xl-kxT" firstAttribute="centerX" secondItem="rav-iP-TIC" secondAttribute="centerX" id="CEj-dW-X2b"/>
+                                    <constraint firstItem="hUo-HY-qjR" firstAttribute="leading" secondItem="rav-iP-TIC" secondAttribute="leading" constant="8" id="MM0-3o-DRk"/>
+                                    <constraint firstAttribute="height" constant="100" id="UM4-1p-eWX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3NO-bm-L3J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rav-iP-TIC" firstAttribute="centerX" secondItem="3NO-bm-L3J" secondAttribute="centerX" id="7Jd-s5-Bxq"/>
+                            <constraint firstItem="rav-iP-TIC" firstAttribute="top" secondItem="OJT-2m-6fv" secondAttribute="top" id="IY5-9M-hMR"/>
+                            <constraint firstItem="rav-iP-TIC" firstAttribute="leading" secondItem="3NO-bm-L3J" secondAttribute="leading" id="bxC-VW-NKh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEq-kX-KMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="798"/>
+        </scene>
         <!--Grading InventoryVC-->
         <scene sceneID="gHu-YE-Vgf">
             <objects>
@@ -128,6 +184,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="appSecondaryColor"/>
                                                 <state key="normal" backgroundImage="qrcode.viewfinder" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onTtapQRUB:" destination="4Hc-b9-5Da" eventType="touchUpInside" id="cCE-CW-ird"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="appGrey4Color"/>
@@ -327,6 +386,7 @@
                     <connections>
                         <outlet property="entryNameTF" destination="OK5-Kd-bKR" id="1q9-q7-RYe"/>
                         <outlet property="extractUB" destination="Lf3-qV-oIN" id="IvC-CI-eie"/>
+                        <outlet property="lotIDLB" destination="9ac-HE-iO4" id="jEK-UL-M3v"/>
                         <outlet property="plantMatterUB" destination="sLU-qB-ahP" id="U1R-Oh-NbT"/>
                     </connections>
                 </viewController>

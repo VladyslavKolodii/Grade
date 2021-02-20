@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */; };
+		4536217E25E17A7900C4B45A /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536217D25E17A7900C4B45A /* SquareView.swift */; };
 		453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */; };
 		453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */; };
 		453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8125E1596D00F9F220 /* GradingVC.swift */; };
@@ -82,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryScanVC.swift; sourceTree = "<group>"; };
+		4536217D25E17A7900C4B45A /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectInfoVC.swift; sourceTree = "<group>"; };
 		453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectIemVC.swift; sourceTree = "<group>"; };
 		453D0F8125E1596D00F9F220 /* GradingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingVC.swift; sourceTree = "<group>"; };
@@ -176,6 +180,24 @@
 				0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4536217A25E1787500C4B45A /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				4536217D25E17A7900C4B45A /* SquareView.swift */,
+				457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */,
+				4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */,
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		4536218525E17E3100C4B45A /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				45760C4825E10A89000E7C3D /* GradingProductVC.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		453D0F7125E13D3800F9F220 /* Defect */ = {
@@ -297,8 +319,8 @@
 				B79773E725DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift */,
 				B79773EA25DFBA9800DBE149 /* LotCompleteViewController.swift */,
 				B79773ED25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift */,
-				457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */,
-				45760C4825E10A89000E7C3D /* GradingProductVC.swift */,
+				4536218525E17E3100C4B45A /* Product */,
+				4536217A25E1787500C4B45A /* Inventory */,
 				453D0F7125E13D3800F9F220 /* Defect */,
 				453D0F8725E1684E00F9F220 /* Grading */,
 			);
@@ -681,6 +703,7 @@
 				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
 				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
+				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
 				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
@@ -712,6 +735,7 @@
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
 				453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */,
+				4536217E25E17A7900C4B45A /* SquareView.swift in Sources */,
 				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
 				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);
@@ -861,9 +885,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -872,7 +896,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -884,9 +908,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -895,7 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
