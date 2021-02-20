@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */; };
+		453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */; };
+		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
+		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
+		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
 		457EF60225E09D290051AF10 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F525E09D290051AF10 /* LocationCell.swift */; };
 		457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F625E09D290051AF10 /* LocationNotesCell.swift */; };
 		457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F725E09D290051AF10 /* LocationDetailVC.swift */; };
@@ -74,6 +79,11 @@
 
 /* Begin PBXFileReference section */
 		0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectInfoVC.swift; sourceTree = "<group>"; };
+		453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectIemVC.swift; sourceTree = "<group>"; };
+		45760C4825E10A89000E7C3D /* GradingProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProductVC.swift; sourceTree = "<group>"; };
+		45760C5525E1242D000E7C3D /* GradingDefectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectVC.swift; sourceTree = "<group>"; };
+		457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryVC.swift; sourceTree = "<group>"; };
 		457EF5F525E09D290051AF10 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		457EF5F625E09D290051AF10 /* LocationNotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotesCell.swift; sourceTree = "<group>"; };
 		457EF5F725E09D290051AF10 /* LocationDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailVC.swift; sourceTree = "<group>"; };
@@ -160,6 +170,16 @@
 				0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		453D0F7125E13D3800F9F220 /* Defect */ = {
+			isa = PBXGroup;
+			children = (
+				45760C5525E1242D000E7C3D /* GradingDefectVC.swift */,
+				453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */,
+				453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */,
+			);
+			path = Defect;
 			sourceTree = "<group>";
 		};
 		457EF5F225E09D290051AF10 /* Schedule */ = {
@@ -261,6 +281,9 @@
 				B79773E725DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift */,
 				B79773EA25DFBA9800DBE149 /* LotCompleteViewController.swift */,
 				B79773ED25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift */,
+				457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */,
+				45760C4825E10A89000E7C3D /* GradingProductVC.swift */,
+				453D0F7125E13D3800F9F220 /* Defect */,
 			);
 			path = GradingProcess;
 			sourceTree = "<group>";
@@ -623,10 +646,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
+				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
 				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
+				45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */,
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
@@ -636,6 +661,7 @@
 				FCE2A90625E02D9F001CF1EA /* SupplierHeaderCell.swift in Sources */,
 				FCE2A90525E02D9F001CF1EA /* SupplierCell.swift in Sources */,
 				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
+				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
@@ -660,10 +686,12 @@
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
 				FCE2A8FD25E02D91001CF1EA /* FaqVC.swift in Sources */,
+				457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */,
 				B79773DD25DFB26B00DBE149 /* CameraController.swift in Sources */,
 				B79773E225DFB7B800DBE149 /* ImagePicker.swift in Sources */,
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
+				453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */,
 				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
 				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);
