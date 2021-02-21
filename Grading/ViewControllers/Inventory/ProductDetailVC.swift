@@ -57,7 +57,9 @@ extension ProductDetailVC : UICollectionViewDataSource,UICollectionViewDelegate,
         return CGSize(width: 85 , height: 85)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let vc = PhotoControlVC.instantiate(from: .schedule)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
