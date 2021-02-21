@@ -10,5 +10,7 @@ target 'Grading' do
   pod 'FSCalendar'
   pod 'SwifterSwift'
   pod 'IQKeyboardManagerSwift'
+  pod 'StepSlider'
+  pod 'ASValueTrackingSlider'
 
 end

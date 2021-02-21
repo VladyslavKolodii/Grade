@@ -11,6 +11,9 @@ class GradingProcessViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var leftUB: UIButton!
+    @IBOutlet weak var titleLB: UILabel!
+    @IBOutlet weak var rightUB: UIButton!
     
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
@@ -18,7 +21,7 @@ class GradingProcessViewController: UIViewController {
     private var currentIndex: Int = 0 {
         didSet {
             pageControl.currentPage = currentIndex
-            navigationItem.title = pageTitle[currentIndex]
+            titleLB.text = pageTitle[currentIndex]
         }
     }
     
@@ -63,20 +66,16 @@ extension GradingProcessViewController {
     
     private func setupPageController() {
         
-        let inventoryVC = UIViewController()
-        inventoryVC.view.backgroundColor = .clear
+        let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
         
-        let productVC = UIViewController()
-        productVC.view.backgroundColor = .cyan
+        let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
         
         let materialPhotosVC = UIViewController()
         materialPhotosVC.view.backgroundColor = .purple
         
-        let gradingVC = UIViewController()
-        gradingVC.view.backgroundColor = .systemPink
+        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
         
-        let defectsVC = UIViewController()
-        defectsVC.view.backgroundColor = .darkGray
+        let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
         
         let labResultsVC = GradingProcessLabSeletedViewController.instantiate(from: .schedule)
         
@@ -104,7 +103,7 @@ extension GradingProcessViewController {
             }
         }
         
-        self.navigationItem.title = pageTitle[0]
+        self.titleLB.text = pageTitle[0]
     }
 }
 
