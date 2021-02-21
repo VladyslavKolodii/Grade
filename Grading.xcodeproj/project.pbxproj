@@ -67,6 +67,10 @@
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
+		FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17425E2160500EA251A /* InventoryCell.swift */; };
+		FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */; };
+		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
+		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -147,6 +151,10 @@
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
+		FC60C17425E2160500EA251A /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierProfileVC.swift; sourceTree = "<group>"; };
+		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
+		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -476,6 +484,8 @@
 		BCE06FF425CED1DD0071CD3C /* Suppliers */ = {
 			isa = PBXGroup;
 			children = (
+				FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */,
+				FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */,
 				FCE2A90325E02D9F001CF1EA /* SupplierCell.swift */,
 				FCE2A90425E02D9F001CF1EA /* SupplierHeaderCell.swift */,
 				BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */,
@@ -486,6 +496,8 @@
 		BCE06FF925CED1F20071CD3C /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				FC60C17425E2160500EA251A /* InventoryCell.swift */,
+				FC60C17C25E2345600EA251A /* ProductDetailVC.swift */,
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
 			);
 			path = Inventory;
@@ -692,6 +704,7 @@
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
 				45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */,
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
+				FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
@@ -706,12 +719,14 @@
 				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
 				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
+				FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
+				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
@@ -727,6 +742,7 @@
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
+				FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
 				FCE2A8FD25E02D91001CF1EA /* FaqVC.swift in Sources */,
 				457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */,
