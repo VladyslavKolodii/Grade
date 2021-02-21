@@ -55,6 +55,8 @@ extension InventoryVC: UITableViewDelegate {
         return 61
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let vc = ProductDetailVC.instantiate(from: .inventory)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

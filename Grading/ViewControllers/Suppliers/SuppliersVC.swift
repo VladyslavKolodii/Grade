@@ -73,6 +73,8 @@ extension SuppliersVC: UITableViewDelegate {
         return 45
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(SupplierProfileVC.instantiate(from: .suppliers), animated: true)
+        let vc = SupplierProfileVC.instantiate(from: .suppliers)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

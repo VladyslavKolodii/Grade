@@ -4,6 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - ASValueTrackingSlider (0.12.1)
   - FSCalendar (2.8.2)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
@@ -18,6 +19,7 @@ PODS:
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - StepSlider (1.8.0)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -45,30 +47,36 @@ PODS:
   - SwifterSwift/UIKit (5.2.0)
 
 DEPENDENCIES:
+  - ASValueTrackingSlider
   - FSCalendar
   - GoogleSignIn
   - IQKeyboardManagerSwift
+  - StepSlider
   - SwifterSwift
 
 SPEC REPOS:
   trunk:
     - AppAuth
+    - ASValueTrackingSlider
     - FSCalendar
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - StepSlider
     - SwifterSwift
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  ASValueTrackingSlider: 5261de3fcf00adb339efc93885e8f0bc99e703cd
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 5fab281cbe6f9ebe19d8e838ad47bf6880dd2d2e
+PODFILE CHECKSUM: 6bc1f09c3ce76fba93dd7e117e1edc1512c4fae3
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0

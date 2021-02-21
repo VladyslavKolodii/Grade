@@ -49,6 +49,7 @@ class LoginVC: UIViewController {
     
     @IBAction func googleSignIn(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
+//        loginSuccess()
     }
     
     @IBAction func emailTap(_ sender: Any) {

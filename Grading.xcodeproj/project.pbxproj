@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */; };
+		4536217E25E17A7900C4B45A /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536217D25E17A7900C4B45A /* SquareView.swift */; };
+		453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */; };
+		453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */; };
+		453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8125E1596D00F9F220 /* GradingVC.swift */; };
+		453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8425E1684700F9F220 /* GradingInfoVC.swift */; };
+		453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */; };
+		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
+		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
+		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
 		457EF60225E09D290051AF10 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F525E09D290051AF10 /* LocationCell.swift */; };
 		457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F625E09D290051AF10 /* LocationNotesCell.swift */; };
 		457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5F725E09D290051AF10 /* LocationDetailVC.swift */; };
@@ -57,9 +67,10 @@
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
-		FC826B1725E1263E009BFB91 /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */; };
-		FC859E3125E0EFB500FC76B5 /* SupplierProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */; };
-		FCCB95EF25E1505200123FE1 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB95EE25E1505200123FE1 /* InventoryCell.swift */; };
+		FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17425E2160500EA251A /* InventoryCell.swift */; };
+		FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */; };
+		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
+		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -77,6 +88,16 @@
 
 /* Begin PBXFileReference section */
 		0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryScanVC.swift; sourceTree = "<group>"; };
+		4536217D25E17A7900C4B45A /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectInfoVC.swift; sourceTree = "<group>"; };
+		453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectIemVC.swift; sourceTree = "<group>"; };
+		453D0F8125E1596D00F9F220 /* GradingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingVC.swift; sourceTree = "<group>"; };
+		453D0F8425E1684700F9F220 /* GradingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInfoVC.swift; sourceTree = "<group>"; };
+		453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingItemVC.swift; sourceTree = "<group>"; };
+		45760C4825E10A89000E7C3D /* GradingProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProductVC.swift; sourceTree = "<group>"; };
+		45760C5525E1242D000E7C3D /* GradingDefectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectVC.swift; sourceTree = "<group>"; };
+		457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryVC.swift; sourceTree = "<group>"; };
 		457EF5F525E09D290051AF10 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		457EF5F625E09D290051AF10 /* LocationNotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotesCell.swift; sourceTree = "<group>"; };
 		457EF5F725E09D290051AF10 /* LocationDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailVC.swift; sourceTree = "<group>"; };
@@ -130,9 +151,10 @@
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
-		FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
-		FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierProfileVC.swift; sourceTree = "<group>"; };
-		FCCB95EE25E1505200123FE1 /* InventoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		FC60C17425E2160500EA251A /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierProfileVC.swift; sourceTree = "<group>"; };
+		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
+		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -166,6 +188,44 @@
 				0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4536217A25E1787500C4B45A /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				4536217D25E17A7900C4B45A /* SquareView.swift */,
+				457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */,
+				4536217725E1784500C4B45A /* GradingInventoryScanVC.swift */,
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		4536218525E17E3100C4B45A /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				45760C4825E10A89000E7C3D /* GradingProductVC.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		453D0F7125E13D3800F9F220 /* Defect */ = {
+			isa = PBXGroup;
+			children = (
+				45760C5525E1242D000E7C3D /* GradingDefectVC.swift */,
+				453D0F6E25E13D3000F9F220 /* GradingDefectInfoVC.swift */,
+				453D0F7325E14A6000F9F220 /* GradingDefectIemVC.swift */,
+			);
+			path = Defect;
+			sourceTree = "<group>";
+		};
+		453D0F8725E1684E00F9F220 /* Grading */ = {
+			isa = PBXGroup;
+			children = (
+				453D0F8125E1596D00F9F220 /* GradingVC.swift */,
+				453D0F8425E1684700F9F220 /* GradingInfoVC.swift */,
+				453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */,
+			);
+			path = Grading;
 			sourceTree = "<group>";
 		};
 		457EF5F225E09D290051AF10 /* Schedule */ = {
@@ -267,6 +327,10 @@
 				B79773E725DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift */,
 				B79773EA25DFBA9800DBE149 /* LotCompleteViewController.swift */,
 				B79773ED25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift */,
+				4536218525E17E3100C4B45A /* Product */,
+				4536217A25E1787500C4B45A /* Inventory */,
+				453D0F7125E13D3800F9F220 /* Defect */,
+				453D0F8725E1684E00F9F220 /* Grading */,
 			);
 			path = GradingProcess;
 			sourceTree = "<group>";
@@ -420,11 +484,11 @@
 		BCE06FF425CED1DD0071CD3C /* Suppliers */ = {
 			isa = PBXGroup;
 			children = (
-				FC826B1625E1263E009BFB91 /* SupplierDetailVC.swift */,
+				FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */,
+				FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */,
 				FCE2A90325E02D9F001CF1EA /* SupplierCell.swift */,
 				FCE2A90425E02D9F001CF1EA /* SupplierHeaderCell.swift */,
 				BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */,
-				FC859E3025E0EFB500FC76B5 /* SupplierProfileVC.swift */,
 			);
 			path = Suppliers;
 			sourceTree = "<group>";
@@ -432,8 +496,9 @@
 		BCE06FF925CED1F20071CD3C /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				FC60C17425E2160500EA251A /* InventoryCell.swift */,
+				FC60C17C25E2345600EA251A /* ProductDetailVC.swift */,
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
-				FCCB95EE25E1505200123FE1 /* InventoryCell.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -450,8 +515,8 @@
 		FCE2A8EA25E02D91001CF1EA /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
-				FCE2A8EC25E02D91001CF1EA /* Cells */,
 				FCE2A8EB25E02D91001CF1EA /* FaqVC.xib */,
+				FCE2A8EC25E02D91001CF1EA /* Cells */,
 				FCE2A8EF25E02D91001CF1EA /* FaqVC.swift */,
 			);
 			path = FAQ;
@@ -631,34 +696,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCB95EF25E1505200123FE1 /* InventoryCell.swift in Sources */,
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
+				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
 				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
+				45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */,
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
+				FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
+				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
 				457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */,
 				FCE2A90625E02D9F001CF1EA /* SupplierHeaderCell.swift in Sources */,
 				FCE2A90525E02D9F001CF1EA /* SupplierCell.swift in Sources */,
 				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
+				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
+				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
+				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
+				FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
-				FC859E3125E0EFB500FC76B5 /* SupplierProfileVC.swift in Sources */,
+				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
 				B79773D625DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift in Sources */,
+				453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */,
 				B79773D925DFB08D00DBE149 /* GradingProcessLabPhotoPreviewViewController.swift in Sources */,
 				FCE2A8FF25E02D91001CF1EA /* ContactVC.swift in Sources */,
 				B79773D225DFA54400DBE149 /* BaseNavigationController.swift in Sources */,
@@ -669,13 +742,16 @@
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
+				FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
 				FCE2A8FD25E02D91001CF1EA /* FaqVC.swift in Sources */,
-				FC826B1725E1263E009BFB91 /* SupplierDetailVC.swift in Sources */,
+				457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */,
 				B79773DD25DFB26B00DBE149 /* CameraController.swift in Sources */,
 				B79773E225DFB7B800DBE149 /* ImagePicker.swift in Sources */,
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
+				453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */,
+				4536217E25E17A7900C4B45A /* SquareView.swift in Sources */,
 				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
 				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);
@@ -825,9 +901,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -836,7 +912,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -848,9 +924,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -859,7 +935,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

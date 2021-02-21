@@ -16,7 +16,9 @@ class SupplierProfileVC: BaseVC {
     }
     
     @IBAction func detailTap(_ sender: Any) {
-        navigationController?.pushViewController(SupplierDetailVC.instantiate(from: .suppliers), animated: true)
+        let vc = SupplierDetailVC.instantiate(from: .suppliers)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func backTap(_ sender: Any) {
