@@ -12,5 +12,6 @@ target 'Grading' do
   pod 'IQKeyboardManagerSwift'
   pod 'StepSlider'
   pod 'ASValueTrackingSlider'
+  pod "AlignedCollectionViewFlowLayout"
 
 end

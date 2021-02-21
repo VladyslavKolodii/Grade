@@ -1,4 +1,5 @@
 PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -47,6 +48,7 @@ PODS:
   - SwifterSwift/UIKit (5.2.0)
 
 DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
   - ASValueTrackingSlider
   - FSCalendar
   - GoogleSignIn
@@ -56,6 +58,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AlignedCollectionViewFlowLayout
     - AppAuth
     - ASValueTrackingSlider
     - FSCalendar
@@ -67,6 +70,7 @@ SPEC REPOS:
     - SwifterSwift
 
 SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   ASValueTrackingSlider: 5261de3fcf00adb339efc93885e8f0bc99e703cd
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
@@ -77,6 +81,6 @@ SPEC CHECKSUMS:
   StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 6bc1f09c3ce76fba93dd7e117e1edc1512c4fae3
+PODFILE CHECKSUM: 448f1e41c317b7d0cf1c0cd83a53162280ef60c8
 
 COCOAPODS: 1.10.0
