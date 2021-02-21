@@ -11,7 +11,10 @@ class SortTypeVC: BaseVC {
 
     @IBOutlet weak var tbMain: UITableView!
     let types = ["Date Graded", "Price","Total Grade", "Product Type","Grader", "Quantity"]
-
+    
+    var onValueChanged: ((String) ->())?
+    var value: String = "Date Graded"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +25,7 @@ class SortTypeVC: BaseVC {
     }
     
     @IBAction func onTapSave(_ sender: Any) {
+        self.onValueChanged?(value)
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -48,6 +52,6 @@ extension SortTypeVC: UITableViewDelegate {
         return 50
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        value = types[indexPath.row]
     }
 }

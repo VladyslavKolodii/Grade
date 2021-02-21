@@ -27,7 +27,7 @@ class ContactVC: BaseVC {
     }
     
     func configureView() {
-        self.navigationItem.title = "Account"
+        self.navigationItem.title = "Contact Verdica"
     }
 
 }

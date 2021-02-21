@@ -13,6 +13,10 @@ class FilterInventoryVC: BaseVC {
     @IBOutlet weak var containerUV: UIView!
     @IBOutlet weak var dateLB: UILabel!
     @IBOutlet weak var calendarUV: FSCalendar!
+    @IBOutlet weak var lbSortBy: UILabel!
+    @IBOutlet weak var lbGrader: UILabel!
+    @IBOutlet weak var lbProductType: UILabel!
+    @IBOutlet weak var lbProgress: UILabel!
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -20,26 +24,15 @@ class FilterInventoryVC: BaseVC {
         return formatter
     }()
     
-    
     var firstDate: Date?
     var lastDate: Date?
     var datesRange: [Date]?
+    var productTypeValues = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIView()
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     func initUIView() {
         
@@ -75,6 +68,33 @@ class FilterInventoryVC: BaseVC {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onTapClearAll(_ sender: Any) {
+        productTypeValues = ["A flower"]
+        lbSortBy.text = "Date Graded"
+        lbGrader.text = "Any"
+        lbProgress.text = "Any"
+        lbProductType.text = productTypeValues.joined(separator: ", ")
+    }
+    
+    @IBAction func productTypeTap(_ sender: Any) {
+        let vc = ProductTypeVC.instantiate(from: .inventory)
+        vc.hidesBottomBarWhenPushed = true
+        vc.modalPresentationStyle = .fullScreen
+        vc.onValueChanged = { productTypeValues in
+            self.lbProductType.text = productTypeValues.joined(separator: ", ")
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func sortTypeTap(_ sender: Any) {
+        let vc = SortTypeVC.instantiate(from: .inventory)
+        vc.hidesBottomBarWhenPushed = true
+        vc.modalPresentationStyle = .fullScreen
+        vc.onValueChanged = { type in
+            self.lbSortBy.text = type
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func datesRange(from: Date, to: Date) -> [Date] {
         // in case of the "from" date is more than "to" date,
         // it should returns an empty array:
@@ -90,19 +110,6 @@ class FilterInventoryVC: BaseVC {
         
         return array
     }
-    @IBAction func productTypeTap(_ sender: Any) {
-        let vc = ProductTypeVC.instantiate(from: .inventory)
-        vc.hidesBottomBarWhenPushed = true
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    @IBAction func sortTypeTap(_ sender: Any) {
-        let vc = SortTypeVC.instantiate(from: .inventory)
-        vc.hidesBottomBarWhenPushed = true
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    
 }
 
 extension FilterInventoryVC: FSCalendarDelegate {

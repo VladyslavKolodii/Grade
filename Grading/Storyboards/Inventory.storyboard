@@ -57,14 +57,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SupplierHeaderCell" id="FOv-Rs-5l3" customClass="SupplierHeaderCell" customModule="Grading" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="22"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="21"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOv-Rs-5l3" id="vGS-BW-XHz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evN-F2-GTI">
-                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="22"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InventoryCell" rowHeight="61" id="W1Q-Tt-4my" customClass="InventoryCell" customModule="Grading" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="77.5" width="414" height="61"/>
+                                        <rect key="frame" x="0.0" y="76.5" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W1Q-Tt-4my" id="XoL-5h-bpV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
@@ -105,13 +105,13 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/14/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-w0-Y7L">
-                                                                            <rect key="frame" x="10.5" y="4" width="59" height="13.5"/>
+                                                                            <rect key="frame" x="10.5" y="4" width="56.5" height="13"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                                             <color key="textColor" name="Gray3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purple Haze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nw-xP-SZT">
-                                                                            <rect key="frame" x="10.5" y="21.5" width="159.5" height="17.5"/>
+                                                                            <rect key="frame" x="10.5" y="22" width="159.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                             <color key="textColor" name="SecondaryBlue"/>
                                                                             <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixed Material  ·  26501 g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="n93-Rj-1FW">
-                                                                            <rect key="frame" x="10.5" y="42.5" width="164.5" height="13.5"/>
+                                                                            <rect key="frame" x="10.5" y="43" width="164.5" height="13"/>
                                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                                             <color key="textColor" name="Gray4"/>
                                                                             <nil key="highlightedColor"/>
@@ -150,14 +150,14 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-v9-PmT">
                                                                             <rect key="frame" x="5.5" y="14.5" width="67.5" height="31"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appraised (g)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-3V-nuC">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="13.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Appraised (g)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-3V-nuC">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="14.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                                                     <color key="textColor" name="Gray3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-rI-BO5">
-                                                                                    <rect key="frame" x="0.0" y="13.5" width="67.5" height="17.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-rI-BO5">
+                                                                                    <rect key="frame" x="0.0" y="14.5" width="67.5" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                                     <color key="textColor" name="Gray5"/>
                                                                                     <nil key="highlightedColor"/>
@@ -190,14 +190,14 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-Bb-glh">
                                                                             <rect key="frame" x="5.5" y="14.5" width="67.5" height="31"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List (per/g)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iju-iQ-SrG">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="13.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="List (per/g)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iju-iQ-SrG">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="14.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                                                     <color key="textColor" name="Gray3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-3g-noB">
-                                                                                    <rect key="frame" x="0.0" y="13.5" width="67.5" height="17.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-3g-noB">
+                                                                                    <rect key="frame" x="0.0" y="14.5" width="67.5" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                                     <color key="textColor" name="Gray5"/>
                                                                                     <nil key="highlightedColor"/>
@@ -230,14 +230,14 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-m2-jej">
                                                                             <rect key="frame" x="5.5" y="14.5" width="67.5" height="31"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sK-tt-76T">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="13.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="List Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sK-tt-76T">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="14.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                                                     <color key="textColor" name="Gray3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$320.59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-dr-qc9">
-                                                                                    <rect key="frame" x="0.0" y="13.5" width="67.5" height="17.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$320.59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-dr-qc9">
+                                                                                    <rect key="frame" x="0.0" y="14.5" width="67.5" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                                     <color key="textColor" name="Gray5"/>
                                                                                     <nil key="highlightedColor"/>
@@ -306,7 +306,7 @@
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.074509803920000006" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPT-Kb-yNi">
-                                        <rect key="frame" x="164" y="13" width="86" height="24.5"/>
+                                        <rect key="frame" x="165.5" y="13.5" width="83" height="23.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -414,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5L-E4-1Py" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-283"/>
+            <point key="canvasLocation" x="262" y="-374"/>
         </scene>
         <!--Product DetailVC-->
         <scene sceneID="yFx-oz-tqb">
@@ -441,32 +441,32 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purple Haze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubm-R0-AR4">
-                                                        <rect key="frame" x="128.5" y="85" width="157" height="35.5"/>
+                                                        <rect key="frame" x="125.5" y="85" width="163.5" height="35"/>
                                                         <fontDescription key="fontDescription" name="ProximaNovaT-Thin" family="Proxima Nova" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDAFWM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKQ-M4-fju">
-                                                        <rect key="frame" x="179" y="125.5" width="56" height="17.5"/>
+                                                        <rect key="frame" x="179" y="125" width="56" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgT-sE-kzy">
-                                                        <rect key="frame" x="180.5" y="143" width="53" height="13.5"/>
+                                                        <rect key="frame" x="180.5" y="141.5" width="53" height="13"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
                                                         <color key="textColor" name="appGrey3Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-qQ-OpC">
-                                                        <rect key="frame" x="15" y="166" width="384" height="0.5"/>
+                                                        <rect key="frame" x="15" y="164" width="384" height="0.5"/>
                                                         <color key="backgroundColor" name="Gray2"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="dvf-rp-LPT"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-yR-IzX">
-                                                        <rect key="frame" x="15" y="171.5" width="384" height="80"/>
+                                                        <rect key="frame" x="15" y="169.5" width="384" height="80"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-4G-utt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="80"/>
@@ -1170,7 +1170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsp-r4-bF3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728.98550724637687" y="-300"/>
+            <point key="canvasLocation" x="997" y="-311"/>
         </scene>
         <!--Filter InventoryVC-->
         <scene sceneID="GUr-rr-cAr">
@@ -1197,7 +1197,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-PT-NRg">
-                                        <rect key="frame" x="16" y="30" width="56" height="30"/>
+                                        <rect key="frame" x="16" y="30" width="56" height="33"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" name="appSecondaryColor"/>
@@ -1207,7 +1207,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gly-kd-8K3">
-                                        <rect key="frame" x="358" y="30" width="40" height="30"/>
+                                        <rect key="frame" x="358" y="30" width="40" height="33"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" name="appSecondaryColor"/>
@@ -1217,10 +1217,10 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kc6-LF-7ar">
-                                        <rect key="frame" x="0.0" y="70" width="414" height="782"/>
+                                        <rect key="frame" x="0.0" y="73" width="414" height="779"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nT0-fB-4Ro">
-                                                <rect key="frame" x="0.0" y="8" width="414" height="1002"/>
+                                                <rect key="frame" x="0.0" y="8" width="414" height="1000.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-yI-r1h">
                                                         <rect key="frame" x="16" y="10" width="382" height="45"/>
@@ -1296,14 +1296,14 @@
                                                         </constraints>
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="xzz-fq-id3">
-                                                        <rect key="frame" x="30" y="226" width="30" height="30"/>
+                                                        <rect key="frame" x="30" y="224.5" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="F7z-Rc-YBr"/>
                                                             <constraint firstAttribute="height" constant="30" id="Oaj-Ck-6eb"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FpY-Og-PkR">
-                                                        <rect key="frame" x="68" y="225" width="326" height="32"/>
+                                                        <rect key="frame" x="68" y="223.5" width="326" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHz-7x-sp7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="326" height="19"/>
@@ -1326,7 +1326,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Muz-rC-YoP" customClass="FSCalendar">
-                                                        <rect key="frame" x="30" y="277" width="354" height="300"/>
+                                                        <rect key="frame" x="30" y="275.5" width="354" height="300"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="GgM-pF-aPR"/>
@@ -1350,14 +1350,14 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-EU-tYJ">
-                                                        <rect key="frame" x="40" y="287" width="8.5" height="22"/>
+                                                        <rect key="frame" x="40" y="285.5" width="8.5" height="22"/>
                                                         <state key="normal" image="arrow_left_white"/>
                                                         <connections>
                                                             <action selector="onTapCalenderControlUB:" destination="Q9I-sa-ttz" eventType="touchUpInside" id="RUN-UO-ekO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csk-Va-V3A">
-                                                        <rect key="frame" x="365.5" y="287" width="8.5" height="22"/>
+                                                        <rect key="frame" x="365.5" y="285.5" width="8.5" height="22"/>
                                                         <state key="normal" image="arrow_right_white"/>
                                                         <connections>
                                                             <action selector="onTapCalenderControlUB:" destination="Q9I-sa-ttz" eventType="touchUpInside" id="Mvb-QG-BSD"/>
@@ -1381,9 +1381,12 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="onTapClearAll:" destination="Q9I-sa-ttz" eventType="touchUpInside" id="wuC-Ov-x7H"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LC-V4-Nem">
-                                                        <rect key="frame" x="0.0" y="126" width="414" height="79"/>
+                                                        <rect key="frame" x="0.0" y="126" width="414" height="77.5"/>
                                                         <color key="backgroundColor" name="iOSInputBlack"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently filtering by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf9-eS-Gqj">
@@ -1397,13 +1400,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grader, Product Type, Process, Price, Total THC, and Grading Score." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-87-cyy">
-                                                        <rect key="frame" x="16" y="160.5" width="382" height="34.5"/>
+                                                        <rect key="frame" x="16" y="160.5" width="382" height="33"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-SO-53e">
-                                                        <rect key="frame" x="16" y="602" width="382" height="350"/>
+                                                        <rect key="frame" x="16" y="600.5" width="382" height="350"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmm-9j-qVz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
@@ -1632,15 +1635,15 @@
                                                                         <rect key="frame" x="10" y="0.0" width="362" height="45.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-Ri-EbJ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="45.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="138" height="45.5"/>
                                                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A-Flower" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-mp-cIZ">
-                                                                                <rect key="frame" x="190" y="0.0" width="150" height="45.5"/>
+                                                                                <rect key="frame" x="140" y="0.0" width="200" height="45.5"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="150" id="iyU-kn-unz"/>
+                                                                                    <constraint firstAttribute="width" constant="200" id="iyU-kn-unz"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                 <color key="textColor" name="appGrey3Color"/>
@@ -1828,6 +1831,10 @@
                         <outlet property="calendarUV" destination="Muz-rC-YoP" id="QvJ-Q0-44n"/>
                         <outlet property="containerUV" destination="qnA-ct-7Ye" id="ze6-BW-kmi"/>
                         <outlet property="dateLB" destination="PCD-fw-qLp" id="DrS-HW-YXU"/>
+                        <outlet property="lbGrader" destination="6N1-gX-dNc" id="v42-Vn-QgR"/>
+                        <outlet property="lbProductType" destination="5qK-mp-cIZ" id="7cC-tS-Lwt"/>
+                        <outlet property="lbProgress" destination="9PJ-al-wrT" id="3m8-IO-oFs"/>
+                        <outlet property="lbSortBy" destination="dHP-Ro-OKd" id="jrw-mQ-ZAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTt-A0-TK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1854,7 +1861,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-et-l00">
-                                                    <rect key="frame" x="15" y="0.0" width="43" height="76"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="76"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1909,7 +1916,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHw-oO-enb">
-                                                    <rect key="frame" x="15" y="0.0" width="43" height="76"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="76"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1972,7 +1979,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s1-SQ-d3S">
-                                        <rect key="frame" x="147" y="13" width="120.5" height="24.5"/>
+                                        <rect key="frame" x="148" y="13.5" width="118.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2089,7 +2096,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTD-kt-X6t">
-                                                    <rect key="frame" x="15" y="0.0" width="43" height="76"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44.5" height="76"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -2152,7 +2159,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdH-aJ-xoy">
-                                        <rect key="frame" x="174" y="13" width="66.5" height="24.5"/>
+                                        <rect key="frame" x="173.5" y="13.5" width="67" height="23.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

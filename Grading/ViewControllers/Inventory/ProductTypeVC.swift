@@ -9,12 +9,16 @@ import UIKit
 
 class ProductTypeVC: BaseVC {
 
+
     @IBOutlet weak var segment: WMSegment!
     @IBOutlet weak var tbMaster: UITableView!
     @IBOutlet weak var tbExtract: UITableView!
+    var onValueChanged: (([String]) ->())?
+
     let masters = ["A-Flower", "B-Flower","Trim", "Mixed Material","Fan Leaf", "Fresh Frozen","Clone", "Crude","Pre-Roll", "Other"]
     let extracts = ["Crumble", "Diamonds","Shatter", "Wax","Kief", "Live Resin","RSO", "Distillate","Other"]
-
+    var selectedValues = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,6 +44,7 @@ class ProductTypeVC: BaseVC {
     }
     
     @IBAction func onTapSave(_ sender: Any) {
+        self.onValueChanged?(selectedValues)
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -75,6 +80,20 @@ extension ProductTypeVC: UITableViewDelegate {
         return 50
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if tableView == tbMaster {
+            let value = masters[indexPath.row]
+            if !selectedValues.contains(value) {
+                selectedValues.append(value)
+            } else {
+                selectedValues.removeAll(value)
+            }
+        } else {
+            let value = extracts[indexPath.row]
+            if !selectedValues.contains(value) {
+                selectedValues.append(value)
+            } else {
+                selectedValues.removeAll(value)
+            }
+        }
     }
 }

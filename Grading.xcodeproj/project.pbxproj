@@ -76,6 +76,7 @@
 		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
 		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
 		FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */; };
+		FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA992DC25E2CD0900E05207 /* UIKits.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -165,6 +166,7 @@
 		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInventoryVC.swift; sourceTree = "<group>"; };
+		FCA992DC25E2CD0900E05207 /* UIKits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKits.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		BCE06FF025CED0740071CD3C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FCA992DC25E2CD0900E05207 /* UIKits.swift */,
 				B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */,
 				B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */,
 				B79773C425DF9CF200DBE149 /* UIFontExtestion+Heplers.swift */,
@@ -751,6 +754,7 @@
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
+				FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */,
 				FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
 				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
