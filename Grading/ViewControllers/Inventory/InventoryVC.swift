@@ -22,6 +22,11 @@ class InventoryVC: BaseVC {
         self.tbMain.reloadData()
     }
     @IBAction func filterTap(_ sender: Any) {
+        let vc = FilterInventoryVC.instantiate(from: .inventory)
+        vc.hidesBottomBarWhenPushed = true
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+
     }
     
 }

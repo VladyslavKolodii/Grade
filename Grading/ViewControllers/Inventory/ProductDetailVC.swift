@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductDetailVC: UIViewController {
+class ProductDetailVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ extension ProductDetailVC : UICollectionViewDataSource,UICollectionViewDelegate,
         return CGSize(width: 85 , height: 85)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "photoControlVC", sender: nil)
+        
     }
     
 }

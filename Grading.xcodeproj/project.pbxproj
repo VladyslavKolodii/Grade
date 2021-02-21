@@ -67,10 +67,15 @@
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
+		FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4B25E27C480098E50C /* WMSegment.swift */; };
+		FC13AC4F25E27FB60098E50C /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
+		FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC5125E28C710098E50C /* ProductTypeCell.swift */; };
+		FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50E71325E29F7100062210 /* SortTypeVC.swift */; };
 		FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17425E2160500EA251A /* InventoryCell.swift */; };
 		FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */; };
 		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
 		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
+		FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
 		FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E925E02D91001CF1EA /* BaseVC.swift */; };
@@ -151,10 +156,15 @@
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
 		BCE0700125CED22B0071CD3C /* Inventory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		EE23D3ABD36EED13EED82D01 /* Pods-Grading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.debug.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.debug.xcconfig"; sourceTree = "<group>"; };
+		FC13AC4B25E27C480098E50C /* WMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMSegment.swift; sourceTree = "<group>"; };
+		FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTypeVC.swift; sourceTree = "<group>"; };
+		FC13AC5125E28C710098E50C /* ProductTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTypeCell.swift; sourceTree = "<group>"; };
+		FC50E71325E29F7100062210 /* SortTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortTypeVC.swift; sourceTree = "<group>"; };
 		FC60C17425E2160500EA251A /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
 		FC60C17725E2160F00EA251A /* SupplierProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierProfileVC.swift; sourceTree = "<group>"; };
 		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInventoryVC.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		FCE2A8E925E02D91001CF1EA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -297,6 +307,7 @@
 		B79773B925DF9A2B00DBE149 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				FC13AC4A25E27C480098E50C /* WMSegment */,
 				B79773F025DFBD2E00DBE149 /* CustomUI */,
 				B79773E125DFB7B700DBE149 /* ImagePicker.swift */,
 				B79773DC25DFB26B00DBE149 /* CameraController.swift */,
@@ -496,11 +507,23 @@
 		BCE06FF925CED1F20071CD3C /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				FC50E71325E29F7100062210 /* SortTypeVC.swift */,
 				FC60C17425E2160500EA251A /* InventoryCell.swift */,
+				FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */,
 				FC60C17C25E2345600EA251A /* ProductDetailVC.swift */,
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
+				FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */,
+				FC13AC5125E28C710098E50C /* ProductTypeCell.swift */,
 			);
 			path = Inventory;
+			sourceTree = "<group>";
+		};
+		FC13AC4A25E27C480098E50C /* WMSegment */ = {
+			isa = PBXGroup;
+			children = (
+				FC13AC4B25E27C480098E50C /* WMSegment.swift */,
+			);
+			path = WMSegment;
 			sourceTree = "<group>";
 		};
 		FCE2A8E625E02D91001CF1EA /* Setting */ = {
@@ -699,6 +722,7 @@
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
 				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
+				FC13AC4F25E27FB60098E50C /* ProductTypeVC.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
 				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
@@ -709,10 +733,12 @@
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
+				FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
 				457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */,
 				FCE2A90625E02D9F001CF1EA /* SupplierHeaderCell.swift in Sources */,
 				FCE2A90525E02D9F001CF1EA /* SupplierCell.swift in Sources */,
+				FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */,
 				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
 				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
@@ -725,6 +751,7 @@
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
+				FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
 				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
@@ -740,6 +767,7 @@
 				B79773C925DFA10B00DBE149 /* GradingProcessLabSeletedViewController.swift in Sources */,
 				BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */,
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
+				FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
 				FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */,
