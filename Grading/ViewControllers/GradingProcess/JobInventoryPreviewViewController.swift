@@ -74,10 +74,13 @@ extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewD
             })
             
             let shareAction = UIContextualAction(style: .normal, title: nil, handler: { (action, view, completionHandler) in
+                self.navigationController?.view.makeToast("Share Action")
                 completionHandler(true)
             })
             
             let editAction = UIContextualAction(style: .normal, title: nil, handler: { (action, view, completionHandler) in
+                self.showToast("Edit Action")
+//                self.navigationController?.view.makeToast("Edit Action")
                 completionHandler(true)
             })
 

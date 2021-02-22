@@ -35,6 +35,7 @@
 		B7691D2A25E3527F00CAA999 /* JobInventoryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */; };
 		B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */; };
 		B7691D3525E366CC00CAA999 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D3425E366CC00CAA999 /* CanvasView.swift */; };
+		B7802FF925E3989300D47C4A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7802FF825E3989300D47C4A /* Toast.swift */; };
 		B79773B025DF7F3300DBE149 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79773AF25DF7F3300DBE149 /* Colors.xcassets */; };
 		B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */; };
 		B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */; };
@@ -131,6 +132,7 @@
 		B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryPreviewViewController.swift; sourceTree = "<group>"; };
 		B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProcessLabManualViewController.swift; sourceTree = "<group>"; };
 		B7691D3425E366CC00CAA999 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		B7802FF825E3989300D47C4A /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B79773AF25DF7F3300DBE149 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+Helpers.swift"; sourceTree = "<group>"; };
@@ -348,9 +350,18 @@
 			path = JobInventory;
 			sourceTree = "<group>";
 		};
+		B7802FF725E3989300D47C4A /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				B7802FF825E3989300D47C4A /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		B79773B925DF9A2B00DBE149 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				B7802FF725E3989300D47C4A /* Toast */,
 				FC13AC4A25E27C480098E50C /* WMSegment */,
 				B79773F025DFBD2E00DBE149 /* CustomUI */,
 				B79773E125DFB7B700DBE149 /* ImagePicker.swift */,
@@ -796,6 +807,7 @@
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
 				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
+				B7802FF925E3989300D47C4A /* Toast.swift in Sources */,
 				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
 				FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */,
 				B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */,

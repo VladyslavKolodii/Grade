@@ -9,6 +9,7 @@ import UIKit
 
 protocol GradingProcessDelegate: class {
     func didFinishGradingProcess()
+    func updateRightButtonTitle(_ title: String)
 }
 
 class GradingProcessViewController: UIViewController {
@@ -19,10 +20,12 @@ class GradingProcessViewController: UIViewController {
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
     private var pageTitle: [String] = []
+    private var rightButtonTitle: [String] = []
     private var currentIndex: Int = 0 {
         didSet {
             pageControl.currentPage = currentIndex
             navigationItem.title = pageTitle[currentIndex]
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[currentIndex], style: .plain, target: self, action: #selector(self.skip_continueAction))
         }
     }
     
@@ -49,7 +52,7 @@ class GradingProcessViewController: UIViewController {
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
-    @IBAction func skipAction(_ sender: Any) {
+    @objc private func skip_continueAction() {
         guard currentIndex < pages.count-1 else {
             navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
             return }
@@ -78,22 +81,8 @@ extension GradingProcessViewController {
 
         let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
         
-//        let inventoryVC = UIViewController()
-//        inventoryVC.view.backgroundColor = .clear
-//
-//        let productVC = UIViewController()
-//        productVC.view.backgroundColor = .cyan
-//
-//        let materialPhotosVC = UIViewController()
-//        materialPhotosVC.view.backgroundColor = .purple
-//
-//        let gradingVC = UIViewController()
-//        gradingVC.view.backgroundColor = .systemPink
-//
-//        let defectsVC = UIViewController()
-//        defectsVC.view.backgroundColor = .darkGray
-        
         let labResultsVC = GradingProcessLabSeletedViewController.instantiate(from: .schedule)
+        labResultsVC.delegate = self
         let navi = UINavigationController(rootViewController: labResultsVC)
         navi.isNavigationBarHidden = true
         
@@ -102,6 +91,7 @@ extension GradingProcessViewController {
         
         pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, navi, appraisalVC]
         pageTitle = ["Inventory", "Product", "Material Photos", "Grading", "Defects", "Lab Results", "Appraisal"]
+        rightButtonTitle = ["Continue", "Continue", "Skip", "Skip", "Continue", "Skip", "Skip"]
         
         self.pageControl.numberOfPages = pages.count
         
@@ -123,6 +113,7 @@ extension GradingProcessViewController {
         }
         
         navigationItem.title = pageTitle[0]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[0], style: .plain, target: self, action: #selector(self.skip_continueAction))
     }
 }
 
@@ -146,6 +137,10 @@ extension GradingProcessViewController: UIPageViewControllerDataSource, UIPageVi
 }
 
 extension GradingProcessViewController: GradingProcessDelegate {
+    func updateRightButtonTitle(_ title: String) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(self.skip_continueAction))
+    }
+    
     func didFinishGradingProcess() {
         navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
     }
