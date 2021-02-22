@@ -6,6 +6,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 import IQKeyboardManagerSwift
 
 @main
@@ -21,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
 
-        GIDSignIn.sharedInstance().clientID = kClientID
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         UINavigationBar.appearance().barTintColor = Color.navBG // Navigation's BG Color
         UINavigationBar.appearance().tintColor = .white // Navigation's Button Color

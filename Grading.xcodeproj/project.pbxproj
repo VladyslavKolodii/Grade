@@ -19,7 +19,6 @@
 		4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */; };
 		4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */; };
 		4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */; };
-		4568EF7725E31AE600ED477D /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
 		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
 		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
 		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
@@ -34,6 +33,9 @@
 		457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */; };
 		457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60125E09D290051AF10 /* ScheduleVC.swift */; };
 		4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */; };
+		45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
+		45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
+		45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */; };
 		B79773B025DF7F3300DBE149 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79773AF25DF7F3300DBE149 /* Colors.xcassets */; };
 		B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */; };
 		B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */; };
@@ -68,14 +70,12 @@
 		BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FD325CEC3C40071CD3C /* Utility.swift */; };
 		BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */; };
 		BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */; };
-		BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */; };
 		BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */; };
 		BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FFA25CED2050071CD3C /* InventoryVC.swift */; };
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
 		FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4B25E27C480098E50C /* WMSegment.swift */; };
-		FC13AC4F25E27FB60098E50C /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
 		FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC5125E28C710098E50C /* ProductTypeCell.swift */; };
 		FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50E71325E29F7100062210 /* SortTypeVC.swift */; };
 		FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17425E2160500EA251A /* InventoryCell.swift */; };
@@ -128,6 +128,7 @@
 		457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailVC.swift; sourceTree = "<group>"; };
 		457EF60125E09D290051AF10 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingMaterialCaptureVC.swift; sourceTree = "<group>"; };
+		45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
 		B79773AF25DF7F3300DBE149 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		BCE06FD325CEC3C40071CD3C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersVC.swift; sourceTree = "<group>"; };
 		BCE06FFA25CED2050071CD3C /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
@@ -524,7 +524,7 @@
 		BCE06FE825CECE6B0071CD3C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */,
+				45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -691,12 +691,12 @@
 				FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */,
 				BCE06F7725CE6C8D0071CD3C /* Assets.xcassets in Resources */,
 				B79773BF25DF9B2300DBE149 /* ProximaNova-Bold.ttf in Resources */,
+				45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */,
 				BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */,
 				BCE06F8D25CE6E650071CD3C /* Account.storyboard in Resources */,
 				FCE2A8FA25E02D91001CF1EA /* FaqVC.xib in Resources */,
 				BCE06F7525CE6C8B0071CD3C /* Schedule.storyboard in Resources */,
 				B79773C225DF9B2300DBE149 /* ProximaNova-Thin.ttf in Resources */,
-				BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */,
 				BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,6 +781,7 @@
 				4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
+				45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
 				FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
@@ -800,6 +801,7 @@
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */,
+				45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
@@ -984,15 +986,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K34X8446Z2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1007,15 +1009,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K34X8446Z2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
