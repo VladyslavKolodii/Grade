@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r4L-yY-fQv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r4L-yY-fQv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -140,6 +140,9 @@
                                                 <rect key="frame" x="35" y="0.0" width="312" height="30"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="fTq-Of-Lx9" id="4m2-05-Za2"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFR-DP-880">
                                                 <rect key="frame" x="5" y="0.0" width="25" height="30"/>
@@ -204,6 +207,7 @@
                     <navigationItem key="navigationItem" id="U8D-Cg-k61"/>
                     <connections>
                         <outlet property="tbMain" destination="Zwf-FB-DxV" id="EWQ-P0-WvQ"/>
+                        <outlet property="tfSearch" destination="5iE-G5-UEE" id="jyV-AP-AgZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohi-ue-PnM" sceneMemberID="firstResponder"/>
@@ -398,6 +402,9 @@
                                                                             <constraint firstAttribute="height" constant="40" id="eR3-5R-drR"/>
                                                                         </constraints>
                                                                         <state key="normal" image="call_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapCall:" destination="pkv-l9-60Q" eventType="touchUpInside" id="WWR-jq-zpD"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -435,6 +442,9 @@
                                                                             <constraint firstAttribute="height" constant="40" id="cgB-Yg-0ZA"/>
                                                                         </constraints>
                                                                         <state key="normal" image="text_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapMessage:" destination="pkv-l9-60Q" eventType="touchUpInside" id="6HC-Zb-1nE"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTM-6e-U9e">
                                                                         <rect key="frame" x="10" y="48" width="384" height="1"/>
@@ -486,6 +496,9 @@
                                                                             <constraint firstAttribute="height" constant="40" id="cWi-7P-toq"/>
                                                                         </constraints>
                                                                         <state key="normal" image="email_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapMail:" destination="pkv-l9-60Q" eventType="touchUpInside" id="eSh-7w-gyh"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -582,6 +595,9 @@
                                                                             <constraint firstAttribute="height" constant="40" id="l0k-KE-Sxe"/>
                                                                         </constraints>
                                                                         <state key="normal" image="call_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapCall:" destination="pkv-l9-60Q" eventType="touchUpInside" id="3bi-s7-ozZ"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -619,6 +635,9 @@
                                                                             <constraint firstAttribute="height" constant="40" id="KPz-rA-ITs"/>
                                                                         </constraints>
                                                                         <state key="normal" image="text_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapMessage:" destination="pkv-l9-60Q" eventType="touchUpInside" id="xIG-Zf-EOE"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-7b-rdt">
                                                                         <rect key="frame" x="10" y="48" width="384" height="1"/>
@@ -670,6 +689,9 @@
                                                                             <constraint firstAttribute="width" constant="40" id="Lid-Hi-uhO"/>
                                                                         </constraints>
                                                                         <state key="normal" image="email_ic"/>
+                                                                        <connections>
+                                                                            <action selector="tapMail:" destination="pkv-l9-60Q" eventType="touchUpInside" id="gi9-I8-CFa"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

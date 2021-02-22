@@ -67,31 +67,31 @@ extension GradingProcessViewController {
     
     private func setupPageController() {
         
-//        let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
+        let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
+
+        let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
+
+        let materialPhotosVC = UIViewController()
+        materialPhotosVC.view.backgroundColor = .purple
+
+        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
+
+        let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
+        
+//        let inventoryVC = UIViewController()
+//        inventoryVC.view.backgroundColor = .clear
 //
-//        let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
+//        let productVC = UIViewController()
+//        productVC.view.backgroundColor = .cyan
 //
 //        let materialPhotosVC = UIViewController()
 //        materialPhotosVC.view.backgroundColor = .purple
 //
-//        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
+//        let gradingVC = UIViewController()
+//        gradingVC.view.backgroundColor = .systemPink
 //
-//        let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
-        
-        let inventoryVC = UIViewController()
-        inventoryVC.view.backgroundColor = .clear
-        
-        let productVC = UIViewController()
-        productVC.view.backgroundColor = .cyan
-        
-        let materialPhotosVC = UIViewController()
-        materialPhotosVC.view.backgroundColor = .purple
-        
-        let gradingVC = UIViewController()
-        gradingVC.view.backgroundColor = .systemPink
-        
-        let defectsVC = UIViewController()
-        defectsVC.view.backgroundColor = .darkGray
+//        let defectsVC = UIViewController()
+//        defectsVC.view.backgroundColor = .darkGray
         
         let labResultsVC = GradingProcessLabSeletedViewController.instantiate(from: .schedule)
         let navi = UINavigationController(rootViewController: labResultsVC)
