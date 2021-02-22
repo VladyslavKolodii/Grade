@@ -7,13 +7,14 @@
 
 import UIKit
 
+protocol GradingProcessDelegate: class {
+    func didFinishGradingProcess()
+}
+
 class GradingProcessViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var leftUB: UIButton!
-    @IBOutlet weak var titleLB: UILabel!
-    @IBOutlet weak var rightUB: UIButton!
     
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
@@ -21,7 +22,7 @@ class GradingProcessViewController: UIViewController {
     private var currentIndex: Int = 0 {
         didSet {
             pageControl.currentPage = currentIndex
-            titleLB.text = pageTitle[currentIndex]
+            navigationItem.title = pageTitle[currentIndex]
         }
     }
     
@@ -52,7 +53,7 @@ class GradingProcessViewController: UIViewController {
         guard currentIndex < pages.count-1 else {
             navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
             return }
-        currentIndex += 1
+        currentIndex = pages.count-1
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
@@ -66,22 +67,40 @@ extension GradingProcessViewController {
     
     private func setupPageController() {
         
-        let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
+//        let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
+//
+//        let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
+//
+//        let materialPhotosVC = UIViewController()
+//        materialPhotosVC.view.backgroundColor = .purple
+//
+//        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
+//
+//        let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
         
-        let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
+        let inventoryVC = UIViewController()
+        inventoryVC.view.backgroundColor = .clear
+        
+        let productVC = UIViewController()
+        productVC.view.backgroundColor = .cyan
         
         let materialPhotosVC = UIViewController()
         materialPhotosVC.view.backgroundColor = .purple
         
-        let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
+        let gradingVC = UIViewController()
+        gradingVC.view.backgroundColor = .systemPink
         
-        let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
+        let defectsVC = UIViewController()
+        defectsVC.view.backgroundColor = .darkGray
         
         let labResultsVC = GradingProcessLabSeletedViewController.instantiate(from: .schedule)
+        let navi = UINavigationController(rootViewController: labResultsVC)
+        navi.isNavigationBarHidden = true
         
         let appraisalVC = GradingProcessAppraisalViewController.instantiate(from: .schedule)
+        appraisalVC.delegate = self
         
-        pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, labResultsVC, appraisalVC]
+        pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, navi, appraisalVC]
         pageTitle = ["Inventory", "Product", "Material Photos", "Grading", "Defects", "Lab Results", "Appraisal"]
         
         self.pageControl.numberOfPages = pages.count
@@ -103,7 +122,7 @@ extension GradingProcessViewController {
             }
         }
         
-        self.titleLB.text = pageTitle[0]
+        navigationItem.title = pageTitle[0]
     }
 }
 
@@ -123,5 +142,11 @@ extension GradingProcessViewController: UIPageViewControllerDataSource, UIPageVi
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return self.viewController(comingFrom: viewController, indexModifier: 1)
+    }
+}
+
+extension GradingProcessViewController: GradingProcessDelegate {
+    func didFinishGradingProcess() {
+        navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
     }
 }

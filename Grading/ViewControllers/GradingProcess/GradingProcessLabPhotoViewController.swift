@@ -13,7 +13,8 @@ class GradingProcessLabPhotoViewController: UIViewController {
     @IBOutlet weak var capturePreviewView: UIView!
     @IBOutlet weak var takenImageView: UIImageView!
     
-    let cameraController = CameraController()
+    private let cameraController = CameraController()
+    weak var delegate: GradingProcessLabResultsDelegate?
     
     private var takenImage: UIImage? {
         didSet {
@@ -47,6 +48,7 @@ class GradingProcessLabPhotoViewController: UIViewController {
     @IBAction func doneAction(_ sender: Any) {
         let controller = GradingProcessLabPhotoPreviewViewController.instantiate(from: .schedule)
         controller.takenImage = takenImage
+        controller.delegate = delegate
         navigationController?.pushViewController(controller, animated: true)
     }
 }

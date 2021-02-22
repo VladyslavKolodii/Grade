@@ -12,6 +12,7 @@ class GradingProcessLabPhotoPreviewViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
     
     var takenImage: UIImage?
+    weak var delegate: GradingProcessLabResultsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class GradingProcessLabPhotoPreviewViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: false)
+        delegate?.didSelectedPhoto(takenImage)
     }
     
     @IBAction func retakeAction(_ sender: Any) {
