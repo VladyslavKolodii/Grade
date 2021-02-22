@@ -10,6 +10,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileInfoVC" customModule="Grading" customModuleProvider="target">
             <connections>
@@ -43,13 +51,13 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-sl-03j">
                                             <rect key="frame" x="0.0" y="0.0" width="204" height="13.5"/>
-                                            <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
                                             <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-aR-gax">
                                             <rect key="frame" x="0.0" y="21.5" width="204" height="13.5"/>
-                                            <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                             <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -64,7 +72,7 @@
                                         <constraint firstAttribute="height" constant="30" id="7kX-Ir-kN2"/>
                                         <constraint firstAttribute="width" constant="100" id="FRb-1K-EI0"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                     <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Log Out" image="ic_logout">
                                         <color key="titleColor" name="AccentColor"/>
@@ -109,13 +117,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="TZP-qQ-FgR"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                             <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jdoe2@bigtreegrading.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-rw-cIt">
                                             <rect key="frame" x="102" y="0.0" width="281" height="40"/>
-                                            <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                             <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
