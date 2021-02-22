@@ -103,7 +103,6 @@ extension SuppliersVC: UITextFieldDelegate {
         return true
     }
     @objc func textFieldDidChange(textField: UITextField){
-        print("Text changed")
         self.filterDatas()
     }
 }
