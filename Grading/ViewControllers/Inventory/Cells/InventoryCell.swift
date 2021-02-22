@@ -9,6 +9,7 @@ import UIKit
 
 class InventoryCell: UITableViewCell {
 
+    @IBOutlet weak var lbTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
