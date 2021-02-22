@@ -44,19 +44,15 @@ class GradingProcessViewController: UIViewController {
     }
     
     @IBAction func nextStepAction(_ sender: Any) {
-        guard currentIndex < pages.count-1 else {
-            navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
-            return
-        }
-        currentIndex += 1
-        pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
+        skip_continueAction()
     }
     
     @objc private func skip_continueAction() {
         guard currentIndex < pages.count-1 else {
             navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
-            return }
-        currentIndex = pages.count-1
+            return
+        }
+        currentIndex += 1
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
