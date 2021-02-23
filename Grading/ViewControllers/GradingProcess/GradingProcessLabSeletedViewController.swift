@@ -60,7 +60,6 @@ extension GradingProcessLabSeletedViewController: ImagePickerDelegate {
 
 extension GradingProcessLabSeletedViewController: GradingProcessLabResultsDelegate {
     func didSelectedPhoto(_ image: UIImage?) {
-        self.delegate?.updateRightButtonTitle("Continue")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
             self.navigationController?.pushViewController(GradingProcessLabDataViewController.instantiate(from: .schedule), animated: true)
         }

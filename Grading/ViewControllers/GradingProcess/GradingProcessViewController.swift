@@ -9,7 +9,6 @@ import UIKit
 
 protocol GradingProcessDelegate: class {
     func didFinishGradingProcess()
-    func updateRightButtonTitle(_ title: String)
 }
 
 class GradingProcessViewController: UIViewController {
@@ -25,13 +24,10 @@ class GradingProcessViewController: UIViewController {
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
     private var pageTitle: [String] = []
-    private var rightButtonTitle: [String] = []
     private var currentIndex: Int = 0 {
         didSet {
             pageControl.currentPage = currentIndex
             titleLB.text = pageTitle[currentIndex]
-            navigationItem.title = pageTitle[currentIndex]
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[currentIndex], style: .plain, target: self, action: #selector(self.skip_continueAction))
         }
     }
     
@@ -84,11 +80,10 @@ class GradingProcessViewController: UIViewController {
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
-    @objc private func skip_continueAction() {
+    @IBAction func skipAction(_ sender: Any) {
         guard currentIndex < pages.count-1 else {
             navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
-            return
-        }
+            return }
         currentIndex += 1
         if currentIndex == 2 {
             self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
@@ -133,7 +128,6 @@ extension GradingProcessViewController {
         
         pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, navi, appraisalVC]
         pageTitle = ["Inventory", "Product", "Material Photos", "Grading", "Defects", "Lab Results", "Appraisal"]
-        rightButtonTitle = ["Continue", "Continue", "Skip", "Skip", "Continue", "Skip", "Skip"]
         
         self.pageControl.numberOfPages = pages.count
         
@@ -155,8 +149,6 @@ extension GradingProcessViewController {
         }
         
         self.titleLB.text = pageTitle[0]
-        navigationItem.title = pageTitle[0]
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[0], style: .plain, target: self, action: #selector(self.skip_continueAction))
     }
 }
 
@@ -194,10 +186,6 @@ extension GradingProcessViewController: GradingMaterialCaptureVCDelegate {
 }
 
 extension GradingProcessViewController: GradingProcessDelegate {
-    func updateRightButtonTitle(_ title: String) {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(self.skip_continueAction))
-    }
-    
     func didFinishGradingProcess() {
         navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
     }
