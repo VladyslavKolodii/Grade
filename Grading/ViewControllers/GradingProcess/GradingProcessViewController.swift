@@ -16,6 +16,11 @@ class GradingProcessViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var leftUB: UIButton!
+    @IBOutlet weak var titleLB: UILabel!
+    @IBOutlet weak var rightUB: UIButton!
+    @IBOutlet weak var topbarheight: NSLayoutConstraint!
+    @IBOutlet weak var bottombarheight: NSLayoutConstraint!
     
     private var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pages: [UIViewController] = []
@@ -24,6 +29,7 @@ class GradingProcessViewController: UIViewController {
     private var currentIndex: Int = 0 {
         didSet {
             pageControl.currentPage = currentIndex
+            titleLB.text = pageTitle[currentIndex]
             navigationItem.title = pageTitle[currentIndex]
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[currentIndex], style: .plain, target: self, action: #selector(self.skip_continueAction))
         }
@@ -35,16 +41,47 @@ class GradingProcessViewController: UIViewController {
     }
     
     @IBAction func backStepAction(_ sender: Any) {
+        showPreItem()
+    }
+    
+    func showPreItem() {
         guard currentIndex > 0 else {
             dismiss(animated: true, completion: nil)
             return
         }
         currentIndex -= 1
+        if currentIndex == 2 {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
+            bottombarheight.constant = 0
+            topbarheight.constant = 0
+        } else {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.containerView.frame.width, height: self.containerView.frame.height)
+            bottombarheight.constant = 51
+            topbarheight.constant = 100
+        }
         pageController.setViewControllers([pages[currentIndex]], direction: .reverse, animated: true, completion: nil)
     }
     
     @IBAction func nextStepAction(_ sender: Any) {
-        skip_continueAction()
+        showNextItem()
+    }
+    
+    func showNextItem() {
+        guard currentIndex < pages.count-1 else {
+            navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
+            return
+        }
+        currentIndex += 1
+        if currentIndex == 2 {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
+            bottombarheight.constant = 0
+            topbarheight.constant = 0
+        } else {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.containerView.frame.width, height: self.containerView.frame.height)
+            bottombarheight.constant = 51
+            topbarheight.constant = 100
+        }
+        pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
     @objc private func skip_continueAction() {
@@ -53,6 +90,15 @@ class GradingProcessViewController: UIViewController {
             return
         }
         currentIndex += 1
+        if currentIndex == 2 {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
+            bottombarheight.constant = 0
+            topbarheight.constant = 0
+        } else {
+            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.containerView.frame.width, height: self.containerView.frame.height)
+            bottombarheight.constant = 51
+            topbarheight.constant = 100
+        }
         pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
     }
     
@@ -70,9 +116,9 @@ extension GradingProcessViewController {
 
         let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
 
-        let materialPhotosVC = UIViewController()
-        materialPhotosVC.view.backgroundColor = .purple
-
+        let materialPhotosVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingMaterialCaptureVC") as! GradingMaterialCaptureVC
+        materialPhotosVC.delegate = self
+        
         let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
 
         let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
@@ -108,6 +154,7 @@ extension GradingProcessViewController {
             }
         }
         
+        self.titleLB.text = pageTitle[0]
         navigationItem.title = pageTitle[0]
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButtonTitle[0], style: .plain, target: self, action: #selector(self.skip_continueAction))
     }
@@ -132,6 +179,20 @@ extension GradingProcessViewController: UIPageViewControllerDataSource, UIPageVi
     }
 }
 
+extension GradingProcessViewController: GradingMaterialCaptureVCDelegate {
+    func didCompleteCapture() {
+        showNextItem()
+    }
+    
+    func didTapSkipUB() {
+        showNextItem()
+    }
+
+    func didTapBackUB() {
+        showPreItem()
+    }
+}
+
 extension GradingProcessViewController: GradingProcessDelegate {
     func updateRightButtonTitle(_ title: String) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(self.skip_continueAction))
@@ -141,3 +202,4 @@ extension GradingProcessViewController: GradingProcessDelegate {
         navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
     }
 }
+

@@ -12,5 +12,9 @@ target 'Grading' do
   pod 'IQKeyboardManagerSwift'
   pod 'StepSlider'
   pod 'ASValueTrackingSlider'
-
+  pod "AlignedCollectionViewFlowLayout"
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
 end

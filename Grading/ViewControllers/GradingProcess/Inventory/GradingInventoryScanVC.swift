@@ -127,7 +127,7 @@ extension GradingInventoryScanVC: AVCaptureMetadataOutputObjectsDelegate {
             print("No QR code is detected")
             return
         }
-        
+            
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         if metadataObj.type == AVMetadataObject.ObjectType.qr {

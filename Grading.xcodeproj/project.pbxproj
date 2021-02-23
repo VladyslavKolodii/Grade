@@ -15,6 +15,10 @@
 		453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8125E1596D00F9F220 /* GradingVC.swift */; };
 		453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8425E1684700F9F220 /* GradingInfoVC.swift */; };
 		453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */; };
+		4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */; };
+		4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */; };
+		4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */; };
+		4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */; };
 		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
 		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
 		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
@@ -36,6 +40,10 @@
 		B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */; };
 		B7691D3525E366CC00CAA999 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D3425E366CC00CAA999 /* CanvasView.swift */; };
 		B7802FF925E3989300D47C4A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7802FF825E3989300D47C4A /* Toast.swift */; };
+		4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */; };
+		45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
+		45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
+		45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */; };
 		B79773B025DF7F3300DBE149 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79773AF25DF7F3300DBE149 /* Colors.xcassets */; };
 		B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */; };
 		B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */; };
@@ -70,14 +78,12 @@
 		BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FD325CEC3C40071CD3C /* Utility.swift */; };
 		BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */; };
 		BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */; };
-		BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */; };
 		BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */; };
 		BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE06FFA25CED2050071CD3C /* InventoryVC.swift */; };
 		BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */; };
 		BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0700125CED22B0071CD3C /* Inventory.storyboard */; };
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
 		FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4B25E27C480098E50C /* WMSegment.swift */; };
-		FC13AC4F25E27FB60098E50C /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
 		FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC5125E28C710098E50C /* ProductTypeCell.swift */; };
 		FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50E71325E29F7100062210 /* SortTypeVC.swift */; };
 		FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17425E2160500EA251A /* InventoryCell.swift */; };
@@ -111,6 +117,11 @@
 		453D0F8125E1596D00F9F220 /* GradingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingVC.swift; sourceTree = "<group>"; };
 		453D0F8425E1684700F9F220 /* GradingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInfoVC.swift; sourceTree = "<group>"; };
 		453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingItemVC.swift; sourceTree = "<group>"; };
+		4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoGuideVC.swift; sourceTree = "<group>"; };
+		4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidePhotoItemVC.swift; sourceTree = "<group>"; };
+		4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotosVC.swift; sourceTree = "<group>"; };
+		4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoCell.swift; sourceTree = "<group>"; };
+		4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewVC.swift; sourceTree = "<group>"; };
 		45760C4825E10A89000E7C3D /* GradingProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProductVC.swift; sourceTree = "<group>"; };
 		45760C5525E1242D000E7C3D /* GradingDefectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectVC.swift; sourceTree = "<group>"; };
 		457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryVC.swift; sourceTree = "<group>"; };
@@ -124,6 +135,8 @@
 		457EF5FF25E09D290051AF10 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailVC.swift; sourceTree = "<group>"; };
 		457EF60125E09D290051AF10 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingMaterialCaptureVC.swift; sourceTree = "<group>"; };
+		45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
 		B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryTableViewCell.swift; sourceTree = "<group>"; };
 		B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobInventoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -169,7 +182,6 @@
 		BCE06FD325CEC3C40071CD3C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		BCE06FDA25CEC5E20071CD3C /* TabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		BCE06FDB25CEC5E20071CD3C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE06FF525CED1EF0071CD3C /* SuppliersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersVC.swift; sourceTree = "<group>"; };
 		BCE06FFA25CED2050071CD3C /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		BCE06FFE25CED2200071CD3C /* Suppliers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suppliers.storyboard; sourceTree = "<group>"; };
@@ -267,6 +279,14 @@
 			path = Grading;
 			sourceTree = "<group>";
 		};
+		4568EF7125E3087B00ED477D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		457EF5F225E09D290051AF10 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +342,19 @@
 				457EF5FF25E09D290051AF10 /* ScheduleCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4589020325E2960F0049C6CD /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				4568EF7125E3087B00ED477D /* Cell */,
+				4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */,
+				4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */,
+				4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */,
+				4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */,
+				4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */,
+			);
+			path = Material;
 			sourceTree = "<group>";
 		};
 		8E1E59385BEA9C88561BBE7D /* Pods */ = {
@@ -399,6 +432,7 @@
 				4536217A25E1787500C4B45A /* Inventory */,
 				453D0F7125E13D3800F9F220 /* Defect */,
 				453D0F8725E1684E00F9F220 /* Grading */,
+				4589020325E2960F0049C6CD /* Material */,
 			);
 			path = GradingProcess;
 			sourceTree = "<group>";
@@ -536,7 +570,7 @@
 		BCE06FE825CECE6B0071CD3C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				BCE06FE925CECE790071CD3C /* GoogleService-Info.plist */,
+				45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -706,12 +740,12 @@
 				FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */,
 				BCE06F7725CE6C8D0071CD3C /* Assets.xcassets in Resources */,
 				B79773BF25DF9B2300DBE149 /* ProximaNova-Bold.ttf in Resources */,
+				45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */,
 				BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */,
 				BCE06F8D25CE6E650071CD3C /* Account.storyboard in Resources */,
 				FCE2A8FA25E02D91001CF1EA /* FaqVC.xib in Resources */,
 				BCE06F7525CE6C8B0071CD3C /* Schedule.storyboard in Resources */,
 				B79773C225DF9B2300DBE149 /* ProximaNova-Thin.ttf in Resources */,
-				BCE06FEA25CECE790071CD3C /* GoogleService-Info.plist in Resources */,
 				BCE06FFF25CED2200071CD3C /* Suppliers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,9 +817,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
+				4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */,
 				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
-				FC13AC4F25E27FB60098E50C /* ProductTypeVC.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
 				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
 				B79773E825DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift in Sources */,
@@ -793,8 +827,10 @@
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
 				FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
+				4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
+				45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
 				FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
@@ -803,6 +839,8 @@
 				FCE2A90525E02D9F001CF1EA /* SupplierCell.swift in Sources */,
 				FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */,
 				457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */,
+				4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */,
+				4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */,
 				453D0F6F25E13D3000F9F220 /* GradingDefectInfoVC.swift in Sources */,
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
 				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
@@ -813,6 +851,8 @@
 				B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
+				4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */,
+				45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
@@ -1010,7 +1050,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.wayne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
 				SWIFT_VERSION = 5.0;
@@ -1033,7 +1073,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.wayne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
 				SWIFT_VERSION = 5.0;

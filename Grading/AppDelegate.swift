@@ -6,6 +6,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 import IQKeyboardManagerSwift
 
 @main
@@ -20,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKeyboardManager()
         setupNavigationAppearence()
 
-        GIDSignIn.sharedInstance().clientID = kClientID
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         return true
     }

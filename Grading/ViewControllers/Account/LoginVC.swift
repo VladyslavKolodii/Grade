@@ -6,16 +6,19 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseUI
+import FirebaseAuth
+import FirebaseUI
 
 class LoginVC: UIViewController {
-
+    
     //@IBOutlet weak var loginGoogleButton: GIDSignInButton!
     @IBOutlet weak var loginGmailButton: UIButton!
     @IBOutlet weak var loginEmailButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureView()
     }
     
@@ -53,16 +56,18 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func emailTap(_ sender: Any) {
-        
-        if let controller = OnboardVC.storyboardInstance() {
-            navigationController?.pushViewController(controller, animated: true)
-        }
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [FUIEmailAuth()]
+        authUI?.providers = providers
+        let authVC = authUI!.authViewController()
+        self.present(authVC, animated: true, completion: nil)
     }
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
-          return .darkContent
+        return .darkContent
     }
-
+    
 }
 
 extension LoginVC: GIDSignInDelegate {
@@ -86,12 +91,30 @@ extension LoginVC: GIDSignInDelegate {
         }
         print("\(user.userID ?? "?") - \(fullName) - \(email)")
         print(authentication.accessToken ?? "-")
-        self.loginSuccess()
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential, completion: {(authResult, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.loginSuccess()
+        })
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
         print("disconnect: \(error.localizedDescription)")
+    }
+}
+
+extension LoginVC: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if error == nil {
+            print("success")
+            loginSuccess()
+        } else {
+            print(error.debugDescription)
+        }
     }
 }
