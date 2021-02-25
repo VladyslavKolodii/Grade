@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol GradingProcessDelegate: class {
+    func didFinishGradingProcess()
+}
+
 class GradingProcessViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
@@ -104,21 +108,25 @@ extension GradingProcessViewController {
     private func setupPageController() {
         
         let inventoryVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryVC") as! GradingInventoryVC
-        
+
         let productVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingProductVC") as! GradingProductVC
-        
+
         let materialPhotosVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingMaterialCaptureVC") as! GradingMaterialCaptureVC
         materialPhotosVC.delegate = self
         
         let gradingVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingVC") as! GradingVC
-        
+
         let defectsVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingDefectVC") as! GradingDefectVC
         
         let labResultsVC = GradingProcessLabSeletedViewController.instantiate(from: .schedule)
+        labResultsVC.delegate = self
+        let navi = UINavigationController(rootViewController: labResultsVC)
+        navi.isNavigationBarHidden = true
         
         let appraisalVC = GradingProcessAppraisalViewController.instantiate(from: .schedule)
+        appraisalVC.delegate = self
         
-        pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, labResultsVC, appraisalVC]
+        pages = [inventoryVC, productVC, materialPhotosVC, gradingVC, defectsVC, navi, appraisalVC]
         pageTitle = ["Inventory", "Product", "Material Photos", "Grading", "Defects", "Lab Results", "Appraisal"]
         
         self.pageControl.numberOfPages = pages.count
@@ -176,3 +184,10 @@ extension GradingProcessViewController: GradingMaterialCaptureVCDelegate {
         showPreItem()
     }
 }
+
+extension GradingProcessViewController: GradingProcessDelegate {
+    func didFinishGradingProcess() {
+        navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
+    }
+}
+

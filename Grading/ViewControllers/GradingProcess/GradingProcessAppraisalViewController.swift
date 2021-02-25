@@ -12,6 +12,8 @@ class GradingProcessAppraisalViewController: UIViewController {
     @IBOutlet weak var noteTextView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
     
+    weak var delegate: GradingProcessDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         noteTextView.textContainerInset.left = 10
@@ -21,6 +23,7 @@ class GradingProcessAppraisalViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
+        delegate?.didFinishGradingProcess()
     }
 }
 

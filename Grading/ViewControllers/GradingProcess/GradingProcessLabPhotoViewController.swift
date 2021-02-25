@@ -13,7 +13,8 @@ class GradingProcessLabPhotoViewController: UIViewController {
     @IBOutlet weak var capturePreviewView: UIView!
     @IBOutlet weak var takenImageView: UIImageView!
     
-    let cameraController = CameraController()
+    private let cameraController = CameraController()
+    weak var delegate: GradingProcessLabResultsDelegate?
     
     private var takenImage: UIImage? {
         didSet {
@@ -21,11 +22,21 @@ class GradingProcessLabPhotoViewController: UIViewController {
             takenImageView.image = takenImage
         }
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCameraController()
         takenImageView.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func takePhotoAction(_ sender: Any) {
@@ -47,6 +58,7 @@ class GradingProcessLabPhotoViewController: UIViewController {
     @IBAction func doneAction(_ sender: Any) {
         let controller = GradingProcessLabPhotoPreviewViewController.instantiate(from: .schedule)
         controller.takenImage = takenImage
+        controller.delegate = delegate
         navigationController?.pushViewController(controller, animated: true)
     }
 }

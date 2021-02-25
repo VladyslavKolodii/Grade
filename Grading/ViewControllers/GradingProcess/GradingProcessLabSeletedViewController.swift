@@ -7,9 +7,22 @@
 
 import UIKit
 
+protocol GradingProcessLabResultsDelegate: class {
+    func didSelectedPhoto(_ image: UIImage?)
+}
+
 class GradingProcessLabSeletedViewController: UIViewController {
     
     private var mediaPicker: ImagePicker?
+    weak var delegate: GradingProcessDelegate?
+    
+    private var rootNavigationController: UINavigationController? {
+        if let pageViewController = self.parent?.parent as? UIPageViewController {
+            return pageViewController.navigationController
+        }
+        
+        return nil
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +34,15 @@ class GradingProcessLabSeletedViewController: UIViewController {
     }
     
     @IBAction func takePhotoAction(_ sender: Any) {
-        navigationController?.pushViewController(GradingProcessLabPhotoViewController.instantiate(from: .schedule), animated: true)
+        let controller = GradingProcessLabPhotoViewController.instantiate(from: .schedule)
+        controller.delegate = self
+        rootNavigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func manualAction(_ sender: Any) {
+        let controller = GradingProcessLabManualViewController.instantiate(from: .schedule)
+        controller.delegate = self
+        rootNavigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -37,5 +55,13 @@ extension GradingProcessLabSeletedViewController: ImagePickerDelegate {
     }
     
     func didSelect(videoURL: URL?) {
+    }
+}
+
+extension GradingProcessLabSeletedViewController: GradingProcessLabResultsDelegate {
+    func didSelectedPhoto(_ image: UIImage?) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            self.navigationController?.pushViewController(GradingProcessLabDataViewController.instantiate(from: .schedule), animated: true)
+        }
     }
 }

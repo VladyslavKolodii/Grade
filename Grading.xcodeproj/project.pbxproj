@@ -32,6 +32,14 @@
 		457EF60925E09D290051AF10 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF5FF25E09D290051AF10 /* ScheduleCell.swift */; };
 		457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */; };
 		457EF60B25E09D290051AF10 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EF60125E09D290051AF10 /* ScheduleVC.swift */; };
+		B7691D1F25E3509B00CAA999 /* JobInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */; };
+		B7691D2025E3509B00CAA999 /* JobInventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */; };
+		B7691D2425E351EB00CAA999 /* UITabelViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */; };
+		B7691D2725E3520C00CAA999 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */; };
+		B7691D2A25E3527F00CAA999 /* JobInventoryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */; };
+		B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */; };
+		B7691D3525E366CC00CAA999 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D3425E366CC00CAA999 /* CanvasView.swift */; };
+		B7802FF925E3989300D47C4A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7802FF825E3989300D47C4A /* Toast.swift */; };
 		4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */; };
 		45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
 		45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
@@ -130,6 +138,14 @@
 		4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingMaterialCaptureVC.swift; sourceTree = "<group>"; };
 		45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
+		B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryTableViewCell.swift; sourceTree = "<group>"; };
+		B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobInventoryTableViewCell.xib; sourceTree = "<group>"; };
+		B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabelViewExtensions.swift; sourceTree = "<group>"; };
+		B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryPreviewViewController.swift; sourceTree = "<group>"; };
+		B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProcessLabManualViewController.swift; sourceTree = "<group>"; };
+		B7691D3425E366CC00CAA999 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		B7802FF825E3989300D47C4A /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B79773AF25DF7F3300DBE149 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+Helpers.swift"; sourceTree = "<group>"; };
@@ -350,9 +366,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B7691D1B25E3507900CAA999 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7691D1C25E3508100CAA999 /* JobInventory */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7691D1C25E3508100CAA999 /* JobInventory */ = {
+			isa = PBXGroup;
+			children = (
+				B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */,
+				B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */,
+			);
+			path = JobInventory;
+			sourceTree = "<group>";
+		};
+		B7802FF725E3989300D47C4A /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				B7802FF825E3989300D47C4A /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		B79773B925DF9A2B00DBE149 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				B7802FF725E3989300D47C4A /* Toast */,
 				FC13AC4A25E27C480098E50C /* WMSegment */,
 				B79773F025DFBD2E00DBE149 /* CustomUI */,
 				B79773E125DFB7B700DBE149 /* ImagePicker.swift */,
@@ -381,9 +423,11 @@
 				B79773D525DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift */,
 				B79773D825DFB08D00DBE149 /* GradingProcessLabPhotoPreviewViewController.swift */,
 				B79773E425DFBA7600DBE149 /* GradingProcessLabDataViewController.swift */,
+				B7691D2F25E3662D00CAA999 /* GradingProcessLabManualViewController.swift */,
 				B79773E725DFBA8800DBE149 /* GradingProcessAppraisalViewController.swift */,
 				B79773EA25DFBA9800DBE149 /* LotCompleteViewController.swift */,
 				B79773ED25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift */,
+				B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */,
 				4536218525E17E3100C4B45A /* Product */,
 				4536217A25E1787500C4B45A /* Inventory */,
 				453D0F7125E13D3800F9F220 /* Defect */,
@@ -409,6 +453,7 @@
 				B79773F925DFBD6600DBE149 /* CustomTextField.swift */,
 				B79773F525DFBD5300DBE149 /* CustomButton.swift */,
 				B79773F425DFBD5300DBE149 /* CustomLabel.swift */,
+				B7691D3425E366CC00CAA999 /* CanvasView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -442,6 +487,7 @@
 		BCE06F6C25CE6C8B0071CD3C /* Grading */ = {
 			isa = PBXGroup;
 			children = (
+				B7691D1B25E3507900CAA999 /* Views */,
 				BC774DF325CF6AB30052B4EA /* Model */,
 				BCE06F8425CE6CD60071CD3C /* ViewControllers */,
 				BCE06F8525CE6CE70071CD3C /* Storyboards */,
@@ -536,6 +582,8 @@
 				B79773B525DF98EE00DBE149 /* UIColorExtension+Helpers.swift */,
 				B79773B225DF98E700DBE149 /* UIViewControllerExtensions.swift */,
 				B79773C425DF9CF200DBE149 /* UIFontExtestion+Heplers.swift */,
+				B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */,
+				B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -685,6 +733,7 @@
 				B79773C025DF9B2300DBE149 /* ProximaNova-Semibold.ttf in Resources */,
 				B79773C125DF9B2300DBE149 /* ProximaNova-Regular.ttf in Resources */,
 				BCE06F7A25CE6C8D0071CD3C /* LaunchScreen.storyboard in Resources */,
+				B7691D2025E3509B00CAA999 /* JobInventoryTableViewCell.xib in Resources */,
 				FCE2A8FE25E02D91001CF1EA /* ContactVC.xib in Resources */,
 				FCE2A8FC25E02D91001CF1EA /* FaqCell.xib in Resources */,
 				BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */,
@@ -796,8 +845,10 @@
 				FCE2A8F925E02D91001CF1EA /* BaseVC.swift in Sources */,
 				4536217825E1784500C4B45A /* GradingInventoryScanVC.swift in Sources */,
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
+				B7802FF925E3989300D47C4A /* Toast.swift in Sources */,
 				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
 				FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */,
+				B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */,
@@ -821,12 +872,15 @@
 				457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */,
 				B79773C925DFA10B00DBE149 /* GradingProcessLabSeletedViewController.swift in Sources */,
 				BCE06FDD25CEC5E20071CD3C /* TabBarController.swift in Sources */,
+				B7691D2425E351EB00CAA999 /* UITabelViewExtensions.swift in Sources */,
+				B7691D2A25E3527F00CAA999 /* JobInventoryPreviewViewController.swift in Sources */,
 				B79773EE25DFBAAA00DBE149 /* DuplicateInventoryViewController.swift in Sources */,
 				FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
 				FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
+				B7691D3525E366CC00CAA999 /* CanvasView.swift in Sources */,
 				FCE2A8FD25E02D91001CF1EA /* FaqVC.swift in Sources */,
 				457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */,
 				B79773DD25DFB26B00DBE149 /* CameraController.swift in Sources */,
@@ -835,7 +889,9 @@
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
 				453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */,
+				B7691D1F25E3509B00CAA999 /* JobInventoryTableViewCell.swift in Sources */,
 				4536217E25E17A7900C4B45A /* SquareView.swift in Sources */,
+				B7691D2725E3520C00CAA999 /* UICollectionViewExtensions.swift in Sources */,
 				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
 				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);
@@ -985,9 +1041,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7CZRA7KNK3;
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -996,7 +1052,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1008,9 +1064,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7CZRA7KNK3;
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1019,7 +1075,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

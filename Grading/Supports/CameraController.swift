@@ -82,7 +82,7 @@ extension CameraController {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
             self.photoOutput = AVCapturePhotoOutput()
-            self.photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecJPEG])], completionHandler: nil)
+            self.photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
             
             if captureSession.canAddOutput(self.photoOutput!) { captureSession.addOutput(self.photoOutput!) }
             captureSession.startRunning()
@@ -188,19 +188,13 @@ extension CameraController {
 }
 
 extension CameraController: AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
-                        resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
-        if let error = error { self.photoCaptureCompletionBlock?(nil, error) }
-            
-        else if let buffer = photoSampleBuffer, let data = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: buffer, previewPhotoSampleBuffer: nil),
-            let image = UIImage(data: data) {
-            
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) {
             self.photoCaptureCompletionBlock?(image, nil)
+            return
         }
-            
-        else {
-            self.photoCaptureCompletionBlock?(nil, CameraControllerError.unknown)
-        }
+        self.photoCaptureCompletionBlock?(nil, error)
     }
 }
 

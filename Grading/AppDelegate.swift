@@ -17,21 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        IQKeyboardManager.shared.enableAutoToolbar = false
-        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        setupToast()
+        setupKeyboardManager()
+        setupNavigationAppearence()
 
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        
-        UINavigationBar.appearance().barTintColor = Color.navBG // Navigation's BG Color
-        UINavigationBar.appearance().tintColor = .white // Navigation's Button Color
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.appFontBold(ofSize: 18)]
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .normal)
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .highlighted)
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .selected)
         
         return true
     }
@@ -43,6 +34,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+    private func setupToast() {
+        ToastManager.shared.position = .top
+        ToastManager.shared.duration = 2.0
+        var style = ToastStyle()
+        style.messageFont = UIFont.appFontBold(ofSize: 9)
+        style.titleAlignment = .center
+        style.verticalPadding = 3
+        style.rounded = true
+        ToastManager.shared.style = style
+    }
+    
+    private func setupKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+    }
 
+    private func setupNavigationAppearence() {
+        UINavigationBar.appearance().barTintColor = Color.navBG
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.appFontBold(ofSize: 18)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .highlighted)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.appFontRegular(ofSize: 18)], for: .selected)
+    }
 }
 

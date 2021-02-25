@@ -127,4 +127,8 @@ public extension UIViewController {
 
         present(popoverContent, animated: animated, completion: completion)
     }
+    
+    func showToast(_ message: String?) {
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.makeToast(message)
+    }
 }
