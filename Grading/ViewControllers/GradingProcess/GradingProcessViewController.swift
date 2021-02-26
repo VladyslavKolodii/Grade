@@ -31,6 +31,8 @@ class GradingProcessViewController: UIViewController {
         }
     }
     
+    var isEditingViewType: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPageController()
@@ -64,6 +66,13 @@ class GradingProcessViewController: UIViewController {
     
     func showNextItem() {
         guard currentIndex < pages.count-1 else {
+            if isEditingViewType {
+                self.showToast("Update Successful")
+                DispatchQueue.main.asyncAfter(deadline: .now() + ToastManager.shared.duration) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+                return
+            }
             navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
             return
         }
@@ -81,20 +90,7 @@ class GradingProcessViewController: UIViewController {
     }
     
     @IBAction func skipAction(_ sender: Any) {
-        guard currentIndex < pages.count-1 else {
-            navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
-            return }
-        currentIndex += 1
-        if currentIndex == 2 {
-            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width, height: self.view.frame.height)
-            bottombarheight.constant = 0
-            topbarheight.constant = 0
-        } else {
-            self.pageController.view.frame = CGRect(x: 0,y: 0,width: self.containerView.frame.width, height: self.containerView.frame.height)
-            bottombarheight.constant = 51
-            topbarheight.constant = 100
-        }
-        pageController.setViewControllers([pages[currentIndex]], direction: .forward, animated: true, completion: nil)
+        showNextItem()
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -187,7 +183,7 @@ extension GradingProcessViewController: GradingMaterialCaptureVCDelegate {
 
 extension GradingProcessViewController: GradingProcessDelegate {
     func didFinishGradingProcess() {
-        navigationController?.pushViewController(LotCompleteViewController.instantiate(from: .schedule), animated: true)
+        showNextItem()
     }
 }
 

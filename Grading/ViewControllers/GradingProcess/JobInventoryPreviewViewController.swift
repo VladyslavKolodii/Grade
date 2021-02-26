@@ -46,6 +46,18 @@ extension JobInventoryPreviewViewController {
         tableView.rowHeight = 60
         tableView.contentInset.top = 16
     }
+    
+    private func showEditView() {
+        let controller = GradingProcessViewController.instantiate(from: .schedule)
+        controller.isEditingViewType = true
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.isNavigationBarHidden = true
+        navigationController.modalPresentationStyle = .overFullScreen
+        navigationController.modalTransitionStyle = .crossDissolve
+        DispatchQueue.main.async {
+            self.present(navigationController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewDelegate {
@@ -89,8 +101,7 @@ extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewD
             })
             
             let editAction = UIContextualAction(style: .normal, title: nil, handler: { (action, view, completionHandler) in
-                self.showToast("Edit Action")
-//                self.navigationController?.view.makeToast("Edit Action")
+                self.showEditView()
                 completionHandler(true)
             })
 

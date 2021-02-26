@@ -14,7 +14,7 @@
 		<key>AlignedCollectionViewFlowLayout.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>14</integer>
 		</dict>
 		<key>AppAuth.xcscheme</key>
 		<dict>
@@ -38,42 +38,42 @@
 		<key>FirebaseAnalytics.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>16</integer>
 		</dict>
 		<key>FirebaseAuth.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>21</integer>
 		</dict>
 		<key>FirebaseCore.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>25</integer>
 		</dict>
 		<key>FirebaseCoreDiagnostics.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>15</integer>
 		</dict>
 		<key>FirebaseInstallations.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>24</integer>
 		</dict>
 		<key>FirebaseUI-FirebaseAuthUI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>22</integer>
 		</dict>
 		<key>FirebaseUI-FirebaseEmailAuthUI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>11</integer>
 		</dict>
 		<key>FirebaseUI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>10</integer>
 		</dict>
 		<key>GTMAppAuth.xcscheme</key>
 		<dict>
@@ -92,12 +92,12 @@
 		<key>GoogleAppMeasurement.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>17</integer>
 		</dict>
 		<key>GoogleDataTransport.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>13</integer>
 		</dict>
 		<key>GoogleSignIn.xcscheme</key>
 		<dict>
@@ -109,7 +109,7 @@
 		<key>GoogleUtilities.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>18</integer>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
@@ -128,7 +128,7 @@
 		<key>PromisesObjC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>20</integer>
 		</dict>
 		<key>StepSlider.xcscheme</key>
 		<dict>

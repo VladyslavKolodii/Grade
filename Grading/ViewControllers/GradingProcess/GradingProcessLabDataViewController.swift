@@ -27,9 +27,9 @@ class GradingProcessLabDataViewController: UIViewController {
         pesticideTestSlider.labels = testingStatus
         heavyMetalsTestSlider.labels = testingStatus
         
-        microbiaTestSlider.labelFont = UIFont.appFontBold(ofSize: 9)
-        pesticideTestSlider.labelFont = UIFont.appFontBold(ofSize: 9)
-        heavyMetalsTestSlider.labelFont = UIFont.appFontBold(ofSize: 9)
+        microbiaTestSlider.labelFont = UIFont.appFontBold(ofSize: 11)
+        pesticideTestSlider.labelFont = UIFont.appFontBold(ofSize: 11)
+        heavyMetalsTestSlider.labelFont = UIFont.appFontBold(ofSize: 11)
         
         microbiaTestSlider.labelColor = UIColor.white
         pesticideTestSlider.labelColor = UIColor.white

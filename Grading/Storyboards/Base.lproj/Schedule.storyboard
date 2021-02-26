@@ -955,7 +955,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="1122"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnK-PL-eaY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="828"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nTV-FG-6Ju">
                                                 <rect key="frame" x="16" y="20" width="343" height="428"/>
@@ -975,7 +975,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90.05" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-cq-FCi" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-cq-FCi" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="GCQ-2g-VTa"/>
@@ -987,6 +987,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1043,7 +1046,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-OF-hsP" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-OF-hsP" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="8ZW-es-cj3"/>
@@ -1055,6 +1058,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1100,7 +1106,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Urc-fm-Ub9" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Urc-fm-Ub9" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="22" id="0bF-7v-NR3"/>
@@ -1112,6 +1118,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1157,7 +1166,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m69-Gp-ZB4" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="m69-Gp-ZB4" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="22" id="4vC-YE-JVB"/>
@@ -1169,6 +1178,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1225,7 +1237,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkr-Tl-39a" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rkr-Tl-39a" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="7g3-Oj-E3O"/>
@@ -1237,6 +1249,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1282,7 +1297,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh5-8z-isq" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="fh5-8z-isq" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="22" id="BVk-gQ-zpo"/>
@@ -1294,6 +1309,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1339,7 +1357,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-It-3Q0" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-It-3Q0" customClass="PercentTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="259" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="VIk-mE-Ptq"/>
@@ -1351,6 +1369,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" name="Gray3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -1384,19 +1405,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gFA-ph-8Br">
-                                                <rect key="frame" x="0.0" y="478" width="375" height="342"/>
+                                                <rect key="frame" x="0.0" y="478" width="375" height="350"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7A-DX-slT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="103.33333333333333"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microbial Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUE-kL-l4E">
-                                                                <rect key="frame" x="16" y="0.0" width="343" height="15.666666666666666"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="18.333333333333332"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdO-JI-TJR">
-                                                                <rect key="frame" x="0.0" y="20.666666666666629" width="375" height="80"/>
+                                                                <rect key="frame" x="0.0" y="23.333333333333371" width="375" height="80"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17S-AG-1n9" customClass="StepSlider">
                                                                         <rect key="frame" x="107.66666666666669" y="10" width="160" height="60"/>
@@ -1423,7 +1444,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="adjustLabel" value="NO"/>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="labelOffset">
-                                                                                <real key="value" value="4"/>
+                                                                                <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
@@ -1448,16 +1469,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-nl-kxg">
-                                                        <rect key="frame" x="0.0" y="120.66666666666663" width="375" height="100.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="123.33333333333337" width="375" height="103.33333333333331"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesticide Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8N-2A-PK0">
-                                                                <rect key="frame" x="16" y="0.0" width="343" height="15.666666666666666"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="18.333333333333332"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cr-7I-JDz">
-                                                                <rect key="frame" x="0.0" y="20.666666666666742" width="375" height="80"/>
+                                                                <rect key="frame" x="0.0" y="23.333333333333258" width="375" height="80"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-Cg-9jz" customClass="StepSlider">
                                                                         <rect key="frame" x="107.66666666666669" y="10" width="160" height="60"/>
@@ -1484,7 +1505,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="adjustLabel" value="NO"/>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="labelOffset">
-                                                                                <real key="value" value="4"/>
+                                                                                <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
@@ -1509,16 +1530,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhT-p0-bws">
-                                                        <rect key="frame" x="0.0" y="241.33333333333334" width="375" height="100.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="246.66666666666666" width="375" height="103.33333333333334"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heavy Metals Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W3-bJ-XMR">
-                                                                <rect key="frame" x="16" y="0.0" width="343" height="15.666666666666666"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="18.333333333333332"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-aq-oUr">
-                                                                <rect key="frame" x="0.0" y="20.666666666666629" width="375" height="80"/>
+                                                                <rect key="frame" x="0.0" y="23.333333333333371" width="375" height="80"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wy-iY-Gjg" customClass="StepSlider">
                                                                         <rect key="frame" x="107.66666666666669" y="10" width="160" height="60"/>
@@ -1545,7 +1566,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="adjustLabel" value="NO"/>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="labelOffset">
-                                                                                <real key="value" value="4"/>
+                                                                                <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
@@ -1792,7 +1813,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-Ne-hOb" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-Ne-hOb" customClass="CustomTextField" customModule="Grading" customModuleProvider="target">
                                                                 <rect key="frame" x="263.33333333333331" y="11" width="47" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="QiT-JZ-I1T"/>
@@ -1821,6 +1842,7 @@
                                                             <constraint firstItem="8oI-Xb-VDP" firstAttribute="trailing" secondItem="8Ee-Ne-hOb" secondAttribute="trailing" id="Jff-95-rph"/>
                                                             <constraint firstItem="oao-mJ-lr1" firstAttribute="leading" secondItem="ySU-7O-82u" secondAttribute="leading" constant="16" id="V8I-t4-b4e"/>
                                                             <constraint firstItem="8Ee-Ne-hOb" firstAttribute="centerY" secondItem="ySU-7O-82u" secondAttribute="centerY" id="YiJ-iv-tfG"/>
+                                                            <constraint firstItem="8Ee-Ne-hOb" firstAttribute="width" relation="lessThanOrEqual" secondItem="ySU-7O-82u" secondAttribute="width" multiplier="0.5" id="baD-1R-hh9"/>
                                                             <constraint firstItem="8oI-Xb-VDP" firstAttribute="leading" secondItem="8Ee-Ne-hOb" secondAttribute="leading" id="fbM-ht-Aty"/>
                                                             <constraint firstAttribute="height" constant="44" id="g4y-VC-M3d"/>
                                                             <constraint firstAttribute="trailing" secondItem="5qb-m3-YdN" secondAttribute="trailing" constant="14" id="hir-ao-kSG"/>
@@ -1930,6 +1952,7 @@
                     <connections>
                         <outlet property="noteTextView" destination="YT0-Th-aPa" id="Fsx-KL-qlO"/>
                         <outlet property="placeholderLabel" destination="ICP-tA-IWM" id="TcF-6m-LRi"/>
+                        <outlet property="priceTextField" destination="8Ee-Ne-hOb" id="cE4-6o-Pz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrF-DT-zGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2979,7 +3002,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mu-co-FW6">
                                                                 <rect key="frame" x="0.0" y="19.333333333333329" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blx-dC-dk6" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blx-dC-dk6" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -3037,7 +3060,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-bA-10m">
                                                                 <rect key="frame" x="0.0" y="19.333333333333314" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrX-0E-bWu" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KrX-0E-bWu" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -3095,7 +3118,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uta-XK-1oJ">
                                                                 <rect key="frame" x="0.0" y="19.333333333333314" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdU-Ga-W5F" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdU-Ga-W5F" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -3153,7 +3176,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pN8-nj-IKL">
                                                                 <rect key="frame" x="0.0" y="19.333333333333314" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tW-gf-Cp6" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6tW-gf-Cp6" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -3211,7 +3234,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRP-1g-cFp">
                                                                 <rect key="frame" x="0.0" y="19.333333333333258" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Lo-Yan" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Lo-Yan" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -3269,7 +3292,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wu7-HW-jhj">
                                                                 <rect key="frame" x="0.0" y="19.333333333333371" width="375" height="80"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-cf-5SG" customClass="StepSlider">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-cf-5SG" customClass="StepSlider">
                                                                         <rect key="frame" x="24" y="18" width="327" height="44"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" name="appwhiteColor"/>
@@ -6621,26 +6644,6 @@
             <point key="canvasLocation" x="985" y="797"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="6tW-gf-Cp6">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-        <designable name="GxD-Lo-Yan">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-        <designable name="KrX-0E-bWu">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-        <designable name="Lqh-cf-5SG">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-        <designable name="blx-dC-dk6">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-        <designable name="kdU-Ga-W5F">
-            <size key="intrinsicContentSize" width="327" height="44"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Located_ic" width="19" height="25"/>
         <image name="S_send_ic" width="20" height="20"/>
