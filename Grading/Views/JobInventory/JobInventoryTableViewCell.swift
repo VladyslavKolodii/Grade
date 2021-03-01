@@ -7,35 +7,19 @@
 
 import UIKit
 
-protocol JobInventoryTableViewCellDelegate: class {
-    func undoAction(at indexPath: IndexPath)
-}
-
 class JobInventoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var overlayView: UIView!
-    
-    weak var delegate: JobInventoryTableViewCellDelegate?
-    var indexPath: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        indexPath = nil
-    }
-    
-    func setup(_ deleted: Bool, indexPath: IndexPath) {
-        self.indexPath = indexPath
-        overlayView.alpha = deleted ? 1.0 : 0.0
-    }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
-    @IBAction func didTapUndo(_ sender: Any) {
-        guard let indexPath = indexPath else { return }
-        delegate?.undoAction(at: indexPath)
+        // Configure the view for the selected state
     }
+    
 }

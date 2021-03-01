@@ -67,8 +67,7 @@ extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: JobInventoryTableViewCell.identifier, for: indexPath) as! JobInventoryTableViewCell
-        cell.setup(jobInventories[indexPath.row])
-        cell.delegate = self
+        cell.overlayView.alpha = jobInventories[indexPath.row] ? 1.0 : 0.0
         return cell
     }
     
@@ -119,12 +118,7 @@ extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewD
             return configuration
 
         }
-    }
-}
-
-extension JobInventoryPreviewViewController: JobInventoryTableViewCellDelegate {
-    func undoAction(at indexPath: IndexPath) {
-        self.jobInventories[indexPath.row].toggle()
-        self.tableView.reloadRows(at: [indexPath], with: .none)
+        
+        
     }
 }
