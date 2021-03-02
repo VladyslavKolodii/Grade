@@ -15,6 +15,7 @@
 		453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8125E1596D00F9F220 /* GradingVC.swift */; };
 		453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8425E1684700F9F220 /* GradingInfoVC.swift */; };
 		453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */; };
+		454CB78725EED263009EA5CD /* CustomTrackingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CB78625EED262009EA5CD /* CustomTrackingSlider.swift */; };
 		4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */; };
 		4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */; };
 		4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */; };
@@ -119,6 +120,7 @@
 		453D0F8125E1596D00F9F220 /* GradingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingVC.swift; sourceTree = "<group>"; };
 		453D0F8425E1684700F9F220 /* GradingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInfoVC.swift; sourceTree = "<group>"; };
 		453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingItemVC.swift; sourceTree = "<group>"; };
+		454CB78625EED262009EA5CD /* CustomTrackingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTrackingSlider.swift; sourceTree = "<group>"; };
 		4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoGuideVC.swift; sourceTree = "<group>"; };
 		4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidePhotoItemVC.swift; sourceTree = "<group>"; };
 		4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotosVC.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 		B79773F025DFBD2E00DBE149 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				454CB78625EED262009EA5CD /* CustomTrackingSlider.swift */,
 				B79773F125DFBD4C00DBE149 /* CustomView.swift */,
 				B79773F925DFBD6600DBE149 /* CustomTextField.swift */,
 				B79773F525DFBD5300DBE149 /* CustomButton.swift */,
@@ -838,6 +841,7 @@
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
 				45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
+				454CB78725EED263009EA5CD /* CustomTrackingSlider.swift in Sources */,
 				FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */,
 				B761D12625E8A63400ADD391 /* StringExtensions.swift in Sources */,
 				B79773EB25DFBA9800DBE149 /* LotCompleteViewController.swift in Sources */,
@@ -1049,9 +1053,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1060,7 +1064,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1072,9 +1076,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1083,7 +1087,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Grading_Dev_Feb19;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
