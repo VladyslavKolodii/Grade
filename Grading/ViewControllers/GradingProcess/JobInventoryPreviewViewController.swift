@@ -67,7 +67,7 @@ extension JobInventoryPreviewViewController: UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: JobInventoryTableViewCell.identifier, for: indexPath) as! JobInventoryTableViewCell
-        cell.setup(jobInventories[indexPath.row])
+        cell.setup(jobInventories[indexPath.row], indexPath: indexPath)
         cell.delegate = self
         return cell
     }
