@@ -81,7 +81,6 @@ extension InventoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inventories[section].titles.count
     }
-
  }
 
 extension InventoryVC: UITableViewDelegate {
