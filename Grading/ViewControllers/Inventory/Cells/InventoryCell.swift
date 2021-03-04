@@ -2,8 +2,7 @@
 //  InventoryCell.swift
 //  Grading
 //
-//  Created by Viet Tuan on 20/02/2021.
-//
+
 
 import UIKit
 

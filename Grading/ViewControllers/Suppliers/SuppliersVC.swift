@@ -2,8 +2,7 @@
 //  SupplierVC.swift
 //  Grading
 //
-//  Created by Viet Tuan on 19/02/2021.
-//
+
 
 import UIKit
 

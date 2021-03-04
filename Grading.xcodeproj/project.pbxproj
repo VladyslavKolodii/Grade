@@ -37,10 +37,10 @@
 		45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
 		45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
 		45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */; };
+		84AA4F4625F157B600A92864 /* JobInventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AA4F4425F157B600A92864 /* JobInventoryTableViewCell.xib */; };
+		84AA4F4725F157B600A92864 /* JobInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4F4525F157B600A92864 /* JobInventoryTableViewCell.swift */; };
 		B761D12625E8A63400ADD391 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761D12525E8A63400ADD391 /* StringExtensions.swift */; };
 		B761D12925E8A88D00ADD391 /* PercentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761D12825E8A88D00ADD391 /* PercentTextField.swift */; };
-		B7691D1F25E3509B00CAA999 /* JobInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */; };
-		B7691D2025E3509B00CAA999 /* JobInventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */; };
 		B7691D2425E351EB00CAA999 /* UITabelViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */; };
 		B7691D2725E3520C00CAA999 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */; };
 		B7691D2A25E3527F00CAA999 /* JobInventoryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */; };
@@ -141,11 +141,11 @@
 		457EF60125E09D290051AF10 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingMaterialCaptureVC.swift; sourceTree = "<group>"; };
 		45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84AA4F4425F157B600A92864 /* JobInventoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobInventoryTableViewCell.xib; sourceTree = "<group>"; };
+		84AA4F4525F157B600A92864 /* JobInventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInventoryTableViewCell.swift; sourceTree = "<group>"; };
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
 		B761D12525E8A63400ADD391 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		B761D12825E8A88D00ADD391 /* PercentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentTextField.swift; sourceTree = "<group>"; };
-		B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryTableViewCell.swift; sourceTree = "<group>"; };
-		B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobInventoryTableViewCell.xib; sourceTree = "<group>"; };
 		B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabelViewExtensions.swift; sourceTree = "<group>"; };
 		B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		B7691D2925E3527F00CAA999 /* JobInventoryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInventoryPreviewViewController.swift; sourceTree = "<group>"; };
@@ -363,6 +363,15 @@
 			path = Material;
 			sourceTree = "<group>";
 		};
+		84AA4F4325F157B600A92864 /* JobInventory */ = {
+			isa = PBXGroup;
+			children = (
+				84AA4F4425F157B600A92864 /* JobInventoryTableViewCell.xib */,
+				84AA4F4525F157B600A92864 /* JobInventoryTableViewCell.swift */,
+			);
+			path = JobInventory;
+			sourceTree = "<group>";
+		};
 		8E1E59385BEA9C88561BBE7D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,23 +379,6 @@
 				B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B7691D1B25E3507900CAA999 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B7691D1C25E3508100CAA999 /* JobInventory */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B7691D1C25E3508100CAA999 /* JobInventory */ = {
-			isa = PBXGroup;
-			children = (
-				B7691D1D25E3509B00CAA999 /* JobInventoryTableViewCell.swift */,
-				B7691D1E25E3509B00CAA999 /* JobInventoryTableViewCell.xib */,
-			);
-			path = JobInventory;
 			sourceTree = "<group>";
 		};
 		B7802FF725E3989300D47C4A /* Toast */ = {
@@ -495,7 +487,6 @@
 		BCE06F6C25CE6C8B0071CD3C /* Grading */ = {
 			isa = PBXGroup;
 			children = (
-				B7691D1B25E3507900CAA999 /* Views */,
 				BC774DF325CF6AB30052B4EA /* Model */,
 				BCE06F8425CE6CD60071CD3C /* ViewControllers */,
 				BCE06F8525CE6CE70071CD3C /* Storyboards */,
@@ -513,6 +504,7 @@
 		BCE06F8425CE6CD60071CD3C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84AA4F4325F157B600A92864 /* JobInventory */,
 				457EF5F225E09D290051AF10 /* Schedule */,
 				FCE2A8F025E02D91001CF1EA /* Contact */,
 				FCE2A8EA25E02D91001CF1EA /* FAQ */,
@@ -742,7 +734,7 @@
 				B79773C025DF9B2300DBE149 /* ProximaNova-Semibold.ttf in Resources */,
 				B79773C125DF9B2300DBE149 /* ProximaNova-Regular.ttf in Resources */,
 				BCE06F7A25CE6C8D0071CD3C /* LaunchScreen.storyboard in Resources */,
-				B7691D2025E3509B00CAA999 /* JobInventoryTableViewCell.xib in Resources */,
+				84AA4F4625F157B600A92864 /* JobInventoryTableViewCell.xib in Resources */,
 				FCE2A8FE25E02D91001CF1EA /* ContactVC.xib in Resources */,
 				FCE2A8FC25E02D91001CF1EA /* FaqCell.xib in Resources */,
 				BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */,
@@ -901,9 +893,9 @@
 				BCE06FFB25CED2060071CD3C /* InventoryVC.swift in Sources */,
 				BCE06F8925CE6E070071CD3C /* LoginVC.swift in Sources */,
 				453D0F7425E14A6000F9F220 /* GradingDefectIemVC.swift in Sources */,
-				B7691D1F25E3509B00CAA999 /* JobInventoryTableViewCell.swift in Sources */,
 				4536217E25E17A7900C4B45A /* SquareView.swift in Sources */,
 				B7691D2725E3520C00CAA999 /* UICollectionViewExtensions.swift in Sources */,
+				84AA4F4725F157B600A92864 /* JobInventoryTableViewCell.swift in Sources */,
 				457EF60525E09D290051AF10 /* AddLocationPhotoVC.swift in Sources */,
 				457EF60425E09D290051AF10 /* LocationDetailVC.swift in Sources */,
 			);

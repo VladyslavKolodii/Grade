@@ -1,8 +1,7 @@
 //
 //  UIColorExtension+Helpers.swift
 //
-//  Created by QTS.
-//
+
 
 import UIKit
 

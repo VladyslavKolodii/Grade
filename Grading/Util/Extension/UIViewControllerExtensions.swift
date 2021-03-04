@@ -1,8 +1,7 @@
 //
 //  UIViewControllerExtensions.swift
 //
-//  Created by QTS.
-//
+
 
 import UIKit
 

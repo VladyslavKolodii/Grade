@@ -2,8 +2,6 @@
 //  SettingVC.swift
 //  Grading
 //
-//  Created by VietTuan on 19/02/2021.
-//
 
 import UIKit
 

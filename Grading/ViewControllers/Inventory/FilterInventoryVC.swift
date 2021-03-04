@@ -2,8 +2,7 @@
 //  FilterInventoryVC.swift
 //  Grading
 //
-//  Created by Viet Tuan on 21/02/2021.
-//
+
 
 import UIKit
 import FSCalendar

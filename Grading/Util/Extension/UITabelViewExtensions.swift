@@ -2,8 +2,7 @@
 //  UITabelViewExtensions.swift
 //  Luxsurance
 //
-//  Created by QTS.
-//
+
 
 import UIKit
 

@@ -1,8 +1,7 @@
 //
 //  UIFontExtestion+Heplers.swift
 //
-//  Created by QTS.
-//
+
 
 import UIKit
 
