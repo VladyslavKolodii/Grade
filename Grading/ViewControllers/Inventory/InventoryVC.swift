@@ -12,9 +12,16 @@ struct Inventory {
 
 class InventoryVC: BaseVC {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var addMoreButton: UIButton!
+    
     @IBOutlet weak var tbMain: UITableView!
     @IBOutlet weak var tfSearch: UITextField!
-
+    
+    var isPreviewJobInventory: Bool = false
+    
     let titles = ["Aernier Inc", "Akiles Group", "Aoehm Extracts", "Bahringer Supply Co.", "Batterfield Growers", "Busche Gardens", "Cahringer Supply Co.","Catterfield Growers"]
     var inventories = [Inventory]()
     
@@ -25,12 +32,17 @@ class InventoryVC: BaseVC {
     
     func configureView() {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationItem.title = "Inventory"
+        titleLabel.text = isPreviewJobInventory ? "Job Inventory" : "Inventory"
+        self.navigationItem.title = isPreviewJobInventory ? "Job Inventory" : "Inventory"
         tfSearch.delegate = self
         tfSearch.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        let keys = ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
+        let keys = isPreviewJobInventory ? ["From Today (09/15/2020)"] : ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
         inventories = keys.map{ Inventory(letter: $0, titles: titles) }
         self.tbMain.reloadData()
+        
+        doneButton.isHidden = !isPreviewJobInventory
+        addMoreButton.isHidden = !isPreviewJobInventory
+        filterButton.isHidden = isPreviewJobInventory
     }
     
     func filterDatas() {
@@ -44,7 +56,7 @@ class InventoryVC: BaseVC {
             users = titles
         }
         if users.count > 0 {
-            let keys = ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
+            let keys = isPreviewJobInventory ? ["From Today (09/15/2020)"] : ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
             inventories = keys.map{ Inventory(letter: $0, titles: users) }
         }
         self.tbMain.reloadData()
@@ -55,15 +67,24 @@ class InventoryVC: BaseVC {
         vc.hidesBottomBarWhenPushed = true
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
-
+        
+    }
+    
+    @IBAction func addMoreAction(_ sender: Any) {
+    }
+    
+    @IBAction func doneAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
 
 extension InventoryVC: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return inventories.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryCell
         let section = inventories[indexPath.section]
@@ -73,6 +94,9 @@ extension InventoryVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if isPreviewJobInventory {
+            return nil
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "SupplierHeaderCell") as! SupplierHeaderCell
         cell.lbTitle.text = inventories[section].letter
         return cell
@@ -81,15 +105,21 @@ extension InventoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inventories[section].titles.count
     }
- }
+}
 
 extension InventoryVC: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if isPreviewJobInventory {
+            return CGFloat.leastNonzeroMagnitude
+        }
         return 30
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 61
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductDetailVC.instantiate(from: .inventory)
         vc.hidesBottomBarWhenPushed = true
@@ -98,11 +128,13 @@ extension InventoryVC: UITableViewDelegate {
 }
 
 extension InventoryVC: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         self.filterDatas()
         return true
     }
+    
     @objc func textFieldDidChange(textField: UITextField){
         self.filterDatas()
     }
