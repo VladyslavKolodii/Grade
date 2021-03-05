@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>437590431602-953a22evi5lk3v381pp6o14kq008pkn0.apps.googleusercontent.com</string>
+	<string>437590431602-3ddh6patmvh9vil3gfspsjfqut3k5aem.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.437590431602-953a22evi5lk3v381pp6o14kq008pkn0</string>
+	<string>com.googleusercontent.apps.437590431602-3ddh6patmvh9vil3gfspsjfqut3k5aem</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDhZpEDza-WZ0nkCnXY9QpyjF3xRqyTQV4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Grading</string>
+	<string>com.Grading.app</string>
 	<key>PROJECT_ID</key>
 	<string>big-tree-grading</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:437590431602:ios:d34f6a6080b2da384d2feb</string>
+	<string>1:437590431602:ios:d417122d127a84a24d2feb</string>
 </dict>
 </plist>
