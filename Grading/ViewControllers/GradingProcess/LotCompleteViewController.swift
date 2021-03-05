@@ -33,7 +33,8 @@ class LotCompleteViewController: UIViewController {
     }
     
     @IBAction func finishGradingAction(_ sender: Any) {
-        navigationController?.pushViewController(JobInventoryPreviewViewController.instantiate(from: .schedule), animated: true)
-        
+        let controller = InventoryVC.instantiate(from: .inventory)
+        controller.isPreviewJobInventory = true
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

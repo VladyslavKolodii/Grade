@@ -154,8 +154,9 @@ class GradingMaterialCaptureVC: UIViewController {
         if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
             backCamera = device
         } else {
+            return
             //handle this appropriately for production purposes
-            fatalError("no back camera")
+//            fatalError("no back camera")
         }
         
         //get front camera
