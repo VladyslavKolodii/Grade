@@ -36,13 +36,7 @@
 		4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */; };
 		45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */; };
 		45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */; };
-<<<<<<< HEAD
-		840AE14625F174320072BE0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840AE14525F174320072BE0E /* GoogleService-Info.plist */; };
-		84AA4F7025F159BD00A92864 /* JobInventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AA4F6E25F159BD00A92864 /* JobInventoryTableViewCell.xib */; };
-		84AA4F7125F159BD00A92864 /* JobInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4F6F25F159BD00A92864 /* JobInventoryTableViewCell.swift */; };
-=======
-		45E3C0FD25E3F42400B55B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */; };
->>>>>>> wayne
+		B75BE0B925F5BA8200DD0E65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B75BE0B825F5BA8100DD0E65 /* GoogleService-Info.plist */; };
 		B761D12625E8A63400ADD391 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761D12525E8A63400ADD391 /* StringExtensions.swift */; };
 		B761D12925E8A88D00ADD391 /* PercentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761D12825E8A88D00ADD391 /* PercentTextField.swift */; };
 		B7691D2425E351EB00CAA999 /* UITabelViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */; };
@@ -143,14 +137,8 @@
 		457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailVC.swift; sourceTree = "<group>"; };
 		457EF60125E09D290051AF10 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		4589020025E295970049C6CD /* GradingMaterialCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingMaterialCaptureVC.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		840AE14525F174320072BE0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		84AA4F6E25F159BD00A92864 /* JobInventoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobInventoryTableViewCell.xib; sourceTree = "<group>"; };
-		84AA4F6F25F159BD00A92864 /* JobInventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInventoryTableViewCell.swift; sourceTree = "<group>"; };
-=======
-		45E3C0FC25E3F42400B55B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
->>>>>>> wayne
 		B6CAD70A6D5AA3171A28B25E /* Pods-Grading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grading.release.xcconfig"; path = "Target Support Files/Pods-Grading/Pods-Grading.release.xcconfig"; sourceTree = "<group>"; };
+		B75BE0B825F5BA8100DD0E65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B761D12525E8A63400ADD391 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		B761D12825E8A88D00ADD391 /* PercentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentTextField.swift; sourceTree = "<group>"; };
 		B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabelViewExtensions.swift; sourceTree = "<group>"; };
@@ -565,7 +553,7 @@
 		BCE06FE825CECE6B0071CD3C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				840AE14525F174320072BE0E /* GoogleService-Info.plist */,
+				B75BE0B825F5BA8100DD0E65 /* GoogleService-Info.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -734,8 +722,8 @@
 				BCE0700225CED22B0071CD3C /* Inventory.storyboard in Resources */,
 				FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */,
 				BCE06F7725CE6C8D0071CD3C /* Assets.xcassets in Resources */,
-				840AE14625F174320072BE0E /* GoogleService-Info.plist in Resources */,
 				B79773BF25DF9B2300DBE149 /* ProximaNova-Bold.ttf in Resources */,
+				B75BE0B925F5BA8200DD0E65 /* GoogleService-Info.plist in Resources */,
 				BCE06FDC25CEC5E20071CD3C /* TabBarController.storyboard in Resources */,
 				BCE06F8D25CE6E650071CD3C /* Account.storyboard in Resources */,
 				FCE2A8FA25E02D91001CF1EA /* FaqVC.xib in Resources */,
