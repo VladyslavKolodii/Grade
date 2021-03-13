@@ -8,6 +8,8 @@ import UIKit
 
 class FaqCell: UITableViewCell {
 
+    @IBOutlet weak var lbQuestion: UILabel!
+    @IBOutlet weak var lbAnswer: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

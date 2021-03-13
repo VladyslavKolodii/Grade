@@ -87,7 +87,7 @@
 		FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC5125E28C710098E50C /* ProductTypeCell.swift */; };
 		FC24506025FC92EF0086B600 /* GradingRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24505225FC92EF0086B600 /* GradingRequestService.swift */; };
 		FC24506125FC92EF0086B600 /* RequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24505325FC92EF0086B600 /* RequestInfo.swift */; };
-		FC24508C25FC9E1F0086B600 /* SupplierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24508B25FC9E1F0086B600 /* SupplierService.swift */; };
+		FC24508C25FC9E1F0086B600 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24508B25FC9E1F0086B600 /* AppService.swift */; };
 		FC2450CB25FCA6400086B600 /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2450CA25FCA6400086B600 /* Supplier.swift */; };
 		FC2450CF25FCC02B0086B600 /* SupplierProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2450CD25FCC02A0086B600 /* SupplierProfileCell.swift */; };
 		FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50E71325E29F7100062210 /* SortTypeVC.swift */; };
@@ -96,6 +96,8 @@
 		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
 		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
 		FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */; };
+		FC79604225FD1C6A008FB9C9 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604125FD1C6A008FB9C9 /* Faq.swift */; };
+		FC79604725FD2314008FB9C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604625FD2314008FB9C9 /* User.swift */; };
 		FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA992DC25E2CD0900E05207 /* UIKits.swift */; };
 		FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE2A8E725E02D91001CF1EA /* SettingVC.swift */; };
 		FCE2A8F825E02D91001CF1EA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE2A8E825E02D91001CF1EA /* SettingVC.xib */; };
@@ -197,7 +199,7 @@
 		FC13AC5125E28C710098E50C /* ProductTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTypeCell.swift; sourceTree = "<group>"; };
 		FC24505225FC92EF0086B600 /* GradingRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradingRequestService.swift; sourceTree = "<group>"; };
 		FC24505325FC92EF0086B600 /* RequestInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInfo.swift; sourceTree = "<group>"; };
-		FC24508B25FC9E1F0086B600 /* SupplierService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierService.swift; sourceTree = "<group>"; };
+		FC24508B25FC9E1F0086B600 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		FC2450CA25FCA6400086B600 /* Supplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		FC2450CD25FCC02A0086B600 /* SupplierProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierProfileCell.swift; sourceTree = "<group>"; };
 		FC50E71325E29F7100062210 /* SortTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortTypeVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,8 @@
 		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInventoryVC.swift; sourceTree = "<group>"; };
+		FC79604125FD1C6A008FB9C9 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
+		FC79604625FD2314008FB9C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FCA992DC25E2CD0900E05207 /* UIKits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKits.swift; sourceTree = "<group>"; };
 		FCE2A8E725E02D91001CF1EA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FCE2A8E825E02D91001CF1EA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
@@ -457,6 +461,8 @@
 			children = (
 				BC774DF425CF6AC40052B4EA /* Schedule.swift */,
 				FC2450CA25FCA6400086B600 /* Supplier.swift */,
+				FC79604125FD1C6A008FB9C9 /* Faq.swift */,
+				FC79604625FD2314008FB9C9 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -640,7 +646,7 @@
 		FC24505425FC92EF0086B600 /* AppServices */ = {
 			isa = PBXGroup;
 			children = (
-				FC24508B25FC9E1F0086B600 /* SupplierService.swift */,
+				FC24508B25FC9E1F0086B600 /* AppService.swift */,
 			);
 			path = AppServices;
 			sourceTree = "<group>";
@@ -658,8 +664,8 @@
 			isa = PBXGroup;
 			children = (
 				FCE2A8EB25E02D91001CF1EA /* FaqVC.xib */,
-				FCE2A8EC25E02D91001CF1EA /* Cells */,
 				FCE2A8EF25E02D91001CF1EA /* FaqVC.swift */,
+				FCE2A8EC25E02D91001CF1EA /* Cells */,
 			);
 			path = FAQ;
 			sourceTree = "<group>";
@@ -850,6 +856,7 @@
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
 				FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
+				FC79604225FD1C6A008FB9C9 /* Faq.swift in Sources */,
 				4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */,
 				457EF60625E09D290051AF10 /* PhotoControlVC.swift in Sources */,
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
@@ -879,8 +886,9 @@
 				457EF60A25E09D290051AF10 /* ScheduleDetailVC.swift in Sources */,
 				4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */,
 				45E3C0F925E3E92000B55B76 /* PhotoPreviewVC.swift in Sources */,
+				FC79604725FD2314008FB9C9 /* User.swift in Sources */,
 				FCE2A8F725E02D91001CF1EA /* SettingVC.swift in Sources */,
-				FC24508C25FC9E1F0086B600 /* SupplierService.swift in Sources */,
+				FC24508C25FC9E1F0086B600 /* AppService.swift in Sources */,
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */,

@@ -4018,7 +4018,7 @@
         <!--Schedule-->
         <scene sceneID="kaw-5u-6Gv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Re5-Ib-RR7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Re5-Ib-RR7" customClass="BaseNavigationController" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="tab_schedule_off" id="hls-QH-FA1"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>

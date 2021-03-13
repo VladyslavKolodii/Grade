@@ -42,6 +42,8 @@ enum RequestParameterEncoding {
 class RequestInfoFactory {
     private static let mainURL = "http://18.220.129.47/api/v1/"
     static let supplierURL = mainURL + "supplier"
+    static let faqURL = mainURL + "faq"
+    static let userURL = mainURL + "user"
 
     /// Generate an default header with accept and content type
     /// create header for request

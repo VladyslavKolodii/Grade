@@ -119,7 +119,7 @@ extension SuppliersVC: UITextFieldDelegate {
 // MARK: Webservice
 extension SuppliersVC {
     func getSupplierList(completion: (() -> Void)? = nil) {
-        let service = SupplierService()
+        let service = AppService()
         SVProgressHUD.show()
         service.getSupplierList { json in
             let statusCode = json["status"].intValue
@@ -145,7 +145,7 @@ extension SuppliersVC {
     }
     
     func getSupplierDetail(supplier:Supplier, completion: (() -> Void)? = nil) {
-        let service = SupplierService()
+        let service = AppService()
         SVProgressHUD.show()
         service.getSupplierDetail(id: supplier.id) { json in
             let statusCode = json["status"].intValue
