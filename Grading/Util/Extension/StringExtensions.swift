@@ -5,7 +5,7 @@
 
 
 import Foundation
-
+import UIKit
 extension String {
     
     func isValidDouble(maxDecimalPlaces: Int) -> Bool {
@@ -26,4 +26,47 @@ extension String {
         
         return false
     }
+    
+    func phoneNumber() -> String {
+        var string = self
+        string = string.replacingOccurrences(of: " ", with: "")
+        string = string.replacingOccurrences(of: "(", with: "")
+        string = string.replacingOccurrences(of: ")", with: "")
+        string = string.replacingOccurrences(of: "-", with: "")
+        return string
+    }
+}
+
+extension Data {
+    private static let mimeTypeSignatures: [UInt8 : String] = [
+        0xFF : "image/jpeg",
+        0x89 : "image/png",
+        0x47 : "image/gif",
+        0x49 : "image/tiff",
+        0x4D : "image/tiff"
+    ]
+
+    var mimeType: String? {
+        var c: UInt8 = 0
+        copyBytes(to: &c, count: 1)
+        return Data.mimeTypeSignatures[c] ?? nil
+    }
+}
+
+extension UIApplication {
+    class func getTopViewController(base: UIViewController? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return getTopViewController(base: nav.visibleViewController)
+
+        } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return getTopViewController(base: selected)
+        } else if let presented = base?.presentedViewController {
+            return getTopViewController(base: presented)
+        }
+        return base
+    }
+}
+
+extension Int {
+    var boolValue: Bool { return self != 0 }
 }
