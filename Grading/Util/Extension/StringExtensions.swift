@@ -35,6 +35,10 @@ extension String {
         string = string.replacingOccurrences(of: "-", with: "")
         return string
     }
+    func dola() -> String {
+        return "$"+self
+    }
+
 }
 
 extension Data {

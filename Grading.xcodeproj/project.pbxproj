@@ -85,6 +85,7 @@
 		BD2980A2305323FDCFBE20C4 /* Pods_Grading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC86CB41FEF82E4BB0BD3AE /* Pods_Grading.framework */; };
 		FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC4B25E27C480098E50C /* WMSegment.swift */; };
 		FC13AC5225E28C710098E50C /* ProductTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC13AC5125E28C710098E50C /* ProductTypeCell.swift */; };
+		FC20CF3325FDD6A1007D96E5 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC20CF3225FDD6A1007D96E5 /* Inventory.swift */; };
 		FC24506025FC92EF0086B600 /* GradingRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24505225FC92EF0086B600 /* GradingRequestService.swift */; };
 		FC24506125FC92EF0086B600 /* RequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24505325FC92EF0086B600 /* RequestInfo.swift */; };
 		FC24508C25FC9E1F0086B600 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24508B25FC9E1F0086B600 /* AppService.swift */; };
@@ -197,6 +198,7 @@
 		FC13AC4B25E27C480098E50C /* WMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMSegment.swift; sourceTree = "<group>"; };
 		FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTypeVC.swift; sourceTree = "<group>"; };
 		FC13AC5125E28C710098E50C /* ProductTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTypeCell.swift; sourceTree = "<group>"; };
+		FC20CF3225FDD6A1007D96E5 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		FC24505225FC92EF0086B600 /* GradingRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradingRequestService.swift; sourceTree = "<group>"; };
 		FC24505325FC92EF0086B600 /* RequestInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInfo.swift; sourceTree = "<group>"; };
 		FC24508B25FC9E1F0086B600 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				FC2450CA25FCA6400086B600 /* Supplier.swift */,
 				FC79604125FD1C6A008FB9C9 /* Faq.swift */,
 				FC79604625FD2314008FB9C9 /* User.swift */,
+				FC20CF3225FDD6A1007D96E5 /* Inventory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */,
 				45E3C0F725E3E91200B55B76 /* ProductTypeVC.swift in Sources */,
 				BC774DF525CF6AC40052B4EA /* Schedule.swift in Sources */,
+				FC20CF3325FDD6A1007D96E5 /* Inventory.swift in Sources */,
 				454CB78725EED263009EA5CD /* CustomTrackingSlider.swift in Sources */,
 				FC13AC4C25E27C490098E50C /* WMSegment.swift in Sources */,
 				B761D12625E8A63400ADD391 /* StringExtensions.swift in Sources */,

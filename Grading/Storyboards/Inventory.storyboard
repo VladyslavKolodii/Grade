@@ -236,7 +236,7 @@
                                                                                     <color key="textColor" name="Gray3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$320.59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-dr-qc9">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$320.59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-dr-qc9">
                                                                                     <rect key="frame" x="0.0" y="14.5" width="67.5" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                                     <color key="textColor" name="Gray5"/>
@@ -424,6 +424,11 @@
                                             <outlet property="ctrLeftMainView" destination="ri6-KA-KK6" id="1sj-d7-QsR"/>
                                             <outlet property="ctrRightMainView" destination="f06-rh-JGT" id="RN0-th-kqr"/>
                                             <outlet property="ctrWidthViewDelete" destination="QLl-kR-EhA" id="Fzu-oh-Eha"/>
+                                            <outlet property="lbApp" destination="X5q-rI-BO5" id="SEG-06-8tY"/>
+                                            <outlet property="lbDate" destination="Lpa-w0-Y7L" id="mdM-zo-8mV"/>
+                                            <outlet property="lbList" destination="SBD-3g-noB" id="4je-XB-AXO"/>
+                                            <outlet property="lbMix" destination="n93-Rj-1FW" id="Fqp-0g-cNQ"/>
+                                            <outlet property="lbPrice" destination="oLL-dr-qc9" id="0IO-WD-RAh"/>
                                             <outlet property="lbTitle" destination="1nw-xP-SZT" id="KxA-Kr-utf"/>
                                         </connections>
                                     </tableViewCell>

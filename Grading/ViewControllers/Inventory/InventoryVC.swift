@@ -4,11 +4,8 @@
 //
 
 import UIKit
-
-struct Inventory {
-    let letter : String
-    let titles : [String]
-}
+import SVProgressHUD
+import SwiftyJSON
 
 class InventoryVC: BaseVC {
     
@@ -22,12 +19,13 @@ class InventoryVC: BaseVC {
     
     var isPreviewJobInventory: Bool = false
     
-    let titles = ["Aernier Inc", "Akiles Group", "Aoehm Extracts", "Bahringer Supply Co.", "Batterfield Growers", "Busche Gardens", "Cahringer Supply Co.","Catterfield Growers"]
+    var sections = [InventorySection]()
     var inventories = [Inventory]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        self.getInventoryList()
     }
     
     func configureView() {
@@ -36,28 +34,40 @@ class InventoryVC: BaseVC {
         self.navigationItem.title = isPreviewJobInventory ? "Job Inventory" : "Inventory"
         tfSearch.delegate = self
         tfSearch.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        let keys = isPreviewJobInventory ? ["From Today (09/15/2020)"] : ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
-        inventories = keys.map{ Inventory(letter: $0, titles: titles) }
-        self.tbMain.reloadData()
-        
         doneButton.isHidden = !isPreviewJobInventory
         addMoreButton.isHidden = !isPreviewJobInventory
         filterButton.isHidden = isPreviewJobInventory
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tbMain.refreshControl = refreshControl
+    }
+    
+    @objc func refreshData(refreshControl: UIRefreshControl) {
+        self.getInventoryList()
+        refreshControl.endRefreshing()
+    }
+    
+    func initSections() {
+        let groupedDictionary = Dictionary(grouping: inventories, by: {$0.date.string(withFormat: "yyyy-MM-dd")})
+        let keys = groupedDictionary.keys.sorted()
+        self.sections = keys.map{ InventorySection(date: $0, inventory: groupedDictionary[$0]!.sorted(by: ({$0.id < $1.id}))) }
+        self.tbMain.reloadData()
     }
     
     func filterDatas() {
-        inventories = [Inventory]()
-        var users = [String]()
+        var datas = [Inventory]()
+        self.sections.removeAll()
         if let text = tfSearch.text, !text.isEmpty {
-            users = titles.filter({ obj -> Bool in
-                obj.lowercased().range(of: text.lowercased()) != nil
+            datas = inventories.filter({ obj -> Bool in
+                obj.title.lowercased().range(of: text.lowercased()) != nil
             })
         } else {
-            users = titles
+            datas = inventories
         }
-        if users.count > 0 {
-            let keys = isPreviewJobInventory ? ["From Today (09/15/2020)"] : ["From Today (09/15/2020)", "From This Week (09/13 - 09/19)"]
-            inventories = keys.map{ Inventory(letter: $0, titles: users) }
+        if datas.count > 0 {
+            let groupedDictionary = Dictionary(grouping: datas, by: {$0.date.string(withFormat: "yyyy-MM-dd")})
+            let keys = groupedDictionary.keys.sorted()
+            self.sections = keys.map{ InventorySection(date: $0, inventory: groupedDictionary[$0]!.sorted(by: ({$0.id < $1.id}))) }
         }
         self.tbMain.reloadData()
     }
@@ -82,14 +92,14 @@ class InventoryVC: BaseVC {
 extension InventoryVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return inventories.count
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryCell
-        let section = inventories[indexPath.section]
-        let title = section.titles[indexPath.row]
-        cell.lbTitle.text = title
+        let section = sections[indexPath.section]
+        let inventory = section.inventory[indexPath.row]
+        cell.inventory = inventory
         return cell
     }
     
@@ -98,12 +108,12 @@ extension InventoryVC: UITableViewDataSource {
             return nil
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "SupplierHeaderCell") as! SupplierHeaderCell
-        cell.lbTitle.text = inventories[section].letter
+        cell.lbTitle.text = sections[section].date
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inventories[section].titles.count
+        return sections[section].inventory.count
     }
 }
 
@@ -121,9 +131,17 @@ extension InventoryVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let section = sections[indexPath.section]
+//        let inventory = section.inventory[indexPath.row]
+//        self.getInventoryDetail(inventory: inventory) {
+//            let vc = ProductDetailVC.instantiate(from: .inventory)
+//            vc.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
         let vc = ProductDetailVC.instantiate(from: .inventory)
         vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 }
 
@@ -137,5 +155,55 @@ extension InventoryVC: UITextFieldDelegate {
     
     @objc func textFieldDidChange(textField: UITextField){
         self.filterDatas()
+    }
+}
+
+// MARK: Webservice
+extension InventoryVC {
+    func getInventoryList(completion: (() -> Void)? = nil) {
+        let service = AppService()
+        SVProgressHUD.show()
+        service.getInventoryList { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                self.inventories.removeAll()
+                for object in response {
+                    let inventory = Inventory(object)
+                    self.inventories.append(inventory)
+                }
+                self.initSections()
+                self.tbMain.reloadData()
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
+        }
+    }
+    
+    func getInventoryDetail(inventory: Inventory, completion: (() -> Void)? = nil) {
+        let service = AppService()
+        SVProgressHUD.show()
+        service.getInventoryDetail(id: 5) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"]
+                inventory.mapInfoData(response)
+                completion?()
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
+        }
     }
 }

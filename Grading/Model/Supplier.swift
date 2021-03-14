@@ -23,6 +23,10 @@ class Supplier {
     var ubi: Int = 0
     var farmPacket: Bool = false
     var networkAgreement: Bool = false
+    
+    init() {
+    
+    }
 
     init(_ json: JSON) {
         self.id = json["id"].intValue

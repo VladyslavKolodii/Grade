@@ -40,6 +40,23 @@ class AppService {
             callBack(json)
         }
     }
+    
+    func getInventoryList(callBack: @escaping (_ json: JSON) -> ()){
+        let url = RequestInfoFactory.inventoryURL
+        let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo) { (response,serverData,json) in
+            callBack(json)
+        }
+    }
+    
+    
+    func getInventoryDetail(id:Int, callBack: @escaping (_ json: JSON) -> ()){
+        let url = RequestInfoFactory.inventoryURL + "/\(id)"
+        let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo) { (response,serverData,json) in
+            callBack(json)
+        }
+    }
 }
 
 
