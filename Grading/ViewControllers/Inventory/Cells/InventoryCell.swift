@@ -12,8 +12,19 @@ class InventoryCell: UITableViewCell {
     @IBOutlet weak var ctrWidthViewDelete: NSLayoutConstraint!
     @IBOutlet weak var ctrLeftMainView: NSLayoutConstraint!
     @IBOutlet weak var ctrRightMainView: NSLayoutConstraint!
+    @IBOutlet weak var lbDate: UILabel!
+    @IBOutlet weak var lbApp: UILabel!
+    @IBOutlet weak var lbList: UILabel!
+    @IBOutlet weak var lbPrice: UILabel!
+    @IBOutlet weak var lbMix: UILabel!
     
-    
+    var inventory: Inventory? = nil {
+        didSet {
+            self.setData()
+        }
+    }
+        
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +35,18 @@ class InventoryCell: UITableViewCell {
         let swiperight = UISwipeGestureRecognizer(target: self, action: #selector(self.swiperight(sender:)))
         swiperight.direction = .right
         self.addGestureRecognizer(swiperight)
+    }
+    
+    func setData() {
+        guard let inventory = inventory else {
+            return
+        }
+        self.lbDate.text = inventory.date.string(withFormat: "yyyy-MM-dd")
+        self.lbTitle.text = inventory.title
+        self.lbApp.text = inventory.appraised.string
+        self.lbList.text = inventory.list.string
+        self.lbMix.text = "Mixed Material · \(inventory.mixedMaterial) g"
+        self.lbPrice.text = inventory.totalValue.string.dola()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

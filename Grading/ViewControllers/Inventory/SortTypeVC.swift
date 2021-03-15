@@ -9,14 +9,13 @@ import UIKit
 class SortTypeVC: BaseVC {
 
     @IBOutlet weak var tbMain: UITableView!
-    let types = ["Date Graded", "Price","Total Grade", "Product Type","Grader", "Quantity"]
-    
-    var onValueChanged: ((String) ->())?
-    var value: String = "Date Graded"
-    
+    var onValueChanged: ((SortType) ->())?
+    var sortSelected: SortType = .date
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        sortSelected = FilterTypeData.sortSelected
     }
     
     @IBAction func onTapCancel(_ sender: Any) {
@@ -24,7 +23,7 @@ class SortTypeVC: BaseVC {
     }
     
     @IBAction func onTapSave(_ sender: Any) {
-        self.onValueChanged?(value)
+        self.onValueChanged?(sortSelected)
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -35,15 +34,15 @@ extension SortTypeVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTypeCell", for: indexPath) as! ProductTypeCell
-        cell.lbTilte.text = types[indexPath.row]
+        let type = FilterTypeData.listSorts[indexPath.row]
+        cell.lbTilte.text = type.rawValue
+        cell.isSelectedType = sortSelected == type
         return cell
 
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return types.count
+        return FilterTypeData.listSorts.count
     }
-
  }
 
 extension SortTypeVC: UITableViewDelegate {
@@ -51,6 +50,8 @@ extension SortTypeVC: UITableViewDelegate {
         return 50
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        value = types[indexPath.row]
+        sortSelected = FilterTypeData.listSorts[indexPath.row]
+        self.tbMain.reloadData()
     }
 }
+

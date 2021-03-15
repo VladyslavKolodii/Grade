@@ -12,18 +12,32 @@ class ProductTypeVC: BaseVC {
     @IBOutlet weak var segment: WMSegment!
     @IBOutlet weak var tbMaster: UITableView!
     @IBOutlet weak var tbExtract: UITableView!
-    var onValueChanged: (([String]) ->())?
+    var onValueChanged: (([FilterType]) ->())?
 
-    let masters = ["A-Flower", "B-Flower","Trim", "Mixed Material","Fan Leaf", "Fresh Frozen","Clone", "Crude","Pre-Roll", "Other"]
-    let extracts = ["Crumble", "Diamonds","Shatter", "Wax","Kief", "Live Resin","RSO", "Distillate","Other"]
-    var selectedValues = [String]()
+    var masters = [FilterType]()
+    var extracts = [FilterType]()
+    var selectedValues = [FilterType]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.configureView()
+        self.setupData()
+        self.tbMaster.reloadData()
+        self.tbExtract.reloadData()
     }
 
+    func setupData() {
+        let types = FilterTypeData.listProductTypes.filter({$0.parentId == 0})
+        for type in types {
+            if type.name.lowercased().hasSuffix("Matter".lowercased()) {
+                masters = FilterTypeData.listProductTypes.filter({$0.parentId == type.id})
+            } else {
+                extracts = FilterTypeData.listProductTypes.filter({$0.parentId == type.id})
+            }
+        }
+    }
+    
     func configureView() {
         self.segment.selectedFont = UIFont.appFontBold(ofSize: 14)
         self.segment.normalFont = UIFont.appFontBold(ofSize: 14)
@@ -55,11 +69,15 @@ extension ProductTypeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tbMaster {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTypeCell", for: indexPath) as! ProductTypeCell
-            cell.lbTilte.text = masters[indexPath.row]
+            let type = masters[indexPath.row]
+            cell.lbTilte.text = type.name
+            cell.isSelectedType = selectedValues.contains(where: {$0.id == type.id})
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTypeCell", for: indexPath) as! ProductTypeCell
-            cell.lbTilte.text = extracts[indexPath.row]
+            let type = extracts[indexPath.row]
+            cell.lbTilte.text = type.name
+            cell.isSelectedType = selectedValues.contains(where: {$0.id == type.id})
             return cell
         }
     }
@@ -80,19 +98,20 @@ extension ProductTypeVC: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tbMaster {
-            let value = masters[indexPath.row]
-            if !selectedValues.contains(value) {
-                selectedValues.append(value)
+            let type = masters[indexPath.row]
+            if let index = selectedValues.firstIndex(where: {$0.id == type.id}) {
+                selectedValues.remove(at: index)
             } else {
-                selectedValues.removeAll(value)
+                selectedValues.append(type)
             }
         } else {
-            let value = extracts[indexPath.row]
-            if !selectedValues.contains(value) {
-                selectedValues.append(value)
+            let type = extracts[indexPath.row]
+            if let index = selectedValues.firstIndex(where: {$0.id == type.id}) {
+                selectedValues.remove(at: index)
             } else {
-                selectedValues.removeAll(value)
+                selectedValues.append(type)
             }
         }
+        tableView.reloadData()
     }
 }

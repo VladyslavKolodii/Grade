@@ -6,6 +6,9 @@ target 'Grading' do
   use_frameworks!
 
   # Pods for Grading
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
   pod 'GoogleSignIn'
   pod 'FSCalendar'
   pod 'SwifterSwift'

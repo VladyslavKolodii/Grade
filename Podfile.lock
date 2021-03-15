@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.1)
   - AlignedCollectionViewFlowLayout (1.1.2)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
@@ -95,6 +96,7 @@ PODS:
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
   - StepSlider (1.8.0)
+  - SVProgressHUD (2.2.5)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -120,8 +122,10 @@ PODS:
   - SwifterSwift/StoreKit (5.2.0)
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - AlignedCollectionViewFlowLayout
   - ASValueTrackingSlider
   - Firebase/Auth
@@ -132,10 +136,13 @@ DEPENDENCIES:
   - GoogleSignIn
   - IQKeyboardManagerSwift
   - StepSlider
+  - SVProgressHUD
   - SwifterSwift
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - AlignedCollectionViewFlowLayout
     - AppAuth
     - ASValueTrackingSlider
@@ -157,9 +164,12 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - StepSlider
+    - SVProgressHUD
     - SwifterSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   ASValueTrackingSlider: 5261de3fcf00adb339efc93885e8f0bc99e703cd
@@ -181,8 +191,10 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 125465386d1ac80c650ae8f661c80b9221430c70
+PODFILE CHECKSUM: f0af1f355f667fd661ed8a101263d1ea0c787805
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

@@ -5,110 +5,71 @@
 
 
 import UIKit
-import MessageUI
 
 class SupplierProfileVC: BaseVC {
+    @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var lbLocation: UILabel!
+    @IBOutlet weak var lbNote: UILabel!
+    @IBOutlet weak var lbNumber: UILabel!
+    @IBOutlet weak var lbUBI: UILabel!
+    @IBOutlet weak var ctrHeightTableView: NSLayoutConstraint!
+    @IBOutlet weak var lbPacket: UILabel!
+    @IBOutlet weak var lbNetwork: UILabel!
+    
+    var supplier: Supplier?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        self.configView()
+    }
+    
+    func configView() {
+        lbName.text = supplier?.name
+        lbLocation.text = supplier?.location
+        lbNote.text = supplier?.note
+        lbNumber.text = supplier?.licenseNumber.string
+        lbUBI.text = supplier?.ubi.string
+        lbPacket.text = supplier?.farmPacket == true ? "Yes" : "No"
+        lbNetwork.text = supplier?.networkAgreement == true ? "Yes" : "No"
+        ctrHeightTableView.constant = CGFloat((supplier?.info.count ?? 0)*190)
     }
     
     @IBAction func detailTap(_ sender: Any) {
         let vc = SupplierDetailVC.instantiate(from: .suppliers)
         vc.hidesBottomBarWhenPushed = true
+        vc.supplier = self.supplier
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func backTap(_ sender: Any) {
         navigationController?.popViewController()
     }
-    
-    
-    @IBAction func tapCall(_ sender: Any) {
-        self.dialNumber(number: "1234567890")
-    }
-    
-    @IBAction func tapMessage(_ sender: Any) {
-        if (MFMessageComposeViewController.canSendText()) {
-            let controller = MFMessageComposeViewController()
-            controller.body = "Message Body"
-            controller.recipients = ["1234567890"]
-            controller.messageComposeDelegate = self
-            self.present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func tapMail(_ sender: Any) {
-        // Modify following variables with your text / recipient
-        let recipientEmail = "joes@gmail.com"
-        let subject = "Grading"
-        let body = "Grading"
-        
-        // Show default mail composer
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients([recipientEmail])
-            mail.setSubject(subject)
-            mail.setMessageBody(body, isHTML: false)
-            
-            present(mail, animated: true)
-            
-            // Show third party email composer if default Mail app is not present
-        } else if let emailUrl = createEmailUrl(to: recipientEmail, subject: subject, body: body) {
-            UIApplication.shared.open(emailUrl)
-        }
-    }
-    
-    func dialNumber(number : String) {
-        if let url = URL(string: "tel://\(number)"),
-           UIApplication.shared.canOpenURL(url) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler:nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        } else {
-            // add error message here
-        }
-    }
-    
-    private func createEmailUrl(to: String, subject: String, body: String) -> URL? {
-        let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        let gmailUrl = URL(string: "googlegmail://co?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-        let outlookUrl = URL(string: "ms-outlook://compose?to=\(to)&subject=\(subjectEncoded)")
-        let yahooMail = URL(string: "ymail://mail/compose?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-        let sparkUrl = URL(string: "readdle-spark://compose?recipient=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-        let defaultUrl = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
-        
-        if let gmailUrl = gmailUrl, UIApplication.shared.canOpenURL(gmailUrl) {
-            return gmailUrl
-        } else if let outlookUrl = outlookUrl, UIApplication.shared.canOpenURL(outlookUrl) {
-            return outlookUrl
-        } else if let yahooMail = yahooMail, UIApplication.shared.canOpenURL(yahooMail) {
-            return yahooMail
-        } else if let sparkUrl = sparkUrl, UIApplication.shared.canOpenURL(sparkUrl) {
-            return sparkUrl
-        }
-        
-        return defaultUrl
-    }
-    
 }
 
-extension SupplierProfileVC: MFMessageComposeViewControllerDelegate {
-    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        controller.dismiss(animated: true, completion: nil)
+extension SupplierProfileVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SupplierProfileCell", for: indexPath) as! SupplierProfileCell
+        let info = supplier?.info[indexPath.row]
+        cell.info = info
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return supplier?.info.count ?? 0
     }
 }
 
-
-extension SupplierProfileVC: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
+extension SupplierProfileVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 190
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
