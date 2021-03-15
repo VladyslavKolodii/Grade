@@ -6,6 +6,18 @@ class AppService {
         return GradingRequestService()
     }
     
+    func saveUserInfo(userName: String, userEmail: String, callBack: @escaping (_ json: JSON) -> ()) {
+        let url = RequestInfoFactory.saveUser
+        let param: [String: String] = [
+            "fullName": userName,
+            "email": userEmail
+        ]
+        let requestInfo = RequestInfo(requestType: .post, header: RequestInfoFactory.defaultHeader(), body: param)
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo){(reponse, serverData, json) in
+            callBack(json)
+        }
+    }
+    
     func getSupplierList(callBack: @escaping (_ json: JSON) -> ()){
         let url = RequestInfoFactory.supplierURL
         let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())

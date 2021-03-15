@@ -9,6 +9,7 @@ import GoogleSignIn
 import FirebaseUI
 import FirebaseAuth
 import FirebaseUI
+import SVProgressHUD
 
 class LoginVC: UIViewController {
     
@@ -51,8 +52,8 @@ class LoginVC: UIViewController {
     //MARK: - USER INTERACTION
     
     @IBAction func googleSignIn(_ sender: Any) {
-//        GIDSignIn.sharedInstance().signIn()
-        loginSuccess()
+        GIDSignIn.sharedInstance().signIn()
+//        loginSuccess()
     }
     
     @IBAction func emailTap(_ sender: Any) {
@@ -61,6 +62,8 @@ class LoginVC: UIViewController {
         let providers: [FUIAuthProvider] = [FUIEmailAuth()]
         authUI?.providers = providers
         let authVC = authUI!.authViewController()
+        authVC.modalPresentationStyle = .overFullScreen
+        authVC.modalTransitionStyle = .crossDissolve
         self.present(authVC, animated: true, completion: nil)
     }
     
@@ -97,7 +100,7 @@ extension LoginVC: GIDSignInDelegate {
                 print(err.localizedDescription)
                 return
             }
-            self.loginSuccess()
+            self.saveUserInfo(name: fullName, email: email)
         })
     }
     
@@ -111,10 +114,32 @@ extension LoginVC: GIDSignInDelegate {
 extension LoginVC: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if error == nil {
-            print("success")
-            loginSuccess()
+            self.saveUserInfo(name: user!.displayName!, email: user!.email!)
         } else {
             print(error.debugDescription)
+        }
+    }
+}
+
+extension LoginVC {
+    func saveUserInfo(name: String, email: String) {
+        SVProgressHUD.show()
+        let service = AppService()
+        service.saveUserInfo(userName: name, userEmail: email) { (json) in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let userID = json["response"].intValue
+                Util.gUserID = userID
+                self.loginSuccess()
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
         }
     }
 }

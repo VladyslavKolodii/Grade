@@ -24,6 +24,8 @@ struct Color {
 
 class Util: NSObject {
     
+    static var gUserID: Int?
+    
     class func showTabbar() {
         if let ctrl = TabBarController.storyboardInstance() {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
