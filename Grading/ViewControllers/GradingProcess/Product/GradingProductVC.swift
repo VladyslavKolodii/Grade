@@ -2,8 +2,7 @@
 //  GradingProductVC.swift
 //  Grading
 //
-//  Created by Aira on 20.02.2021.
-//
+
 
 import UIKit
 import StepSlider

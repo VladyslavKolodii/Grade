@@ -2,8 +2,7 @@
 //  GradingPhotoGuideVC.swift
 //  Grading
 //
-//  Created by Aira on 21.02.2021.
-//
+
 
 import UIKit
 

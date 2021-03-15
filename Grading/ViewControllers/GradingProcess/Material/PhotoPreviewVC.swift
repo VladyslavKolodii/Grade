@@ -2,8 +2,7 @@
 //  PhotoPreviewVC.swift
 //  Grading
 //
-//  Created by Aira on 22.02.2021.
-//
+
 
 import UIKit
 

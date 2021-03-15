@@ -2,9 +2,7 @@
 //  SquareView.swift
 //  Scanfy
 //
-//  Created by Aira on 25/09/2020.
-//  Copyright © 2020 Aira. All rights reserved.
-//
+
 
 import UIKit
 

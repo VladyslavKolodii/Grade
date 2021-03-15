@@ -2,8 +2,7 @@
 //  CustomTrackingSlider.swift
 //  Grading
 //
-//  Created by Aira on 26.02.2021.
-//
+
 
 import UIKit
 import ASValueTrackingSlider

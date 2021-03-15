@@ -2,8 +2,7 @@
 //  SupplierProfileCell.swift
 //  Grading
 //
-//  Created by Viet Tuan on 13/03/2021.
-//
+
 
 import UIKit
 import MessageUI

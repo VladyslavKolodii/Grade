@@ -2,8 +2,7 @@
 //  Faq.swift
 //  Grading
 //
-//  Created by Viet Tuan on 13/03/2021.
-//
+
 
 import Foundation
 import SwiftyJSON
