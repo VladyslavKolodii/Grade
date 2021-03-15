@@ -37,6 +37,14 @@ class AppService {
         })
     }
     
+    func getAppointmentLocationDetail(selectedID: Int, callBack: @escaping (_ json: JSON) -> ()) {
+        let url = RequestInfoFactory.appointmentURL + "location/\(selectedID)"
+        let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo, callBack: { (response, serverData, json) in
+            callBack(json)
+        })
+    }
+    
     func getSupplierList(callBack: @escaping (_ json: JSON) -> ()){
         let url = RequestInfoFactory.supplierURL
         let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())

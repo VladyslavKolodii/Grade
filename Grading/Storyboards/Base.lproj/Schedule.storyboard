@@ -4698,6 +4698,9 @@
                                                             <constraint firstItem="jSP-Qj-WOB" firstAttribute="top" secondItem="owl-dk-DSj" secondAttribute="top" id="jTb-WG-P5o"/>
                                                             <constraint firstItem="jSP-Qj-WOB" firstAttribute="leading" secondItem="owl-dk-DSj" secondAttribute="leading" id="oOc-u0-Qg7"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="cellImg" destination="jSP-Qj-WOB" id="ueU-Ge-Edx"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>

@@ -46,6 +46,14 @@ extension String {
         return strDate!
     }
     
+    func stringToCGFloat() -> CGFloat {
+        if let doubleVal = Double(self) {
+            return CGFloat(doubleVal)
+        } else {
+            return 0
+        }
+    }
+    
 }
 
 extension Data {

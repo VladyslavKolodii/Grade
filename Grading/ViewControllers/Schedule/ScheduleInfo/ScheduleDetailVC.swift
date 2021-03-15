@@ -38,12 +38,19 @@ class ScheduleDetailVC: UIViewController {
         initData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "locationDetail" {
+            let destVC = segue.destination as! LocationDetailVC
+            destVC.selectedID = sender as? Int
+        }
+    }
+    
     @IBAction func onTapBackUB(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onTapLocationUB(_ sender: Any) {
-        self.performSegue(withIdentifier: "locationDetail", sender: nil)
+        self.performSegue(withIdentifier: "locationDetail", sender: selectedID)
     }
 }
 

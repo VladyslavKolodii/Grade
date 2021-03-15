@@ -40,6 +40,7 @@ enum RequestParameterEncoding {
 }
 
 class RequestInfoFactory {
+    static let rootURL = "http://18.220.129.47/"
     static let mainURL = "http://18.220.129.47/api/v1/"
     static let saveUser = mainURL + "user"
     static let appointmentURL = mainURL + "appointment/"

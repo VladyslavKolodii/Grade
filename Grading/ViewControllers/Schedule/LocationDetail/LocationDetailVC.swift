@@ -6,6 +6,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 class LocationDetailVC: UIViewController {
     
     //MARK:- @IBOutlet Variables
@@ -15,6 +16,9 @@ class LocationDetailVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topUV: UIView!
     
+    var selectedID: Int?
+    var appointLocation: AppointLocation = AppointLocation()
+    
     let ContentArray = ["Odit neque nam quas aut voluptatem sequi. Ut sit qui alias.","Leborum delectus minus dicta fuga quam eveniet molestiae vitae et.","Mollitia nisi ad enim sit (15 - 36 - 09)."]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -23,7 +27,7 @@ class LocationDetailVC: UIViewController {
     //MARK:- App lifeCycle:------
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initData()
     }
     
     
@@ -56,11 +60,12 @@ extension LocationDetailVC : UICollectionViewDataSource,UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return appointLocation.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "locationsCell", for: indexPath) as? LocationCell else{return UICollectionViewCell()}
+        cell.cellImg.loadImage(url: RequestInfoFactory.rootURL + appointLocation.photos[indexPath.row])
         return cell
     }
     
@@ -97,7 +102,7 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,7 +111,7 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource {
     
     func cellForRowForOpenList(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationNotesCell", for: indexPath) as! LocationNotesCell
-        cell.titleLbl.text  = ContentArray[indexPath.row]
+        cell.titleLbl.text  = appointLocation.note
         cell.selectionStyle = .none
         return cell
     }
@@ -119,4 +124,34 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource {
         
     }
     
+}
+
+extension LocationDetailVC {
+    func initData() {
+        SVProgressHUD.show()
+        let service = AppService()
+        service.getAppointmentLocationDetail(selectedID: selectedID!) { (json) in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                self.appointLocation.initWithJSON(obj: json["response"])
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+                self.handleMap()
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
+        }
+    }
+    
+    func handleMap() {
+        mapView.setCenter(appointLocation.location, animated: true)
+        let pin = MKPlacemark(coordinate: appointLocation.location)
+        mapView.addAnnotation(pin)
+    }
 }
