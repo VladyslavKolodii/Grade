@@ -99,6 +99,8 @@
 		FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */; };
 		FC6F764A25FF02DC00145C21 /* SoldTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */; };
 		FC6F764B25FF02DC00145C21 /* FilterTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F764825FF02DC00145C21 /* FilterTypeVC.swift */; };
+		FC6F76F825FF930200145C21 /* InventoryPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F76F725FF930200145C21 /* InventoryPhotoCell.swift */; };
+		FC6F76FB25FF936500145C21 /* InventoryAddPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F76FA25FF936500145C21 /* InventoryAddPhotoVC.swift */; };
 		FC79604225FD1C6A008FB9C9 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604125FD1C6A008FB9C9 /* Faq.swift */; };
 		FC79604725FD2314008FB9C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604625FD2314008FB9C9 /* User.swift */; };
 		FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA992DC25E2CD0900E05207 /* UIKits.swift */; };
@@ -214,6 +216,8 @@
 		FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInventoryVC.swift; sourceTree = "<group>"; };
 		FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldTypeVC.swift; sourceTree = "<group>"; };
 		FC6F764825FF02DC00145C21 /* FilterTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTypeVC.swift; sourceTree = "<group>"; };
+		FC6F76F725FF930200145C21 /* InventoryPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryPhotoCell.swift; sourceTree = "<group>"; };
+		FC6F76FA25FF936500145C21 /* InventoryAddPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryAddPhotoVC.swift; sourceTree = "<group>"; };
 		FC79604125FD1C6A008FB9C9 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
 		FC79604625FD2314008FB9C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FCA992DC25E2CD0900E05207 /* UIKits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKits.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			children = (
 				FC60C17425E2160500EA251A /* InventoryCell.swift */,
 				FC13AC5125E28C710098E50C /* ProductTypeCell.swift */,
+				FC6F76F725FF930200145C21 /* InventoryPhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
 				3209A76425E34945008B6C76 /* PhotoDetailVC.swift */,
 				FC60C17C25E2345600EA251A /* ProductDetailVC.swift */,
+				FC6F76FA25FF936500145C21 /* InventoryAddPhotoVC.swift */,
 				FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */,
 				FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */,
 				FC50E71325E29F7100062210 /* SortTypeVC.swift */,
@@ -904,10 +910,12 @@
 				B79773B325DF98E700DBE149 /* UIViewControllerExtensions.swift in Sources */,
 				B79773CD25DFA11C00DBE149 /* GradingProcessViewController.swift in Sources */,
 				FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */,
+				FC6F76F825FF930200145C21 /* InventoryPhotoCell.swift in Sources */,
 				FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
 				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
+				FC6F76FB25FF936500145C21 /* InventoryAddPhotoVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
 				B79773D625DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift in Sources */,
@@ -1089,10 +1097,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = W9NJVXQD7B;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1101,7 +1109,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GradeProvision;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1113,10 +1121,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = W9NJVXQD7B;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Grading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1125,7 +1133,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grading.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GradeProvision;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

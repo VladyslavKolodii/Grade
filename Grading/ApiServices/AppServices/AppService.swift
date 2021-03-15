@@ -102,6 +102,31 @@ class AppService {
             callBack(json)
         }
     }
+    
+    func addInventoryPhoto(id: Int,
+                           image: UIImage,
+                           callBack: @escaping (_ json: JSON) -> ()){
+        let url = RequestInfoFactory.addImageURL + "/\(id)"
+        var parameters: [String:Any] = [String:Any]()
+        do {
+            let imageData = try image.resizeImage()?.rotated(by: CGFloat.zero)?.compressToDataSize()
+            parameters["images[]"] = imageData
+        } catch {
+            print(error.localizedDescription)
+        }
+        let requestInfo = RequestInfo(requestType: .post, header: RequestInfoFactory.defaultHeader(),body: parameters)
+        requestService?.makeRequestUpload(to: url, withRequestInfo: requestInfo) { (response,serverData,json) in
+            callBack(json)
+        }
+    }
+    
+    func deleteInventory(id:Int, callBack: @escaping (_ json: JSON) -> ()){
+        let url = RequestInfoFactory.inventoryURL + "/\(id)"
+        let requestInfo = RequestInfo(requestType: .delete, header: RequestInfoFactory.defaultHeader())
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo) { (response,serverData,json) in
+            callBack(json)
+        }
+    }
 }
 
 

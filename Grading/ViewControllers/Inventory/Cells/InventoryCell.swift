@@ -23,8 +23,8 @@ class InventoryCell: UITableViewCell {
             self.setData()
         }
     }
-        
-        
+    var onDeletedInventory: ((Inventory) ->())?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -80,5 +80,8 @@ class InventoryCell: UITableViewCell {
     
     @IBAction func deleteTap(_ sender: Any) {
         self.swiperight()
+        if let inventory = self.inventory {
+            self.onDeletedInventory?(inventory)
+        }
     }
 }

@@ -137,6 +137,13 @@ extension InventoryVC: UITableViewDataSource {
         let section = sections[indexPath.section]
         let inventory = section.inventory[indexPath.row]
         cell.inventory = inventory
+        cell.onDeletedInventory = { inventory in
+            self.showAlertConfirm(title: Bundle.main.appName, message: "Do you want to delete \(inventory.title) inventory?", buttonTitles: ["Yes","No"], highlightedButtonIndex: 1) { index in
+                if index == 0 {
+                    self.deleteInventoryDetail(inventory: inventory)
+                }
+            }
+        }
         return cell
     }
     
@@ -168,17 +175,17 @@ extension InventoryVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let section = sections[indexPath.section]
-        //        let inventory = section.inventory[indexPath.row]
-        //        self.getInventoryDetail(inventory: inventory) {
-        //            let vc = ProductDetailVC.instantiate(from: .inventory)
-        //            vc.hidesBottomBarWhenPushed = true
-        //            self.navigationController?.pushViewController(vc, animated: true)
-        //        }
-        let vc = ProductDetailVC.instantiate(from: .inventory)
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+        let section = sections[indexPath.section]
+        let inventory = section.inventory[indexPath.row]
+        self.getInventoryDetail(inventory: inventory) {
+            let vc = ProductDetailVC.instantiate(from: .inventory)
+            vc.inventory = inventory
+            vc.onDeletedInventory = { inventory in
+                self.deleteInventoryDetail(inventory: inventory)
+            }
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }        
     }
 }
 
@@ -323,6 +330,27 @@ extension InventoryVC {
                 }
             default: break
             }
+        }
+    }
+    func deleteInventoryDetail(inventory: Inventory) {
+        let service = AppService()
+        SVProgressHUD.show()
+        service.deleteInventory(id: inventory.id) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                if let index = self.inventories.firstIndex(where: {$0.id == inventory.id}) {
+                    self.inventories.remove(at: index)
+                    self.filterDatas()
+                }
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
         }
     }
 }

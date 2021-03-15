@@ -14,7 +14,7 @@ class Inventory {
     var mixedMaterial: Int = 0
     var appraised: Double = 0
     var list: Double = 0
-    var lotId: Int = 0
+    var lotId: String = ""
     var totalValue: Double = 0
     var productType: String = ""
     var totalGrams: Int = 0
@@ -25,6 +25,7 @@ class Inventory {
     var appraisedPrice: Double = 0
     var listPrice: Double = 0
     var supplier: Supplier?
+    var images: [String] = [String]()
 
     init(_ json: JSON) {
         self.id = json["id"].intValue
@@ -33,17 +34,19 @@ class Inventory {
         self.mixedMaterial = json["mixedMaterial"].intValue
         self.appraised = json["appraised"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
         self.list = json["list"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
-        self.totalValue = json["totalValue"].doubleValue.rounded(numberOfDecimalPlaces: 1, rule: .toNearestOrEven)
+        self.totalValue = json["totalValue"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
     }
     func mapInfoData(_ json: JSON) {
+        self.lotId = json["lotId"].stringValue
         self.productType = json["productType"].stringValue
         self.totalGrams = json["totalGrams"].intValue
         self.totalGrams = json["totalGrams"].intValue
         self.processed = json["processed"].stringValue
         self.environment = json["environment"].stringValue
         let appraisedRanges = json["appraisedRange"].array
+        self.appraisedRange.removeAll()
         for range in appraisedRanges ?? [] {
-            self.appraisedRange.append(range.doubleValue)
+            self.appraisedRange.append(range.doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven))
         }
         self.appraisedRange.sort(by: {$0 < $1})
         self.appraisedPrice = json["appraisedPrice"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
@@ -59,6 +62,11 @@ class Inventory {
             }
         }
         self.supplier = sup
+        self.images.removeAll()
+        let imgs = json["img"].array
+        for url in imgs ?? [] {
+            self.images.append(url.stringValue)
+        }
     }
 }
 class InventorySection {

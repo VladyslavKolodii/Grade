@@ -6,7 +6,7 @@
 import UIKit
 import SwiftyJSON
 import SVProgressHUD
-import Alamofire
+import Kingfisher
 
 class SettingVC: BaseVC {
     
@@ -41,12 +41,28 @@ class SettingVC: BaseVC {
     
     func showInfo() {
         self.lbName.text = user?.name
-        AF.request(user?.image ?? "",method: .get).response{ response in
-            switch response.result {
-            case .success(let responseData):
-                self.imgAvatar.image = UIImage(data: responseData!, scale:1)
-            case .failure( _):
-                self.imgAvatar.image = UIImage(named: "ic_avatar")
+        let url = URL(string: user?.image ?? "")
+        let processor = DownsamplingImageProcessor(size: imgAvatar.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 30)
+        imgAvatar.kf.indicatorType = .activity
+        imgAvatar.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "img_avatar_user_empty"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                self.imgAvatar.image = value.image
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+                self.imgAvatar.image = UIImage(named: "img_avatar_user_empty")
             }
         }
     }

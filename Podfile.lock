@@ -89,6 +89,7 @@ PODS:
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (6.1.1)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
@@ -135,6 +136,7 @@ DEPENDENCIES:
   - FSCalendar
   - GoogleSignIn
   - IQKeyboardManagerSwift
+  - Kingfisher
   - StepSlider
   - SVProgressHUD
   - SwifterSwift
@@ -161,6 +163,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - Kingfisher
     - nanopb
     - PromisesObjC
     - StepSlider
@@ -188,6 +191,7 @@ SPEC CHECKSUMS:
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
@@ -195,6 +199,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f0af1f355f667fd661ed8a101263d1ea0c787805
+PODFILE CHECKSUM: 6b0cbdb1718d694926062f972d77aac9c1fc76b0
 
 COCOAPODS: 1.10.1

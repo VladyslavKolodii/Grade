@@ -74,3 +74,9 @@ extension UIApplication {
 extension Int {
     var boolValue: Bool { return self != 0 }
 }
+
+extension Bundle {
+    var appName: String {
+        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "App"
+    }
+}

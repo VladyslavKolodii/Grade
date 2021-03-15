@@ -39,7 +39,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lth-WY-Zd2">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="uXL-o3-p3e">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_avatar_user_empty" translatesAutoresizingMaskIntoConstraints="NO" id="uXL-o3-p3e">
                                     <rect key="frame" x="15" y="10" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="uXL-o3-p3e" secondAttribute="height" multiplier="1:1" id="Pno-XB-rTt"/>
@@ -177,8 +177,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_avatar" width="60" height="60"/>
         <image name="ic_logout" width="22" height="22.5"/>
+        <image name="img_avatar_user_empty" width="53.333332061767578" height="53.333332061767578"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
