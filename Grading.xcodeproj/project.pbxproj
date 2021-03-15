@@ -97,6 +97,8 @@
 		FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */; };
 		FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17C25E2345600EA251A /* ProductDetailVC.swift */; };
 		FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */; };
+		FC6F764A25FF02DC00145C21 /* SoldTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */; };
+		FC6F764B25FF02DC00145C21 /* FilterTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F764825FF02DC00145C21 /* FilterTypeVC.swift */; };
 		FC79604225FD1C6A008FB9C9 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604125FD1C6A008FB9C9 /* Faq.swift */; };
 		FC79604725FD2314008FB9C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79604625FD2314008FB9C9 /* User.swift */; };
 		FCA992DD25E2CD0A00E05207 /* UIKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA992DC25E2CD0900E05207 /* UIKits.swift */; };
@@ -210,6 +212,8 @@
 		FC60C17825E2160F00EA251A /* SupplierDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17C25E2345600EA251A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInventoryVC.swift; sourceTree = "<group>"; };
+		FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldTypeVC.swift; sourceTree = "<group>"; };
+		FC6F764825FF02DC00145C21 /* FilterTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTypeVC.swift; sourceTree = "<group>"; };
 		FC79604125FD1C6A008FB9C9 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
 		FC79604625FD2314008FB9C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FCA992DC25E2CD0900E05207 /* UIKits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKits.swift; sourceTree = "<group>"; };
@@ -609,12 +613,14 @@
 		BCE06FF925CED1F20071CD3C /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				3209A76425E34945008B6C76 /* PhotoDetailVC.swift */,
 				3209A76325E348FB008B6C76 /* Cells */,
 				FC60C17F25E2403E00EA251A /* FilterInventoryVC.swift */,
+				FC6F764825FF02DC00145C21 /* FilterTypeVC.swift */,
 				BCE06FFA25CED2050071CD3C /* InventoryVC.swift */,
+				3209A76425E34945008B6C76 /* PhotoDetailVC.swift */,
 				FC60C17C25E2345600EA251A /* ProductDetailVC.swift */,
 				FC13AC4E25E27FB60098E50C /* ProductTypeVC.swift */,
+				FC6F764725FF02DC00145C21 /* SoldTypeVC.swift */,
 				FC50E71325E29F7100062210 /* SortTypeVC.swift */,
 			);
 			path = Inventory;
@@ -847,6 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6F764B25FF02DC00145C21 /* FilterTypeVC.swift in Sources */,
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
 				4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */,
 				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
@@ -857,6 +864,7 @@
 				FC24506125FC92EF0086B600 /* RequestInfo.swift in Sources */,
 				45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */,
 				FCE2A90125E02D91001CF1EA /* ProfileInfoVC.swift in Sources */,
+				FC6F764A25FF02DC00145C21 /* SoldTypeVC.swift in Sources */,
 				FC60C17925E2160F00EA251A /* SupplierProfileVC.swift in Sources */,
 				B79773F725DFBD5300DBE149 /* CustomButton.swift in Sources */,
 				FC79604225FD1C6A008FB9C9 /* Faq.swift in Sources */,

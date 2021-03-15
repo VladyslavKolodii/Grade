@@ -6,16 +6,17 @@
 
 import UIKit
 
-class SortTypeVC: BaseVC {
+class SoldTypeVC: BaseVC {
 
     @IBOutlet weak var tbMain: UITableView!
-    var onValueChanged: ((SortType) ->())?
-    var sortSelected: SortType = .date
-
+    var soldSelected: SoldType?
+    var onValueChanged: ((SoldType?) ->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        sortSelected = FilterTypeData.sortSelected
+        soldSelected = FilterTypeData.soldSelected
+        self.tbMain.reloadData()
     }
     
     @IBAction func onTapCancel(_ sender: Any) {
@@ -23,34 +24,34 @@ class SortTypeVC: BaseVC {
     }
     
     @IBAction func onTapSave(_ sender: Any) {
-        self.onValueChanged?(sortSelected)
+        self.onValueChanged?(soldSelected)
         self.dismiss(animated: true, completion: nil)
     }
 }
 
-extension SortTypeVC: UITableViewDataSource {
+extension SoldTypeVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTypeCell", for: indexPath) as! ProductTypeCell
-        let type = FilterTypeData.listSorts[indexPath.row]
+        let type = FilterTypeData.listSolds[indexPath.row]
         cell.lbTilte.text = type.rawValue
-        cell.isSelectedType = sortSelected == type
+        cell.isSelectedType = soldSelected == type
         return cell
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FilterTypeData.listSorts.count
+        return FilterTypeData.listSolds.count
     }
  }
 
-extension SortTypeVC: UITableViewDelegate {
+extension SoldTypeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        sortSelected = FilterTypeData.listSorts[indexPath.row]
+        soldSelected = FilterTypeData.listSolds[indexPath.row]
         self.tbMain.reloadData()
     }
 }

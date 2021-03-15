@@ -52,6 +52,7 @@ class SuppliersVC: BaseVC {
     }
     
     func initSections() {
+        self.sections.removeAll()
         let groupedDictionary = Dictionary(grouping: suppliers, by: {String($0.name.prefix(1))})
         let keys = groupedDictionary.keys.sorted()
         self.sections = keys.map{ SupplierSection(letter: $0, supplier: groupedDictionary[$0]!.sorted(by: ({$0.name < $1.name}))) }

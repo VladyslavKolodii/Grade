@@ -21,11 +21,11 @@ class InventoryVC: BaseVC {
     
     var sections = [InventorySection]()
     var inventories = [Inventory]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        self.getInventoryList()
+        setupData()
     }
     
     func configureView() {
@@ -47,10 +47,37 @@ class InventoryVC: BaseVC {
         refreshControl.endRefreshing()
     }
     
+    func setupData() {
+        self.getInventoryList()
+        if FilterTypeData.listGraders.count == 0 {
+            self.getGrader()
+        }
+        if FilterTypeData.listProcess.count == 0 {
+            self.getProcess()
+        }
+        if FilterTypeData.listSuppliers.count == 0 {
+            self.getSupplier()
+        }
+        if FilterTypeData.listEnvironments.count == 0 {
+            self.getEnvironment()
+        }
+        if FilterTypeData.listProductTypes.count == 0 {
+            self.getProductType()
+        }
+    }
+    
     func initSections() {
-        let groupedDictionary = Dictionary(grouping: inventories, by: {$0.date.string(withFormat: "yyyy-MM-dd")})
-        let keys = groupedDictionary.keys.sorted()
-        self.sections = keys.map{ InventorySection(date: $0, inventory: groupedDictionary[$0]!.sorted(by: ({$0.id < $1.id}))) }
+        self.sections.removeAll()
+        for inventory in inventories {
+            if let section = self.sections.first(where: {$0.date == inventory.date.string(withFormat: "yyyy-MM-dd")}) {
+                section.inventory.append(inventory)
+            } else {
+                var array = [Inventory]()
+                array.append(inventory)
+                let section = InventorySection(date: inventory.date.string(withFormat: "yyyy-MM-dd"), inventory: array)
+                self.sections.append(section)
+            }
+        }
         self.tbMain.reloadData()
     }
     
@@ -65,9 +92,16 @@ class InventoryVC: BaseVC {
             datas = inventories
         }
         if datas.count > 0 {
-            let groupedDictionary = Dictionary(grouping: datas, by: {$0.date.string(withFormat: "yyyy-MM-dd")})
-            let keys = groupedDictionary.keys.sorted()
-            self.sections = keys.map{ InventorySection(date: $0, inventory: groupedDictionary[$0]!.sorted(by: ({$0.id < $1.id}))) }
+            for inventory in datas {
+                if let section = self.sections.first(where: {$0.date == inventory.date.string(withFormat: "yyyy-MM-dd")}) {
+                    section.inventory.append(inventory)
+                } else {
+                    var array = [Inventory]()
+                    array.append(inventory)
+                    let section = InventorySection(date: inventory.date.string(withFormat: "yyyy-MM-dd"), inventory: array)
+                    self.sections.append(section)
+                }
+            }
         }
         self.tbMain.reloadData()
     }
@@ -76,6 +110,9 @@ class InventoryVC: BaseVC {
         let vc = FilterInventoryVC.instantiate(from: .inventory)
         vc.hidesBottomBarWhenPushed = true
         vc.modalPresentationStyle = .fullScreen
+        vc.onSaveFilter = {
+            self.getInventoryList()
+        }
         self.present(vc, animated: true, completion: nil)
         
     }
@@ -131,17 +168,17 @@ extension InventoryVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let section = sections[indexPath.section]
-//        let inventory = section.inventory[indexPath.row]
-//        self.getInventoryDetail(inventory: inventory) {
-//            let vc = ProductDetailVC.instantiate(from: .inventory)
-//            vc.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+        //        let section = sections[indexPath.section]
+        //        let inventory = section.inventory[indexPath.row]
+        //        self.getInventoryDetail(inventory: inventory) {
+        //            let vc = ProductDetailVC.instantiate(from: .inventory)
+        //            vc.hidesBottomBarWhenPushed = true
+        //            self.navigationController?.pushViewController(vc, animated: true)
+        //        }
         let vc = ProductDetailVC.instantiate(from: .inventory)
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
-
+        
     }
 }
 
@@ -181,15 +218,17 @@ extension InventoryVC {
                 } else {
                     self.showErrorAlert(message: "Something went wrong. Please try again.")
                 }
+                self.inventories.removeAll()
+                self.initSections()
+                self.tbMain.reloadData()
             }
             SVProgressHUD.dismiss()
         }
     }
-    
     func getInventoryDetail(inventory: Inventory, completion: (() -> Void)? = nil) {
         let service = AppService()
         SVProgressHUD.show()
-        service.getInventoryDetail(id: 5) { json in
+        service.getInventoryDetail(id: inventory.id) { json in
             let statusCode = json["status"].intValue
             switch statusCode {
             case ResponseStatusCode.success.rawValue:
@@ -204,6 +243,86 @@ extension InventoryVC {
                 }
             }
             SVProgressHUD.dismiss()
+        }
+    }
+    func getProductType() {
+        let service = AppService()
+        service.getFilterList(with: FilterTypeAPI.productType.rawValue) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                FilterTypeData.listProductTypes.removeAll()
+                for object in response {
+                    let item = FilterType(object)
+                    FilterTypeData.listProductTypes.append(item)
+                }
+            default: break
+            }
+        }
+    }
+    func getProcess() {
+        let service = AppService()
+        service.getFilterList(with: FilterTypeAPI.process.rawValue) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                FilterTypeData.listProcess.removeAll()
+                for object in response {
+                    let item = FilterType(object)
+                    FilterTypeData.listProcess.append(item)
+                }
+            default: break
+            }
+        }
+    }
+    func getEnvironment() {
+        let service = AppService()
+        service.getFilterList(with: FilterTypeAPI.environment.rawValue) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                FilterTypeData.listEnvironments.removeAll()
+                for object in response {
+                    let item = FilterType(object)
+                    FilterTypeData.listEnvironments.append(item)
+                }
+            default: break
+            }
+        }
+    }
+    func getGrader() {
+        let service = AppService()
+        service.getFilterList(with: FilterTypeAPI.grader.rawValue) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                FilterTypeData.listGraders.removeAll()
+                for object in response {
+                    let item = FilterType(object)
+                    FilterTypeData.listGraders.append(item)
+                }
+            default: break
+            }
+        }
+    }
+    func getSupplier() {
+        let service = AppService()
+        service.getFilterList(with: FilterTypeAPI.supplier.rawValue) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let response = json["response"].arrayValue
+                FilterTypeData.listSuppliers.removeAll()
+                for object in response {
+                    let item = FilterType(object)
+                    FilterTypeData.listSuppliers.append(item)
+                }
+            default: break
+            }
         }
     }
 }
