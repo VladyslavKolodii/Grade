@@ -46,7 +46,7 @@ public extension UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    func showAlert(title: String?, message: String?, buttonTitles: [String]? = nil, highlightedButtonIndex: Int? = nil, completion: ((Int) -> Void)? = nil) {
+    func showAlertConfirm(title: String?, message: String?, buttonTitles: [String]? = nil, highlightedButtonIndex: Int? = nil, completion: ((Int) -> Void)? = nil) {
         let titleAttribute: [NSAttributedString.Key: Any] = [.font: UIFont.appFontSemiBold(ofSize: 17), .foregroundColor: UIColor.black]
         let messageAttribute: [NSAttributedString.Key: Any] = [.font: UIFont.appFontRegular(ofSize: 13), .foregroundColor: UIColor.black]
         

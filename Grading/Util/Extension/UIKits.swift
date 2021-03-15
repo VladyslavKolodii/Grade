@@ -81,3 +81,101 @@ extension UITextView: NSTextStorageDelegate {
     }
 
 }
+public let defaultImageResolution: CGSize = CGSize(width: 1280, height: 720)
+public let defaultImageSize: Int = 10 // 10.0 MB
+extension UIImage {
+    func scaleImageToSize(newSize: CGSize) -> UIImage {
+        var scaledImageRect = CGRect.zero
+        
+        let aspectWidth = newSize.width/size.width
+        let aspectheight = newSize.height/size.height
+        
+        let aspectRatio = max(aspectWidth, aspectheight)
+        
+        scaledImageRect.size.width = size.width * aspectRatio;
+        scaledImageRect.size.height = size.height * aspectRatio;
+        scaledImageRect.origin.x = (newSize.width - scaledImageRect.size.width) / 2.0;
+        scaledImageRect.origin.y = (newSize.height - scaledImageRect.size.height) / 2.0;
+        
+        UIGraphicsBeginImageContext(newSize)
+        draw(in: scaledImageRect)
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage!
+    }
+    
+    func resizeImage(targetSize: CGSize = defaultImageResolution) -> UIImage? {
+        let size = self.size
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+    func compressToDataSize(expectedMB: Int = defaultImageSize) throws -> Data {
+        let sizeInBytes = expectedMB * 1024 * 1024
+        var needCompress: Bool = true
+        var compressingValue: CGFloat = 1.0
+        var imgData: Data?
+        
+        while (needCompress && compressingValue > 0.0) {
+            if let data = self.jpegData(compressionQuality: compressingValue) {
+                if data.count < sizeInBytes {
+                    needCompress = false
+                    imgData = data
+                } else {
+                    compressingValue -= 0.1
+                }
+            }
+        }
+        
+        if let data = imgData {
+            if (data.count < sizeInBytes) {
+                return data
+            }
+        }
+        
+        throw NSError(coder: NSCoder.init())!
+    }
+    
+    func rotated(by radians: CGFloat) -> UIImage? {
+        let destRect = CGRect(origin: .zero, size: size)
+            .applying(CGAffineTransform(rotationAngle: radians))
+        let roundedDestRect = CGRect(x: destRect.origin.x.rounded(),
+                                     y: destRect.origin.y.rounded(),
+                                     width: destRect.width.rounded(),
+                                     height: destRect.height.rounded())
+        
+        UIGraphicsBeginImageContext(roundedDestRect.size)
+        guard let contextRef = UIGraphicsGetCurrentContext() else { return nil }
+        
+        contextRef.translateBy(x: roundedDestRect.width / 2, y: roundedDestRect.height / 2)
+        contextRef.rotate(by: radians)
+        
+        draw(in: CGRect(origin: CGPoint(x: -size.width / 2,
+                                        y: -size.height / 2),
+                        size: size))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+}

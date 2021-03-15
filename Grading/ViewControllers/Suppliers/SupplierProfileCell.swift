@@ -14,6 +14,7 @@ class SupplierProfileCell: UITableViewCell {
     @IBOutlet weak var lbText: UILabel!
     @IBOutlet weak var lbMail: UILabel!
     @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var lbPostion: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +41,7 @@ class SupplierProfileCell: UITableViewCell {
         lbName.text = info.name
         lbText.text = info.textNumber
         lbMail.text = info.email
-        
+        lbPostion.text = info.position
     }
     
     

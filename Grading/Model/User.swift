@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-class User {
+class UserInfo {
     var id: Int = 0
     var name: String = ""
     var role: String = ""

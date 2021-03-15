@@ -45,7 +45,8 @@ class RequestInfoFactory {
     static let faqURL = mainURL + "faq"
     static let userURL = mainURL + "user"
     static let inventoryURL = mainURL + "inventory"
-
+    static let addImageURL = mainURL + "inventory/add-image"
+    
     /// Generate an default header with accept and content type
     /// create header for request
     /// - Parameter accessToken: access token

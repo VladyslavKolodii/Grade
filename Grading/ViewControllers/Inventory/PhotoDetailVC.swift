@@ -5,7 +5,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class PhotoDetailVC: UIViewController {
     
     //MARK:- @IBOutlet Variables
@@ -13,7 +13,8 @@ class PhotoDetailVC: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var  scrollView: UIScrollView!
     
-    let imagesArray:[UIImage] = [#imageLiteral(resourceName: "img3"),#imageLiteral(resourceName: "img2")]
+    var imagesArray:[String] = [String]()
+    var index: Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -30,6 +31,10 @@ class PhotoDetailVC: UIViewController {
         
         DispatchQueue.main.async {
             self.addScrollImages(arrayImages: self.imagesArray)
+            self.pageControl.currentPage = self.index
+            if self.index != 0 {
+                self.scrollView.setContentOffset(CGPoint(x: CGFloat(self.pageControl!.currentPage)*Screen.width, y: -50), animated: false)
+            }
         }
     }
     @IBAction func leftButtonTapped(_ sender: UIButton) {
@@ -43,22 +48,13 @@ class PhotoDetailVC: UIViewController {
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     @IBAction func onTapBackUB(_sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
 extension PhotoDetailVC: UIScrollViewDelegate {
     
-    func addScrollImages(arrayImages: [UIImage]) {
+    func addScrollImages(arrayImages: [String]) {
         scrollView.isPagingEnabled = true
         pageControl.numberOfPages = arrayImages.count
         self.pageControl.isHidden = false
@@ -70,10 +66,31 @@ extension PhotoDetailVC: UIScrollViewDelegate {
             let imageView = UIImageView()
             let xPosition = UIScreen.main.bounds.width * CGFloat(i)
             imageView.frame = CGRect(x: xPosition, y: -40, width: scrollView.frame.width, height: scrollView.frame.height)
-            imageView.contentMode = .scaleAspectFill
-            imageView.image = obj
+            imageView.contentMode = .scaleToFill
+            let url = URL(string: obj)
+            let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(
+                with: url,
+                placeholder: UIImage(named: "ic_slide_document_empty"),
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+                ])
+            {
+                result in
+                switch result {
+                case .success(let value):
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                    imageView.image = value.image
+                case .failure(let error):
+                    print("Job failed: \(error.localizedDescription)")
+                    imageView.image = UIImage(named: "ic_slide_document_empty")
+                }
+            }
             imageView.clipsToBounds = true
-            
             scrollView.contentSize.width = scrollView.frame.width * CGFloat(i + 1)
             scrollView.addSubview(imageView)
             scrollView.delegate = self

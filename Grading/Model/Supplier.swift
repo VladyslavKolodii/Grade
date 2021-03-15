@@ -55,12 +55,14 @@ class SupplierInfo {
     var phoneNumber: String = ""
     var textNumber: String = ""
     var email: String = ""
-    
+    var position: String = ""
+
     init(_ json: JSON) {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
         self.phoneNumber = json["phoneNumber"].stringValue
         self.textNumber = json["textNumber"].stringValue
         self.email = json["email"].stringValue
+        self.position = json["position"].stringValue
     }
 }

@@ -6,6 +6,7 @@ target 'Grading' do
   use_frameworks!
 
   # Pods for Grading
+  pod 'Kingfisher'
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
