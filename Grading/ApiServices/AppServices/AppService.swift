@@ -45,6 +45,21 @@ class AppService {
         })
     }
     
+    func addAppointmentLocationImage(selectedID: Int, image: UIImage, callBack: @escaping (_ json: JSON) -> ()) {
+        let url = RequestInfoFactory.appointmentURL + "add-location-image/\(selectedID)"
+        var parameters: [String:Any] = [String:Any]()
+        do {
+            let imageData = try image.resizeImage()?.rotated(by: CGFloat.zero)?.compressToDataSize()
+            parameters["img[]"] = imageData
+        } catch {
+            print(error.localizedDescription)
+        }
+        let requestInfo = RequestInfo(requestType: .post, header: RequestInfoFactory.defaultHeader(),body: parameters)
+        requestService?.makeRequestUpload(to: url, withRequestInfo: requestInfo) { (response,serverData,json) in
+            callBack(json)
+        }
+    }
+    
     func getSupplierList(callBack: @escaping (_ json: JSON) -> ()){
         let url = RequestInfoFactory.supplierURL
         let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())

@@ -27,26 +27,29 @@ class LocationDetailVC: UIViewController {
     //MARK:- App lifeCycle:------
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         initData()
     }
     
     
-    
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+        if segue.identifier == "addLocationPhoto" {
+            let destVC = segue.destination as! AddLocationPhotoVC
+            destVC.selectedID = sender as? Int
+        }
      }
-     */
     @IBAction func onTapBackUB(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onTapAddPhotoUB(_ sender: Any) {
-        self.performSegue(withIdentifier: "addLocationPhoto", sender: nil)
+        self.performSegue(withIdentifier: "addLocationPhoto", sender: selectedID)
     }
     
 }

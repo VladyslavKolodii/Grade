@@ -5373,6 +5373,9 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" name="appwhiteColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTapDoneUB:" destination="MUr-VD-PXb" eventType="touchUpInside" id="52F-t8-oiM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="appPrimaryColor"/>

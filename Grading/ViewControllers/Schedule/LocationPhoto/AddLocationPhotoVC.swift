@@ -26,6 +26,8 @@ class AddLocationPhotoVC: UIViewController {
     var backCameraOn = true
     var isAlreadyOn = false
     
+    var selectedID: Int?
+    
     //MARK:- View Components
     let switchCameraButton : UIButton = {
         let button = UIButton()
@@ -71,6 +73,7 @@ class AddLocationPhotoVC: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "photoPreview" {
             let destVC = segue.destination as! PhotoReviewVC
+            destVC.selectedID = self.selectedID
             destVC.selectedImage = sender as? UIImage
         }
     }
