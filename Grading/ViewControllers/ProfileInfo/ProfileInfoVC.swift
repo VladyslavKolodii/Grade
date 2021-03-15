@@ -7,7 +7,7 @@ import Alamofire
 import Kingfisher
 class ProfileInfoVC: BaseVC {
 
-    var user: User?
+    var user: UserInfo?
 
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbRole: UILabel!

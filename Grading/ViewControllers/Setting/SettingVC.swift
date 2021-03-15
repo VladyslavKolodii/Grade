@@ -12,7 +12,7 @@ class SettingVC: BaseVC {
     
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var lbName: UILabel!
-    var user: User? {
+    var user: UserInfo? {
         didSet {
             self.showInfo()
         }
@@ -92,7 +92,7 @@ extension SettingVC {
             switch statusCode {
             case ResponseStatusCode.success.rawValue:
                 let response = json["response"]
-                let user = User(response)
+                let user = UserInfo(response)
                 self.user = user
             default:
                 if let message = json["messages"].string{
