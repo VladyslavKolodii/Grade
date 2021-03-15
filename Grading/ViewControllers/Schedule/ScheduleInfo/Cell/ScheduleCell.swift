@@ -7,7 +7,7 @@
 import UIKit
 
 protocol ScheduleCellDelegate {
-    func didTapActionUB()
+    func didTapActionUB(id: Int)
 }
 
 class ScheduleCell: UITableViewCell {
@@ -24,6 +24,6 @@ class ScheduleCell: UITableViewCell {
         
     }
     @IBAction func onTapActionBtn(_ sender: Any) {
-        delegate?.didTapActionUB()
+        delegate?.didTapActionUB(id: btnAction.tag)
     }
 }

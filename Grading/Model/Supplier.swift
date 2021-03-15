@@ -62,6 +62,11 @@ class SupplierInfo {
         self.phoneNumber = json["phoneNumber"].stringValue
         self.textNumber = json["textNumber"].stringValue
         self.email = json["email"].stringValue
-        self.position = json["position"].stringValue
+        if let userPosition = json["position"].string {
+            self.position = userPosition
+        } else {
+            self.position = ""
+        }
+        
     }
 }

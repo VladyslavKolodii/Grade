@@ -40,7 +40,11 @@ class SupplierProfileCell: UITableViewCell {
         lbName.text = info.name
         lbText.text = info.textNumber
         lbMail.text = info.email
-        lbPostion.text = info.position
+        if info.position.isEmpty {
+            lbPostion.text = "Operations Lead"
+        } else {
+            lbPostion.text = info.position
+        }
     }
     
     

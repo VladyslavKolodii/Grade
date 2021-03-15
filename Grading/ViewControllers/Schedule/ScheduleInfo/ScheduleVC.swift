@@ -108,6 +108,7 @@ class ScheduleVC: UIViewController {
         if segue.identifier == "scheduleDetail" {
             let destVC = segue.destination as! ScheduleDetailVC
             destVC.hidesBottomBarWhenPushed = true
+            destVC.selectedID = sender as? Int
         }
     }
     
@@ -229,7 +230,7 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
             cell.btnRadio.setImage(UIImage.init(named: "circle_load"), for: .normal)
             break
         }
-        
+        cell.btnAction.tag = schedules[indexPath.row].id
         switch record.action {
         case .edit:
             cell.btnAction.setTitle("Edit ", for: .normal)
@@ -260,8 +261,8 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ScheduleVC: ScheduleCellDelegate {
-    func didTapActionUB() {
-        self.performSegue(withIdentifier: "scheduleDetail", sender: nil)
+    func didTapActionUB(id: Int) {
+        self.performSegue(withIdentifier: "scheduleDetail", sender: id)
     }
 }
 
