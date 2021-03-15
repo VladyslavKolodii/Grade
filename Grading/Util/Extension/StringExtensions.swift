@@ -20,7 +20,7 @@ extension String {
             
             let split = self.components(separatedBy: decimalSeparator)
             let digits = split.count == 2 ? split.last ?? "" : ""
-
+            
             return digits.count <= maxDecimalPlaces
         }
         
@@ -38,7 +38,14 @@ extension String {
     func dola() -> String {
         return "$"+self
     }
-
+    
+    func stringToDate(format: String) -> Date {
+        let df = DateFormatter()
+        df.dateFormat = format
+        let strDate = df.date(from: self)
+        return strDate!
+    }
+    
 }
 
 extension Data {
@@ -49,7 +56,7 @@ extension Data {
         0x49 : "image/tiff",
         0x4D : "image/tiff"
     ]
-
+    
     var mimeType: String? {
         var c: UInt8 = 0
         copyBytes(to: &c, count: 1)
@@ -61,7 +68,7 @@ extension UIApplication {
     class func getTopViewController(base: UIViewController? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return getTopViewController(base: nav.visibleViewController)
-
+            
         } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
             return getTopViewController(base: selected)
         } else if let presented = base?.presentedViewController {

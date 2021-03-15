@@ -6,9 +6,11 @@
 
 import UIKit
 import FSCalendar
+import SVProgressHUD
+import SwiftyJSON
 
 class ScheduleVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var dragView: UIView!
@@ -36,7 +38,7 @@ class ScheduleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureView()
     }
     
@@ -73,9 +75,10 @@ class ScheduleVC: UIViewController {
         
         lblSelectedDate.text = self.dateFormatter.string(from: Date())
         
-        createDummy()
+        //        createDummy()
         
-        tableView.reloadData()
+        //        tableView.reloadData()
+        self.initData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -147,7 +150,7 @@ class ScheduleVC: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-          return .lightContent
+        return .lightContent
     }
     
     @IBAction func settingTap(_ sender: Any) {
@@ -188,7 +191,7 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
         lblSelectedDate.text = selectedDates[0]
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
-
+    
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
@@ -252,12 +255,43 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
     }
 }
 
 extension ScheduleVC: ScheduleCellDelegate {
     func didTapActionUB() {
         self.performSegue(withIdentifier: "scheduleDetail", sender: nil)
+    }
+}
+
+extension ScheduleVC {
+    func initData() {
+        SVProgressHUD.show()
+        let service = AppService()
+        service.getAppointmentList(date: "2021-03-05") { (json) in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                let responseArr = json["response"].arrayValue
+                self.schedules.removeAll()
+                for item in responseArr {
+                    let id = item["id"].intValue
+                    let name = item["name"].stringValue
+                    let time = item["time"].stringValue
+                    let formattedTime: String = time.stringToDate(format: "yyyy-MM-dd HH:mm:ss").dateToString(format: "hh:mm a")
+                    let schedule: Schedule = Schedule(id, name, formattedTime, .correct, .start)
+                    self.schedules.append(schedule)
+                }
+                self.tableView.reloadData()
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
+        }
     }
 }
