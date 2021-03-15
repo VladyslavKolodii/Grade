@@ -246,34 +246,34 @@
                                 <rect key="frame" x="0.0" y="220" width="414" height="676"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Fz-7nO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1087.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1081.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAv-Oq-ffr">
-                                                <rect key="frame" x="15" y="20" width="99.5" height="17.5"/>
+                                                <rect key="frame" x="15" y="20" width="100.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" name="appGrey3Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odit neque nam quas aut voluptatem sequi. Ut sit qui alias. Laborum delectus minus dicta fuga quam eveniet moletiase viate et." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igo-nm-yxL">
-                                                <rect key="frame" x="30" y="49.5" width="354" height="63"/>
+                                                <rect key="frame" x="30" y="50.5" width="354" height="54"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" name="appGrey4Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-P5-sSx">
-                                                <rect key="frame" x="15" y="132.5" width="61" height="17.5"/>
+                                                <rect key="frame" x="15" y="124.5" width="61" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" name="appGrey3Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQs-O3-3gz">
-                                                <rect key="frame" x="15" y="575" width="136" height="17.5"/>
+                                                <rect key="frame" x="15" y="568" width="139.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" name="appGrey3Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eej-d2-451">
-                                                <rect key="frame" x="0.0" y="165" width="414" height="390"/>
+                                                <rect key="frame" x="0.0" y="158" width="414" height="390"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="390" id="2HE-Uf-ibb"/>
@@ -293,13 +293,13 @@
                                                                             <rect key="frame" x="15" y="0.0" width="384" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June Proh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5e-oX-0M7">
-                                                                                    <rect key="frame" x="0.0" y="12" width="64" height="16.5"/>
+                                                                                    <rect key="frame" x="0.0" y="11.5" width="64.5" height="17.5"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="14"/>
                                                                                     <color key="textColor" name="appGrey5Color"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operations lead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ai-h1-fcU">
-                                                                                    <rect key="frame" x="298.5" y="13" width="85.5" height="14"/>
+                                                                                    <rect key="frame" x="297" y="12.5" width="87" height="15"/>
                                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
                                                                                     <color key="textColor" name="appGrey3Color"/>
                                                                                     <nil key="highlightedColor"/>
@@ -321,13 +321,13 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwF-n0-Ok6">
-                                                                                            <rect key="frame" x="40" y="14.5" width="31" height="21"/>
+                                                                                            <rect key="frame" x="40" y="16" width="30" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appGrey5Color"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(123) 456-7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-IP-tZd">
-                                                                                            <rect key="frame" x="272.5" y="14.5" width="121.5" height="21"/>
+                                                                                            <rect key="frame" x="275.5" y="16" width="118.5" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appSecondaryColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -375,13 +375,13 @@
                                                                                     <rect key="frame" x="0.0" y="50" width="404" height="50"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEX-ap-ozR">
-                                                                                            <rect key="frame" x="40" y="14.5" width="33" height="21"/>
+                                                                                            <rect key="frame" x="40" y="16" width="32.5" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appGrey5Color"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(123) 456-7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAS-fE-dfe">
-                                                                                            <rect key="frame" x="272.5" y="14.5" width="121.5" height="21"/>
+                                                                                            <rect key="frame" x="275.5" y="16" width="118.5" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appSecondaryColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -429,13 +429,13 @@
                                                                                     <rect key="frame" x="0.0" y="100" width="404" height="50"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdQ-eG-eY7">
-                                                                                            <rect key="frame" x="40" y="14.5" width="44.5" height="21"/>
+                                                                                            <rect key="frame" x="40" y="16" width="42.5" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appGrey5Color"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="june@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-EG-aRh">
-                                                                                            <rect key="frame" x="262" y="14.5" width="132" height="21"/>
+                                                                                            <rect key="frame" x="265.5" y="16" width="128.5" height="18"/>
                                                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                                                             <color key="textColor" name="appSecondaryColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -505,6 +505,7 @@
                                                             <outlet property="lbCall" destination="JEc-IP-tZd" id="LVg-y9-OJv"/>
                                                             <outlet property="lbMail" destination="hJ0-EG-aRh" id="tKL-6L-JhR"/>
                                                             <outlet property="lbName" destination="D5e-oX-0M7" id="3Yf-vX-nwt"/>
+                                                            <outlet property="lbPostion" destination="2ai-h1-fcU" id="vN1-h5-psw"/>
                                                             <outlet property="lbText" destination="uAS-fE-dfe" id="9wX-bo-Lae"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -515,7 +516,7 @@
                                                 </connections>
                                             </tableView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="J9x-iZ-9AI">
-                                                <rect key="frame" x="15" y="607.5" width="384" height="380"/>
+                                                <rect key="frame" x="15" y="601.5" width="384" height="380"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-uJ-yDx">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="54.5"/>
@@ -969,16 +970,16 @@
                                         <rect key="frame" x="20" y="174" width="26" height="26"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-PX-khE">
-                                        <rect key="frame" x="56" y="167" width="233" height="40.5"/>
+                                        <rect key="frame" x="56" y="167.5" width="225" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batterfield Growers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHn-tF-xLK">
-                                                <rect key="frame" x="0.0" y="0.0" width="156" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 Supplier Rd, Spokane,WA 99205" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzw-fi-ldw">
-                                                <rect key="frame" x="0.0" y="24" width="233" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="25" width="225" height="14"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -986,7 +987,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller (Tier 2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-Uk-uF6">
-                                        <rect key="frame" x="294.5" y="120" width="104.5" height="21"/>
+                                        <rect key="frame" x="294.5" y="120" width="104.5" height="18"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1040,7 +1041,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-Jb-Jt8">
-                                        <rect key="frame" x="137" y="66" width="140.5" height="23.5"/>
+                                        <rect key="frame" x="135.5" y="65.5" width="143.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" name="appwhiteColor"/>
                                         <nil key="highlightedColor"/>
@@ -1108,16 +1109,16 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ5-Qk-Zjy">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="427.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="419.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-dL-ndP">
-                                                <rect key="frame" x="15" y="235" width="99.5" height="17.5"/>
+                                                <rect key="frame" x="15" y="235" width="100.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" name="appGrey3Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odit neque nam quas aut voluptatem sequi. Ut sit qui alias. Laborum delectus minus dicta fuga quam eveniet moletiase viate et." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccN-qi-JOE">
-                                                <rect key="frame" x="30" y="264.5" width="354" height="63"/>
+                                                <rect key="frame" x="30" y="265.5" width="354" height="54"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" name="appGrey4Color"/>
                                                 <nil key="highlightedColor"/>
@@ -1391,7 +1392,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-Tb-HH4">
-                                        <rect key="frame" x="137" y="66" width="140.5" height="23.5"/>
+                                        <rect key="frame" x="135.5" y="65.5" width="143.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         <color key="textColor" name="appwhiteColor"/>
                                         <nil key="highlightedColor"/>
