@@ -6202,7 +6202,7 @@
             <objects>
                 <viewController storyboardIdentifier="GradingProcessViewController" id="M0X-Hy-3ER" customClass="GradingProcessViewController" customModule="Grading" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dsk-UN-KFc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hco-ql-i97">

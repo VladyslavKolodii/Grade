@@ -269,8 +269,10 @@ extension ScheduleVC: ScheduleCellDelegate {
 extension ScheduleVC {
     func initData() {
         SVProgressHUD.show()
+        let convertDate: Date = lblSelectedDate.text!.stringToDate(format: "MMMM dd, yyyy")
+        let date: String = convertDate.dateToString(format: "yyyy-MM-dd")
         let service = AppService()
-        service.getAppointmentList(date: "2021-03-05") { (json) in
+        service.getAppointmentList(date: date) { (json) in
             let statusCode = json["status"].intValue
             switch statusCode {
             case ResponseStatusCode.success.rawValue:

@@ -35,6 +35,7 @@ class Inventory {
         self.list = json["list"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
         self.totalValue = json["totalValue"].doubleValue.rounded(numberOfDecimalPlaces: 2, rule: .toNearestOrEven)
     }
+    
     func mapInfoData(_ json: JSON) {
         self.lotId = json["lotId"].stringValue
         self.productType = json["productType"].stringValue
