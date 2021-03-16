@@ -52,6 +52,10 @@ class ScheduleDetailVC: UIViewController {
     @IBAction func onTapLocationUB(_ sender: Any) {
         self.performSegue(withIdentifier: "locationDetail", sender: selectedID)
     }
+    @IBAction func onTapSupplierDetailUB(_ sender: Any) {
+        let vc = SupplierDetailVC.instantiate(from: .suppliers)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension ScheduleDetailVC: UITableViewDataSource {

@@ -12,8 +12,10 @@ class PhotoControlVC: UIViewController {
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var  scrollView: UIScrollView!
+    @IBOutlet weak var nextUB: UIButton!
+    @IBOutlet weak var preUB: UIButton!
     
-    let imagesArray:[UIImage] = [#imageLiteral(resourceName: "img3"),#imageLiteral(resourceName: "img2")]
+    var imagesArray:[String]?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -22,14 +24,21 @@ class PhotoControlVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        pageControl.numberOfPages = imagesArray.count
+        if let array = imagesArray {
+            pageControl.numberOfPages = array.count > 1 ? array.count : 0
+            preUB.isHidden = array.count > 1 ? false : true
+            nextUB.isHidden = true
+        } else {
+            pageControl.numberOfPages = 0
+            preUB.isHidden = true
+            nextUB.isHidden = true
+        }
         scrollView.isPagingEnabled = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         
         DispatchQueue.main.async {
-            self.addScrollImages(arrayImages: self.imagesArray)
+            self.addScrollImages(arrayImages: self.imagesArray!)
         }
     }
     @IBAction func leftButtonTapped(_ sender: UIButton) {
@@ -58,7 +67,7 @@ class PhotoControlVC: UIViewController {
 }
 extension PhotoControlVC: UIScrollViewDelegate {
     
-    func addScrollImages(arrayImages: [UIImage]) {
+    func addScrollImages(arrayImages: [String]) {
         scrollView.isPagingEnabled = true
         pageControl.numberOfPages = arrayImages.count
         self.pageControl.isHidden = false
@@ -71,7 +80,7 @@ extension PhotoControlVC: UIScrollViewDelegate {
             let xPosition = UIScreen.main.bounds.width * CGFloat(i)
             imageView.frame = CGRect(x: xPosition, y: -40, width: scrollView.frame.width, height: scrollView.frame.height)
             imageView.contentMode = .scaleAspectFill
-            imageView.image = obj
+            imageView.loadImage(url: RequestInfoFactory.rootURL + obj)
             imageView.clipsToBounds = true
             
             let locationLB = UILabel()

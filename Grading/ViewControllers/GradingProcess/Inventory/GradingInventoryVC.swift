@@ -11,8 +11,9 @@ class GradingInventoryVC: UIViewController {
     @IBOutlet weak var plantMatterUB: UIButton!
     @IBOutlet weak var extractUB: UIButton!
     @IBOutlet weak var entryNameTF: UITextField!
-    @IBOutlet weak var lotIDLB: UILabel!
-    
+    @IBOutlet weak var qrCodeTF: UITextField!
+    @IBOutlet weak var dateLB: UILabel!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIView()
@@ -33,7 +34,10 @@ class GradingInventoryVC: UIViewController {
         plantMatterUB.backgroundColor = UIColor(named: "appSecondaryColor")
         extractUB.backgroundColor = .clear
         entryNameTF.attributedPlaceholder = NSAttributedString(string: "Entry Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appGrey3Color")!])
-    }
+        qrCodeTF.attributedPlaceholder = NSAttributedString(string: "QR Code", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appGrey3Color")!])
+        
+        dateLB.text = Date().dateToString(format: "EEEE, MMM dd, yyyy")
+    }    
     
     @IBAction func onTapSwitchUB(_ sender: UIButton) {
         if sender.tag == 0 {
@@ -44,6 +48,13 @@ class GradingInventoryVC: UIViewController {
             extractUB.backgroundColor = UIColor(named: "appSecondaryColor")
         }
     }
+    @IBAction func onTapCalenderUB(_ sender: Any) {
+        let vc = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "CalendarPickerVC") as! CalendarPickerVC
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func onTtapQRUB(_ sender: Any) {
         let vc = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "GradingInventoryScanVC") as! GradingInventoryScanVC
@@ -52,8 +63,14 @@ class GradingInventoryVC: UIViewController {
     }
 }
 
+extension GradingInventoryVC: CalendarPickerVCDelegate {
+    func didSelectDate(date: String) {
+        self.dateLB.text = date
+    }
+}
+
 extension GradingInventoryVC: GradingQRScanDelegate {
     func returnScanValue(val: String) {
-        lotIDLB.text = val
+        qrCodeTF.text = val
     }
 }

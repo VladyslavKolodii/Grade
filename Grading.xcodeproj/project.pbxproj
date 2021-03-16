@@ -25,6 +25,7 @@
 		4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */; };
 		4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */; };
 		4568EF7325E3089E00ED477D /* GradingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */; };
+		457321EB2600AD910050E4C2 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457321EA2600AD910050E4C2 /* CalendarPickerVC.swift */; };
 		45760C4925E10A89000E7C3D /* GradingProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C4825E10A89000E7C3D /* GradingProductVC.swift */; };
 		45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45760C5525E1242D000E7C3D /* GradingDefectVC.swift */; };
 		457C07C525E0F78800DE22CA /* GradingInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */; };
@@ -145,6 +146,7 @@
 		4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotosVC.swift; sourceTree = "<group>"; };
 		4568EF7225E3089E00ED477D /* GradingPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoCell.swift; sourceTree = "<group>"; };
 		4568EF7625E31AE600ED477D /* PhotoPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewVC.swift; sourceTree = "<group>"; };
+		457321EA2600AD910050E4C2 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
 		45760C4825E10A89000E7C3D /* GradingProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingProductVC.swift; sourceTree = "<group>"; };
 		45760C5525E1242D000E7C3D /* GradingDefectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingDefectVC.swift; sourceTree = "<group>"; };
 		457C07C425E0F78800DE22CA /* GradingInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInventoryVC.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 			children = (
 				FCE2A8E925E02D91001CF1EA /* BaseVC.swift */,
 				B79773D125DFA54400DBE149 /* BaseNavigationController.swift */,
+				457321EA2600AD910050E4C2 /* CalendarPickerVC.swift */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				457EF60825E09D290051AF10 /* AddAppointVC.swift in Sources */,
 				B7802FF925E3989300D47C4A /* Toast.swift in Sources */,
 				453D0F8225E1596D00F9F220 /* GradingVC.swift in Sources */,
+				457321EB2600AD910050E4C2 /* CalendarPickerVC.swift in Sources */,
 				FC60C17D25E2345600EA251A /* ProductDetailVC.swift in Sources */,
 				B7691D3025E3662D00CAA999 /* GradingProcessLabManualViewController.swift in Sources */,
 				457EF60225E09D290051AF10 /* LocationCell.swift in Sources */,

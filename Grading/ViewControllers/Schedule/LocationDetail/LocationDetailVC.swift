@@ -42,6 +42,11 @@ class LocationDetailVC: UIViewController {
         if segue.identifier == "addLocationPhoto" {
             let destVC = segue.destination as! AddLocationPhotoVC
             destVC.selectedID = sender as? Int
+        } else if segue.identifier == "photoControlVC" {
+            let destVC = segue.destination as! PhotoControlVC
+            var urlArr: [String] = [String]()
+            urlArr.append(sender as! String)
+            destVC.imagesArray = urlArr
         }
      }
     @IBAction func onTapBackUB(_ sender: Any) {
@@ -91,7 +96,7 @@ extension LocationDetailVC : UICollectionViewDataSource,UICollectionViewDelegate
         return CGSize(width: 120 , height: 120)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "photoControlVC", sender: nil)
+        self.performSegue(withIdentifier: "photoControlVC", sender: appointLocation.photos[indexPath.row])
     }
     
 }
