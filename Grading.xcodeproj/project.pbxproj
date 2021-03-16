@@ -16,6 +16,11 @@
 		453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8425E1684700F9F220 /* GradingInfoVC.swift */; };
 		453D0F8A25E16BDE00F9F220 /* GradingItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */; };
 		454CB78725EED263009EA5CD /* CustomTrackingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CB78625EED262009EA5CD /* CustomTrackingSlider.swift */; };
+		4563AEF525FFF99D0010992F /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563AEF425FFF99D0010992F /* Appointment.swift */; };
+		4563AEF825FFFEE60010992F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563AEF725FFFEE60010992F /* DateExtension.swift */; };
+		4563AEFB26000D030010992F /* AppointLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563AEFA26000D030010992F /* AppointLocation.swift */; };
+		4563AEFE26000DB20010992F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563AEFD26000DB20010992F /* UIImageViewExtension.swift */; };
+		4563AF2326001FD40010992F /* AddSupplierAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563AF2226001FD40010992F /* AddSupplierAppointment.swift */; };
 		4568EF5B25E2EA7D00ED477D /* GradingPhotoGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */; };
 		4568EF5E25E2EEE000ED477D /* GuidePhotoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */; };
 		4568EF6325E3044D00ED477D /* GradingPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */; };
@@ -130,6 +135,11 @@
 		453D0F8425E1684700F9F220 /* GradingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingInfoVC.swift; sourceTree = "<group>"; };
 		453D0F8925E16BDE00F9F220 /* GradingItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingItemVC.swift; sourceTree = "<group>"; };
 		454CB78625EED262009EA5CD /* CustomTrackingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTrackingSlider.swift; sourceTree = "<group>"; };
+		4563AEF425FFF99D0010992F /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		4563AEF725FFFEE60010992F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		4563AEFA26000D030010992F /* AppointLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointLocation.swift; sourceTree = "<group>"; };
+		4563AEFD26000DB20010992F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		4563AF2226001FD40010992F /* AddSupplierAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSupplierAppointment.swift; sourceTree = "<group>"; };
 		4568EF5A25E2EA7D00ED477D /* GradingPhotoGuideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoGuideVC.swift; sourceTree = "<group>"; };
 		4568EF5D25E2EEE000ED477D /* GuidePhotoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidePhotoItemVC.swift; sourceTree = "<group>"; };
 		4568EF6225E3044D00ED477D /* GradingPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotosVC.swift; sourceTree = "<group>"; };
@@ -304,6 +314,15 @@
 			path = Grading;
 			sourceTree = "<group>";
 		};
+		4563AF25260030B10010992F /* AddApointment */ = {
+			isa = PBXGroup;
+			children = (
+				457EF5FD25E09D290051AF10 /* AddAppointVC.swift */,
+				4563AF2226001FD40010992F /* AddSupplierAppointment.swift */,
+			);
+			path = AddApointment;
+			sourceTree = "<group>";
+		};
 		4568EF7125E3087B00ED477D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,7 +372,7 @@
 		457EF5FC25E09D290051AF10 /* ScheduleInfo */ = {
 			isa = PBXGroup;
 			children = (
-				457EF5FD25E09D290051AF10 /* AddAppointVC.swift */,
+				4563AF25260030B10010992F /* AddApointment */,
 				457EF5FE25E09D290051AF10 /* Cell */,
 				457EF60025E09D290051AF10 /* ScheduleDetailVC.swift */,
 				457EF60125E09D290051AF10 /* ScheduleVC.swift */,
@@ -475,6 +494,8 @@
 				FC79604125FD1C6A008FB9C9 /* Faq.swift */,
 				FC79604625FD2314008FB9C9 /* User.swift */,
 				FC20CF3225FDD6A1007D96E5 /* Inventory.swift */,
+				4563AEF425FFF99D0010992F /* Appointment.swift */,
+				4563AEFA26000D030010992F /* AppointLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +619,8 @@
 				B7691D2325E351EB00CAA999 /* UITabelViewExtensions.swift */,
 				B7691D2625E3520C00CAA999 /* UICollectionViewExtensions.swift */,
 				B761D12525E8A63400ADD391 /* StringExtensions.swift */,
+				4563AEF725FFFEE60010992F /* DateExtension.swift */,
+				4563AEFD26000DB20010992F /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -863,6 +886,7 @@
 				FCE2A8FB25E02D91001CF1EA /* FaqCell.swift in Sources */,
 				4589020125E295970049C6CD /* GradingMaterialCaptureVC.swift in Sources */,
 				45760C5625E1242D000E7C3D /* GradingDefectVC.swift in Sources */,
+				4563AEF825FFFEE60010992F /* DateExtension.swift in Sources */,
 				B79773FA25DFBD6600DBE149 /* CustomTextField.swift in Sources */,
 				BCE06FD425CEC3C40071CD3C /* Utility.swift in Sources */,
 				457EF60725E09D290051AF10 /* PhotoReviewVC.swift in Sources */,
@@ -914,15 +938,18 @@
 				FC60C18025E2403E00EA251A /* FilterInventoryVC.swift in Sources */,
 				B79773E525DFBA7600DBE149 /* GradingProcessLabDataViewController.swift in Sources */,
 				FC60C17525E2160500EA251A /* InventoryCell.swift in Sources */,
+				4563AEF525FFF99D0010992F /* Appointment.swift in Sources */,
 				BCE06FB525CE8AF00071CD3C /* OnboardVC.swift in Sources */,
 				FC6F76FB25FF936500145C21 /* InventoryAddPhotoVC.swift in Sources */,
 				B79773F625DFBD5300DBE149 /* CustomLabel.swift in Sources */,
+				4563AEFE26000DB20010992F /* UIImageViewExtension.swift in Sources */,
 				B79773C525DF9CF200DBE149 /* UIFontExtestion+Heplers.swift in Sources */,
 				B79773D625DFB07400DBE149 /* GradingProcessLabPhotoViewController.swift in Sources */,
 				453D0F8525E1684700F9F220 /* GradingInfoVC.swift in Sources */,
 				B79773D925DFB08D00DBE149 /* GradingProcessLabPhotoPreviewViewController.swift in Sources */,
 				FCE2A8FF25E02D91001CF1EA /* ContactVC.swift in Sources */,
 				B79773D225DFA54400DBE149 /* BaseNavigationController.swift in Sources */,
+				4563AF2326001FD40010992F /* AddSupplierAppointment.swift in Sources */,
 				BCE06FF625CED1EF0071CD3C /* SuppliersVC.swift in Sources */,
 				457EF60325E09D290051AF10 /* LocationNotesCell.swift in Sources */,
 				B79773C925DFA10B00DBE149 /* GradingProcessLabSeletedViewController.swift in Sources */,
@@ -935,6 +962,7 @@
 				FC50E71425E29F7100062210 /* SortTypeVC.swift in Sources */,
 				BCE06F6E25CE6C8B0071CD3C /* AppDelegate.swift in Sources */,
 				B79773B625DF98EE00DBE149 /* UIColorExtension+Helpers.swift in Sources */,
+				4563AEFB26000D030010992F /* AppointLocation.swift in Sources */,
 				FC60C17A25E2160F00EA251A /* SupplierDetailVC.swift in Sources */,
 				B79773F225DFBD4C00DBE149 /* CustomView.swift in Sources */,
 				B7691D3525E366CC00CAA999 /* CanvasView.swift in Sources */,

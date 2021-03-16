@@ -60,6 +60,14 @@ class AppService {
         }
     }
     
+    func addAppointment(param: [String: String], callBack: @escaping(_ json: JSON) -> ()) {
+        let url = RequestInfoFactory.appointmentURL
+        let requestInfo = RequestInfo(requestType: .post, header: RequestInfoFactory.defaultHeader(), body: param)
+        requestService?.makeRequest(to: url, withRequestInfo: requestInfo, callBack: { (response, serverData, json) in
+            callBack(json)
+        })
+    }
+    
     func getSupplierList(callBack: @escaping (_ json: JSON) -> ()){
         let url = RequestInfoFactory.supplierURL
         let requestInfo = RequestInfo(requestType: .get, header: RequestInfoFactory.defaultHeader())

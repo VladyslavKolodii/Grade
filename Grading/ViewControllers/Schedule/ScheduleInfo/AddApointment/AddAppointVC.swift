@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import SVProgressHUD
 
 class AddAppointVC: UIViewController {
 
@@ -30,6 +31,8 @@ class AddAppointVC: UIViewController {
         formatter.dateFormat = "hh:mm a"
         return formatter
     }()
+    
+    var selectedSupplier: Supplier = Supplier()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +67,9 @@ class AddAppointVC: UIViewController {
         
         calendarUV.delegate = self
         
+        dateLB.text = Date().dateToString(format: "EEEE, MMM dd, yyyy")
+        timeLB.text = timeFormatter.string(from: timePicker.date)
+        
     }
     
     @IBAction func onTapCalenderControlUB(_ sender: UIButton) {
@@ -86,6 +92,37 @@ class AddAppointVC: UIViewController {
     @IBAction func onTapCancelUB(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func onTapAddSupplierUB(_ sender: Any) {
+        let vc = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "AddSupplierAppointment") as! AddSupplierAppointment
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func onTapSaveUB(_ sender: Any) {
+        let strDateTime: String = dateLB.text! + " " + timeLB.text!
+        let dateTime: Date = strDateTime.stringToDate(format: "EEEE, MMM dd, yyyy hh:mm a")
+        let param: [String: String] = [
+            "title": titleTF.text!,
+            "supplier": "\(selectedSupplier.id)",
+            "note": noteTF.text!,
+            "date": dateTime.dateToString(format: "yyyy-MM-dd HH:mm:ss")
+        ]
+        let service = AppService()
+        SVProgressHUD.show()
+        service.addAppointment(param: param) { json in
+            let statusCode = json["status"].intValue
+            switch statusCode {
+            case ResponseStatusCode.success.rawValue:
+                self.dismiss(animated: true, completion: nil)
+            default:
+                if let message = json["messages"].string{
+                    self.showErrorAlert(message: message)
+                } else {
+                    self.showErrorAlert(message: "Something went wrong. Please try again.")
+                }
+            }
+            SVProgressHUD.dismiss()
+        }
+    }
 }
 
 extension AddAppointVC: FSCalendarDelegate {
@@ -96,5 +133,12 @@ extension AddAppointVC: FSCalendarDelegate {
             calendar.setCurrentPage(date, animated: true)
         }
         dateLB.text = selectedDates[0]
+    }
+}
+
+extension AddAppointVC: AddSupplierAppointmentDelegate {
+    func didDismiss(supplier: Supplier) {
+        self.selectedSupplier = supplier
+        self.supplierTF.text = supplier.name
     }
 }
