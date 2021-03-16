@@ -74,34 +74,13 @@ class ScheduleVC: UIViewController {
         offlineView.layer.cornerRadius = 10
         
         lblSelectedDate.text = self.dateFormatter.string(from: Date())
-        
-        //        createDummy()
-        
-        //        tableView.reloadData()
-        self.initData()
+        self.initData(key: lblSelectedDate.text!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.calendar.calendarWeekdayView.weekdayLabels[4].text = "TH"
-    }
-    
-    func createDummy() {
-        
-        schedules.append(Schedule.init(1, "Aernier Inc", "11:00am", .correct, .edit))
-        schedules.append(Schedule.init(1, "Akiles Group", "11:00am", .load, .continueAction))
-        schedules.append(Schedule.init(1, "Aoehm Extracts", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Bahringer Supply Co.", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Batterfield Growers", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Busche Gardens", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Aernier Inc", "11:00am", .correct, .edit))
-        schedules.append(Schedule.init(1, "Akiles Group", "11:00am", .load, .continueAction))
-        schedules.append(Schedule.init(1, "Aoehm Extracts", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Bahringer Supply Co.", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Batterfield Growers", "11:00am", .blank, .start))
-        schedules.append(Schedule.init(1, "Busche Gardens", "11:00am", .blank, .start))
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -190,6 +169,7 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate, UIGestureRecogni
             calendar.setCurrentPage(date, animated: true)
         }
         lblSelectedDate.text = selectedDates[0]
+        self.initData(key: lblSelectedDate.text!)
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
     
@@ -256,7 +236,6 @@ extension ScheduleVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
 }
 
@@ -267,7 +246,7 @@ extension ScheduleVC: ScheduleCellDelegate {
 }
 
 extension ScheduleVC {
-    func initData() {
+    func initData(key: String) {
         SVProgressHUD.show()
         let convertDate: Date = lblSelectedDate.text!.stringToDate(format: "MMMM dd, yyyy")
         let date: String = convertDate.dateToString(format: "yyyy-MM-dd")
@@ -288,6 +267,8 @@ extension ScheduleVC {
                 }
                 self.tableView.reloadData()
             default:
+                self.schedules.removeAll()
+                self.tableView.reloadData()
                 if let message = json["messages"].string{
                     self.showErrorAlert(message: message)
                 } else {
